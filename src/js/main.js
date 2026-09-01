@@ -1,10 +1,12 @@
 import '../css/main.css';
 import { renderHeader } from '../components/header.js';
 import { renderFooter } from '../components/footer.js';
+import { renderWhatsAppButton } from '../components/whatsapp.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
   renderFooter();
+  renderWhatsAppButton();
 
   // Setup client-side table filter on category page if present
   const filterInput = document.getElementById('sku-filter');

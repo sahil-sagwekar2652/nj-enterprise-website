@@ -9,11 +9,15 @@ export default {
           const body = await request.json();
           const { sku, finish, email, notes, name, company } = body;
 
-          const apiKey = env.RESEND_API_KEY;
+          const apiKey = 
+            env?.RESEND_API_KEY || 
+            (typeof globalThis !== 'undefined' ? globalThis.RESEND_API_KEY : undefined) ||
+            (typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : undefined);
+
           if (!apiKey) {
             return new Response(JSON.stringify({ 
               success: false, 
-              error: 'RESEND_API_KEY is not configured in Cloudflare environment.' 
+              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please ensure it is added under Worker Settings > Variables and Secrets (or Pages Environment Variables).' 
             }), {
               status: 500,
               headers: { 'Content-Type': 'application/json' },
