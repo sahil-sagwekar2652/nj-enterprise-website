@@ -9,9 +9,7 @@ export function renderHeader() {
       <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
         <div class="flex items-center gap-8">
           <a class="flex items-center gap-3.5 group focus:outline-none" href="/index.html">
-            <div class="p-1 rounded-lg bg-slate-surface border border-cad-blue/30 flex items-center justify-center transition-transform duration-200 group-hover:scale-105 shadow-inner">
-              <img src="/nj-logo.svg" alt="NJ Enterprises Logo" class="h-9 w-9 object-contain" />
-            </div>
+            <img src="/nj-logo.svg" alt="NJ Enterprises Logo" class="h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
             <div class="flex flex-col">
               <span class="font-headline-md text-[19px] md:text-headline-md font-extrabold tracking-tighter text-deep-navy leading-none group-hover:text-safety-orange transition-colors">
                 NJ ENTERPRISES

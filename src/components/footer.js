@@ -7,9 +7,7 @@ export function renderFooter() {
       <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full px-gutter py-12 max-w-container-max mx-auto">
         <div class="flex flex-col gap-4 col-span-1 md:col-span-2">
           <div class="flex items-center gap-3">
-            <div class="p-1.5 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center">
-              <img src="/nj-logo.svg" alt="NJ Enterprises Logo" class="h-8 w-8 object-contain brightness-125" />
-            </div>
+            <img src="/nj-logo.svg" alt="NJ Enterprises Logo" class="h-9 w-auto object-contain brightness-125" />
             <span class="font-headline-md text-headline-md font-bold text-surface-bright tracking-tight">NJ ENTERPRISES</span>
           </div>
           <p class="text-primary-fixed-dim font-body-md text-body-md max-w-sm">
