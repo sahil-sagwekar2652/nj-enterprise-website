@@ -269,7 +269,7 @@ export function initHomeCarousel() {
               <div class="absolute top-4 left-4 z-20 flex flex-col gap-1.5">
                 ${s.badges.map(b => `
                   <span class="bg-deep-navy/90 backdrop-blur-sm text-white text-[10px] font-technical-data px-2.5 py-1 rounded-full shadow border border-white/20">
-                    ✓ ${b}
+                    ${b}
                   </span>
                 `).join('')}
               </div>
