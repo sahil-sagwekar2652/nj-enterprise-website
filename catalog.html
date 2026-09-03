@@ -3,120 +3,1102 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Product Catalog | Precision Enclosures</title>
+  <title>Master Product Catalog - NJ ENTERPRISES</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="/src/css/main.css" />
 </head>
-<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
   <div id="header-container"></div>
 
-  <!-- Main Content Canvas -->
-  <main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-margin-desktop md:py-16">
-    <!-- Hero / Intro -->
-    <section class="mb-16 max-w-3xl">
-      <h1 class="font-headline-xl text-headline-xl text-deep-navy mb-6">Product Catalog</h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant">
-        Engineered for uncompromising durability and technical precision. Explore our comprehensive suite of industrial-grade protective solutions, meticulously designed to safeguard critical infrastructure in the most demanding operational environments.
+  <!-- Hero Header -->
+  <section class="bg-deep-navy text-white py-14 border-b border-cad-blue/30 relative overflow-hidden technical-grid">
+    <div class="max-w-container-max mx-auto px-gutter relative z-10">
+      <nav aria-label="Breadcrumb" class="mb-4">
+        <ol class="flex items-center space-x-2 font-technical-data text-xs text-gray-300">
+          <li><a class="hover:text-safety-orange transition-colors" href="/index.html">Home</a></li>
+          <li><span class="material-symbols-outlined text-[14px] mx-1">chevron_right</span></li>
+          <li aria-current="page" class="text-white font-bold">Product Catalog</li>
+        </ol>
+      </nav>
+
+      <div class="flex items-center gap-2 mb-2">
+        <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
+        <span class="text-xs font-technical-data text-safety-orange tracking-wider uppercase font-bold">PRECISION INDUSTRIAL ENCLOSURES</span>
+      </div>
+      <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl font-extrabold text-white mb-4">Complete Series Catalog</h1>
+      <p class="font-body-md text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
+        Explore all 8 dedicated industrial enclosure series spanning waterproof IP67 cabinets, desktop consoles, wall-mount housings, IoT sensor pods, handheld diagnostic cases, and snap-on DIN-rail modules.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Product Grid -->
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Category Card 1 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Water-Proof Enclosure 11 Series" src="/images/enhanced/11-1%20(F1)%20Size%20200%20x%20120%20x%2075mm.JPG"/>
+  <!-- Series Grid Section -->
+  <main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-14">
+    <div class="mb-16">
+      <div class="flex justify-between items-end mb-8">
+        <div>
+          <span class="font-label-caps text-safety-orange uppercase tracking-wider text-xs">SERIES DIRECTORY</span>
+          <h2 class="font-headline-lg text-headline-lg text-deep-navy mt-1">Select an Enclosure Series</h2>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Water-Proof Enclosure 11 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">IP67 / NEMA 4X</div>
-        </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+        <span class="font-technical-data text-xs text-on-surface-variant">8 Distinct Product Series</span>
+      </div>
 
-      <!-- Category Card 2 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Plastic Cabinet 15 Series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaGU4dOQs47JZe00BBLjL7Oe21J8kQfyjpMBgcBfo5NUOYZuEZjsVymFtZR-RWiFQZzDMwN4vYQdPtZi58EA8dFirsIpAHD0uKE3d9R94K79sZNvNTVIlFAKGgOWSFD4rzEdSM2nZSiGur5Y6f_gZAfoEOnsBM2lXhRe2S3sH0JGhrgYXx6Qobd-2GaEJ8jB0vifEaA2yY4FgB6YZaU0jehOTskDZtLLSQZsAwHAH3N3gPh3OX08-3"/>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Series Card: Water-Proof Enclosure 11 Series -->
+      <a href="/products/11-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">IP67 / NEMA 4X WATERPROOF</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">47 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/11-1%20(F1)%20Size%20200%20x%20120%20x%2075mm.JPG" alt="Water-Proof Enclosure 11 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Water-Proof Enclosure 11 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Precision molded in high-impact Polycarbonate and ABS with continuous silicone gaskets. Engineered for extreme outdoor weather, washdown areas, and marine telemetry.</p>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Plastic Cabinet 15 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">Polycarbonate / ABS</div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 47 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+      </a>
 
-      <!-- Category Card 3 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Iron Cabinet 16 Series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf0BbUEMO9a5yGK7Q4SL5wOLBN3H86wG7OuAcwOmRqJ0ODcvhrsycB1y3_x2S6SalKvU2OpGQbtPSRc-FZxvY75kObpybAuvjgqmErvRsDlBoruYFCCsH6sjQZ6iceBUg1TIPs8w6XkWE2746MwstZEsoY0Cz4UplwjThbpdrhx-lqxuMPbI7BhP55DWvOUU5yFLA5E0vZJv9xz3eJgaKDcOX5SKKyhvWW5hf0UsEuey8Q6DwcztSH"/>
+      <!-- Series Card: Plastic Cabinet 15 Series -->
+      <a href="/products/15-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">BENCHTOP & INSTRUMENT CABINET</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">10 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/15-4(B5)%20164x120x69.jpg" alt="Plastic Cabinet 15 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Plastic Cabinet 15 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Specialized desktop and benchtop instrument enclosures with sloped display sections, aluminum/plastic end panels, and integrated cooling louvers.</p>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Iron Cabinet 16 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">Heavy Duty / NEMA 12</div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 10 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+      </a>
 
-      <!-- Category Card 4 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Desk-Top Enclosure 18 Series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrAMqB_FIfFuzRI9NXxmR6flAjyxoxuPTQF45EnPjrZ5O2J7shyWQLTjhKkbuDqZf1OCchS1lVb_jCyb7JDLgx93rsOTErMEQDWKhSMEotWVh6yr3wlLQZaCkyZ9vfhq6-atP_ypOqnRG5uGih1kuyUCjbjhkMKYZVIW-lJkyrs87QZecVPN52V5Xf5OJx-sv67YSOwS38YwS3YhyMzJs_0evJctTW8WmDOpE_bnXvB_pxRwXRmYbY"/>
+      <!-- Series Card: Desk-Top Enclosure 18 Series -->
+      <a href="/products/18-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">DESKTOP CONSOLE & CONTROLLER</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">7 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/18-4(B18)%20272x200x83.jpg" alt="Desk-Top Enclosure 18 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Desk-Top Enclosure 18 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Engineered for operator touchpoints, desktop display consoles, and HMI control stations with anti-slip wells and display window options.</p>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Desk-Top Enclosure 18 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">Extruded Aluminum</div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 7 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+      </a>
 
-      <!-- Category Card 5 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Wall-Mounting Enclosure 19 Series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfNRnx8XalMIX31QqS1mS0AzC8AuKefy5_AsS2u1Lj83orvbiQ6Ho7kLyM11_gkFi6xTLiMt7hTB440ea3hbEF8Y4eLkYVhnXnkGxyspzAbvwfipXhmT5q3TKuNW9ZOrGN-Lr_ET0cZRINyxObfNkPYdW2LeD8b17vroyDx83WDtvd8XBY2yFEWQ1aBuGHLLRDINjkVmOXunC80QD7SWSW7u3M6MEi45XpkrcaNcsLLjGnrkNoUkzZ"/>
+      <!-- Series Card: Wall-Mounting Enclosure 19 Series -->
+      <a href="/products/19-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">WALL-MOUNT & SURFACE CONTROLLER</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">3 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/19-12(69)%20180x120x41.jpg" alt="Wall-Mounting Enclosure 19 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Wall-Mounting Enclosure 19 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Architectural wall-mount enclosures designed for building automation, RFID access control, and HVAC climate monitoring systems.</p>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Wall-Mounting Enclosure 19 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">NEMA 4 / 4X / 12</div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 3 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+      </a>
 
-      <!-- Category Card 6 -->
-      <article class="bg-surface border border-cad-blue p-6 flex flex-col hover:border-safety-orange transition-colors duration-300 group">
-        <div class="bg-slate-surface aspect-square mb-6 border border-cad-blue flex items-center justify-center overflow-hidden">
-          <img class="object-cover w-full h-full mix-blend-multiply group-hover:scale-105 transition-transform duration-500" alt="Electronical Conjunction box 20 Series" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs9aX8jUBgKUh-Y3K8o4SMsI4V4kkWdPOiSvyezQYHA8Jav30bvV7q7BuyRE16TjQ38LvOF90BTGczz4ZEVwpRGez6FkyjMbmud8g0n6TFyLp0BjI428JHmdh6NOO_fezkAT4AOdAZ9nbqbsy0sw3bTCpt63qbj5JD6AV5d0277Ea3yIvDfclq-PgsR80Qj0Bap54b63jloNvT5bo7WMsY0fTziDBqIFFjz6phG6_092BwttNvTCFF"/>
+      <!-- Series Card: Electrical Junction Box 20 Series -->
+      <a href="/products/20-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">MODULAR JUNCTION & SENSOR HOUSING</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">10 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/20-11(206)%20100x60x25.jpg" alt="Electrical Junction Box 20 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Electrical Junction Box 20 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Versatile electrical junction boxes ranging from miniature IoT transmitter pods to multi-terminal industrial junction housings with lateral mounting tabs.</p>
         </div>
-        <div class="flex-grow">
-          <h2 class="font-headline-md text-headline-md text-deep-navy mb-2">Electronical Conjunction box 20 Series</h2>
-          <div class="font-technical-data text-technical-data text-on-surface-variant mb-6">Terminal Node Integration</div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 10 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </div>
-        <a class="inline-flex items-center justify-between w-full bg-deep-navy text-on-primary px-4 py-3 font-label-caps text-label-caps border-b-2 border-transparent hover:border-safety-orange transition-all" href="/category.html">
-          <span>View Series</span>
-          <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </a>
-      </article>
+      </a>
+
+      <!-- Series Card: Hand-Held Enclosure 21 Series -->
+      <a href="/products/21-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">ERGONOMIC HANDHELD & REMOTE</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">12 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/21-12(47)%20size%20140x82x23mm.jpg" alt="Hand-Held Enclosure 21 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Hand-Held Enclosure 21 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Ergonomically contoured handheld enclosures with display bezels, battery hatches, and tactile side grips for field test equipment and industrial controllers.</p>
+        </div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 12 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </a>
+
+      <!-- Series Card: Industrial Control Enclosure 22 Series -->
+      <a href="/products/22-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">HEAVY-DUTY OPERATOR STATION</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">1 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/22-20(PC33)%20size%20250x110x100.jpg" alt="Industrial Control Enclosure 22 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Industrial Control Enclosure 22 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Heavy-duty industrial control boxes designed for standard 22mm pilot switches, emergency stop pushbuttons, and machine operator stations.</p>
+        </div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 1 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </a>
+
+      <!-- Series Card: Standard DIN-Rail Enclosure 23 Series -->
+      <a href="/products/23-series/index.html" class="group bg-surface border border-cad-blue/20 rounded-2xl p-6 hover:border-safety-orange transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md">
+        <div>
+          <div class="flex justify-between items-start mb-4">
+            <span class="bg-deep-navy text-white text-[10px] font-technical-data px-2.5 py-1 rounded tracking-wider uppercase font-bold">DIN-RAIL & POWER MODULE HOUSING</span>
+            <span class="text-xs font-technical-data text-safety-orange font-bold">6 Models</span>
+          </div>
+          <div class="w-full aspect-video rounded-xl bg-slate-surface border border-cad-blue/20 p-4 flex items-center justify-center mb-4 overflow-hidden relative">
+            <img src="/images/enhanced/23-4(BS10-A)%20Size%20100x70x112.6mm.jpg" alt="Standard DIN-Rail Enclosure 23 Series" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <h3 class="font-headline-md text-xl font-bold text-deep-navy group-hover:text-safety-orange transition-colors mb-2">Standard DIN-Rail Enclosure 23 Series</h3>
+          <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">Standard 4-module to 6-module DIN-rail housings with snap-on feet, terminal shrouds, and multi-tier wire connector accessibility.</p>
+        </div>
+        <div class="pt-4 border-t border-cad-blue/10 flex justify-between items-center text-xs font-label-caps text-safety-orange">
+          <span>BROWSE 6 MODELS</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </a>
+      </div>
+    </div>
+
+    <!-- Complete Filterable Directory Table -->
+    <section id="master-table" class="pt-10 border-t border-cad-blue/20">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="font-label-caps text-safety-orange uppercase tracking-wider text-xs">MASTER SPECIFICATION TABLE</span>
+          <h2 class="font-headline-lg text-headline-lg text-deep-navy mt-1">All 96 Product Models</h2>
+        </div>
+        <div>
+          <input id="sku-filter" type="text" placeholder="Search SKU, series, or size..." class="bg-surface border border-cad-blue/30 rounded-lg px-4 py-2 text-sm font-technical-data focus:border-safety-orange outline-none w-full md:w-80 shadow-inner" />
+        </div>
+      </div>
+
+      <div class="bg-surface border border-cad-blue/30 rounded-xl overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead class="bg-slate-surface border-b border-cad-blue/20 font-label-caps text-xs text-deep-navy uppercase">
+              <tr>
+                <th class="p-4">Visual</th>
+                <th class="p-4">SKU</th>
+                <th class="p-4">Series</th>
+                <th class="p-4">Commercial Name</th>
+                <th class="p-4">Dimensions</th>
+                <th class="p-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="product-rows" class="font-technical-data text-technical-data text-on-surface divide-y divide-cad-blue/10">
+            <!-- 11-1 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-1.html"><img src="/images/enhanced/11-1%20(F1)%20Size%20200%20x%20120%20x%2075mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-1" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-1.html" class="hover:text-safety-orange transition-colors">11-1</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-1.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-1 Micro Waterproof Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">200 x 120 x 75mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-1.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-10 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-10.html"><img src="/images/enhanced/11-10%20(F7-3)%20Size%20198%20x%2090%20x%2046mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-10" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-10.html" class="hover:text-safety-orange transition-colors">11-10</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-10.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-10 Slim Waterproof Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198 x 90 x 46mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-10.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-11 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-11.html"><img src="/images/enhanced/11-11%20(F8)%20size%20160%20x%20160%20x%2063mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-11" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-11.html" class="hover:text-safety-orange transition-colors">11-11</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-11.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-11 Square Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">160 x 160 x 63mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-11.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-12.html"><img src="/images/enhanced/11-12%20(F9)%20Size%20160%20x%2045%20x%2055mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-12.html" class="hover:text-safety-orange transition-colors">11-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-12 Linear Terminal Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">160 x 45 x 55mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-13 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-13.html"><img src="/images/enhanced/11-13%20(F10)%20Size%20211%20x%20160%20x%2071mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-13" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-13.html" class="hover:text-safety-orange transition-colors">11-13</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-13.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-13 Medium Industrial Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">211 x 160 x 71mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-13.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-13T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-13t.html"><img src="/images/enhanced/11-13T%20(F10)%20Size%20211%20x%20160%20x%2071mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-13T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-13t.html" class="hover:text-safety-orange transition-colors">11-13T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-13t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-13T Medium Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">211 x 160 x 71mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-13t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-14 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-14.html"><img src="/images/enhanced/11-14%20(F10-1)%20Size%20211%20x%20160%20x%2071mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-14" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-14.html" class="hover:text-safety-orange transition-colors">11-14</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-14.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-14 Medium Deep Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">211 x 160 x 71mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-14.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-15 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-15.html"><img src="/images/enhanced/11-15%20(F11)%20Size%20140%20x%2082%20x%2045mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-15" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-15.html" class="hover:text-safety-orange transition-colors">11-15</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-15.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-15 Compact Handheld Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">140 x 82 x 45mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-15.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-16 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-16.html"><img src="/images/enhanced/11-16%20Size%20250%20x%20190%20x%2099mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-16" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-16.html" class="hover:text-safety-orange transition-colors">11-16</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-16.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-16 Large Industrial Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">250 x 190 x 99mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-16.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-16T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-16t.html"><img src="/images/enhanced/11-16T%20Size%20250%20x%20190%20x%2099mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-16T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-16t.html" class="hover:text-safety-orange transition-colors">11-16T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-16t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-16T Large Clear Cover Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">250 x 190 x 99mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-16t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-17 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-17.html"><img src="/images/enhanced/11-17.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-17" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-17.html" class="hover:text-safety-orange transition-colors">11-17</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-17.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-17 Heavy Duty Field Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">250 x 190 x 99mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-17.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-18 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-18.html"><img src="/images/enhanced/11-18%20(F14)%20Size%20120%20x%2080%20x%2065.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-18" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-18.html" class="hover:text-safety-orange transition-colors">11-18</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-18.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-18 Compact Signal Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">120 x 80 x 65mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-18.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-18T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-18t.html"><img src="/images/enhanced/11-18T%20%20(F14)%20Size%20120%20x%2080%20x%2065.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-18T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-18t.html" class="hover:text-safety-orange transition-colors">11-18T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-18t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-18T Clear Cover Signal Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">120 x 80 x 65mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-18t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-19T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-19t.html"><img src="/images/enhanced/11-19%20T%20(2536)%20Size%20250%20x%20360%20x%20155mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-19T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-19t.html" class="hover:text-safety-orange transition-colors">11-19T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-19t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-19T Extra Large Control Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">250 x 360 x 155mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-19t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-1T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-1t.html"><img src="/images/enhanced/11-1T%20(F1)%20Size%20200%20x%20120%20x%2075mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-1T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-1t.html" class="hover:text-safety-orange transition-colors">11-1T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-1t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-1T Micro Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">200 x 120 x 75mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-1t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-20 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-20.html"><img src="/images/enhanced/11-20.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-20" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-20.html" class="hover:text-safety-orange transition-colors">11-20</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-20.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-20 Modular Junction Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198 x 90 x 60mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-20.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-21 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-21.html"><img src="/images/enhanced/11-21%20(F16)%20Size%20191%20x%2099%20x%2045mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-21" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-21.html" class="hover:text-safety-orange transition-colors">11-21</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-21.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-21 Ergo Terminal Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">191 x 99 x 45mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-21.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-23 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-23.html"><img src="/images/enhanced/11-23%20Size%20295%20x%20255%20x%20111mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-23" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-23.html" class="hover:text-safety-orange transition-colors">11-23</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-23.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-23 High Capacity Control Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">295 x 255 x 111mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-23.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-23T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-23t.html"><img src="/images/enhanced/11-23T%20Size%20295%20x%20255%20x%20111mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-23T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-23t.html" class="hover:text-safety-orange transition-colors">11-23T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-23t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-23T High Capacity Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">295 x 255 x 111mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-23t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-24 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-24.html"><img src="/images/enhanced/11-24%20Size%20222%20x%20185%20x%20106mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-24" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-24.html" class="hover:text-safety-orange transition-colors">11-24</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-24.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-24 Deep Industrial Control Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">222 x 185 x 106mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-24.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-24T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-24t.html"><img src="/images/enhanced/11-24T%20size%20222%20x%20185%20x%20106mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-24T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-24t.html" class="hover:text-safety-orange transition-colors">11-24T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-24t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-24T Deep Control Box Clear Cover</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">222 x 185 x 106mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-24t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-25 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-25.html"><img src="/images/enhanced/11-25%20Size%20165%20x%20158%20x%20121mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-25" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-25.html" class="hover:text-safety-orange transition-colors">11-25</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-25.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-25 Ultra-Deep Modular Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">165 x 158 x 121mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-25.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-26 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-26.html"><img src="/images/enhanced/11-26%20Size%20180%20x%20125%20x%2056mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-26" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-26.html" class="hover:text-safety-orange transition-colors">11-26</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-26.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-26 Mid-Profile Equipment Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">180 x 125 x 56mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-26.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-26T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-26t.html"><img src="/images/enhanced/11-26T%20Size%20180%20x%20125%20x%2056mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-26T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-26t.html" class="hover:text-safety-orange transition-colors">11-26T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-26t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-26T Mid-Profile Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">180 x 125 x 56mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-26t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-27 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-27.html"><img src="/images/enhanced/11-27%20Size%20318%20x%20238%20x%20101mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-27" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-27.html" class="hover:text-safety-orange transition-colors">11-27</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-27.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-27 Extra Large Instrumentation Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">318 x 238 x 101mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-27.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-28 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-28.html"><img src="/images/enhanced/11-28%20Size%20318%20x%20238%20x%2066mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-28" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-28.html" class="hover:text-safety-orange transition-colors">11-28</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-28.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-28 Slim Extra Large Instrumentation Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">318 x 238 x 66mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-28.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-29 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-29.html"><img src="/images/enhanced/11-29%20Size%20295%20x%20196%20x%2085mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-29" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-29.html" class="hover:text-safety-orange transition-colors">11-29</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-29.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-29 Wide Profile Control Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">295 x 196 x 85mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-29.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-29T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-29t.html"><img src="/images/enhanced/11-29T%20Size%20295%20x%20196%20x%2085mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-29T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-29t.html" class="hover:text-safety-orange transition-colors">11-29T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-29t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-29T Wide Profile Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">295 x 196 x 85mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-29t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-2T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-2t.html"><img src="/images/enhanced/11-2T%20(F2)%20Size%20158%20x%2090%20x%2061mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-2T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-2t.html" class="hover:text-safety-orange transition-colors">11-2T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-2t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-2T Compact Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">158 x 90 x 61mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-2t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-3 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-3.html"><img src="/images/enhanced/11-3%20(F3)%20Size%20115%20x%2090%20x%2055mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-3" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-3.html" class="hover:text-safety-orange transition-colors">11-3</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-3.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-3 Mini Waterproof Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">115 x 90 x 55mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-3.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-30 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-30.html"><img src="/images/enhanced/11-30%20Size%20240%20x%20160%20x%2091mm.PNG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-30" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-30.html" class="hover:text-safety-orange transition-colors">11-30</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-30.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-30 Standard Industrial Junction Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">240 x 160 x 91mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-30.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-31 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-31.html"><img src="/images/enhanced/11-31Size%20240%20x%20160%20x%2065mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-31" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-31.html" class="hover:text-safety-orange transition-colors">11-31</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-31.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-31 Low-Profile Industrial Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">240 x 160 x 65mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-31.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-32T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-32t.html"><img src="/images/enhanced/11-32T%20Size%20222%20x%20125%20x%2075mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-32T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-32t.html" class="hover:text-safety-orange transition-colors">11-32T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-32t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-32T Clear Cover Linear Control Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">222 x 125 x 75mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-32t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-33 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-33.html"><img src="/images/enhanced/11-33%20Size%20194%20x%2080%20x%2060mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-33" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-33.html" class="hover:text-safety-orange transition-colors">11-33</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-33.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-33 Narrow Channel Terminal Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">194 x 80 x 60mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-33.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-36 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-36.html"><img src="/images/enhanced/11-36%20Size%2083x58x33mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-36" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-36.html" class="hover:text-safety-orange transition-colors">11-36</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-36.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-36 Waterproof Flanged GPS / Automation Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">83x58x33mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-36.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-3T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-3t.html"><img src="/images/enhanced/11-3T%20%20(F3)%20Size%20115%20x%2090%20x%2055mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-3T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-3t.html" class="hover:text-safety-orange transition-colors">11-3T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-3t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-3T Mini Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">115 x 90 x 55mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-3t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-4 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-4.html"><img src="/images/enhanced/11-4%20%20(F4)%20Size%20100%20x%2068%20x%2050mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-4" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-4.html" class="hover:text-safety-orange transition-colors">11-4</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-4.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-4 Micro Sensor Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100 x 68 x 50mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-4.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-4T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-4t.html"><img src="/images/enhanced/11-4T%20%20(F4)%20Size%20100%20x%2068%20x%2050mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-4T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-4t.html" class="hover:text-safety-orange transition-colors">11-4T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-4t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-4T Micro Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100 x 68 x 50mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-4t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-5 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-5.html"><img src="/images/enhanced/11-5%20(F5)%20Size%20160%20x%20160%20x%2090mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-5" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-5.html" class="hover:text-safety-orange transition-colors">11-5</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-5.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-5 Deep Square Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">160 x 160 x 90mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-5.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-5T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-5t.html"><img src="/images/enhanced/11-5T%20(F5)%20Size%20160%20x%20160%20x%2090mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-5T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-5t.html" class="hover:text-safety-orange transition-colors">11-5T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-5t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-5T Deep Square Clear Cover Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">160 x 160 x 90mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-5t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-6 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-6.html"><img src="/images/enhanced/11-6%20(F6)%20Size%20263%20x%20184%20x%2095mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-6" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-6.html" class="hover:text-safety-orange transition-colors">11-6</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-6.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-6 Large Equipment Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">263 x 184 x 95mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-6.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-6T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-6t.html"><img src="/images/enhanced/11-6T%20%20(F6)%20Size%20263%20x%20184%20x%2095mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-6T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-6t.html" class="hover:text-safety-orange transition-colors">11-6T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-6t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-6T Large Equipment Clear Cover Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">263 x 184 x 95mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-6t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-7 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-7.html"><img src="/images/enhanced/11-7%20(F6-1)%20Size%20264%20x%20185%20x%2095mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-7" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-7.html" class="hover:text-safety-orange transition-colors">11-7</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-7.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-7 Reinforced Heavy-Duty Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">264 x 185 x 95mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-7.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-8 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-8.html"><img src="/images/enhanced/11-8%20(F7)%20Size%20198%20x%2090%20x%2046mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-8" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-8.html" class="hover:text-safety-orange transition-colors">11-8</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-8.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-8 Low-Profile Terminal Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198 x 90 x 46mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-8.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-86 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-86.html"><img src="/images/enhanced/11-86%20Size%20160x80x85mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-86" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-86.html" class="hover:text-safety-orange transition-colors">11-86</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-86.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-86 Waterproof Outdoor Cable Junction Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">160x80x85mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-86.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-8T -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-8t.html"><img src="/images/enhanced/11-8T%20%20(F7)%20Size%20198%20x%2090%20x%2046mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-8T" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-8t.html" class="hover:text-safety-orange transition-colors">11-8T</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-8t.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-8T Low-Profile Clear Cover Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198 x 90 x 46mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-8t.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 11-9 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/11-series/product-11-9.html"><img src="/images/enhanced/11-9%20(F7-B)%20Size%20198%20x%2090%20x%2060mm.JPG" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="11-9" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/11-series/product-11-9.html" class="hover:text-safety-orange transition-colors">11-9</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Water-Proof Enclosure 11 Series</td>
+              <td class="p-4"><a href="/products/11-series/product-11-9.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">11-9 Medium-Depth Terminal Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198 x 90 x 60mm</td>
+              <td class="p-4 text-right"><a href="/products/11-series/product-11-9.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-12.html"><img src="/images/enhanced/15-12(B16)%20198x176x70.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-12.html" class="hover:text-safety-orange transition-colors">15-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-12 Dual-Bezel Modular Instrument Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">198x176x70mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-13 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-13.html"><img src="/images/enhanced/15-13(AP188)%20158x154x64.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-13" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-13.html" class="hover:text-safety-orange transition-colors">15-13</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-13.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-13 Deep-Chassis Instrument Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">158x154x64mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-13.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-17 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-17.html"><img src="/images/enhanced/15-17(T100K)%20356x297x93-140mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-17" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-17.html" class="hover:text-safety-orange transition-colors">15-17</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-17.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-17 Heavy-Duty Benchtop Console</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">356x297x93-140mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-17.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-18 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-18.html"><img src="/images/enhanced/15-18(T200)%20190x148x68.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-18" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-18.html" class="hover:text-safety-orange transition-colors">15-18</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-18.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-18 Extended Industrial Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">190x148x68mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-18.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-34 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-34.html"><img src="/images/enhanced/15-34%20290x258x62.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-34" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-34.html" class="hover:text-safety-orange transition-colors">15-34</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-34.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-34 MedicMate Sloped Instrument Console</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">290x258x62mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-34.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-35 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-35.html"><img src="/images/enhanced/15-35%20290x258x108.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-35" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-35.html" class="hover:text-safety-orange transition-colors">15-35</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-35.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-35 MedicMate Large Desktop Instrument Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">290x258x108mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-35.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-37 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-37.html"><img src="/images/enhanced/15-37%20240x180x64.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-37" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-37.html" class="hover:text-safety-orange transition-colors">15-37</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-37.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-37 Sloped Control Console Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">240x180x64mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-37.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-4 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-4.html"><img src="/images/enhanced/15-4(B5)%20164x120x69.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-4" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-4.html" class="hover:text-safety-orange transition-colors">15-4</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-4.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-4 Sloped-Front Benchtop Instrument Cabinet</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">164x120x69mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-4.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-5 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-5.html"><img src="/images/enhanced/15-5(B6)%20150x100x53.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-5" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-5.html" class="hover:text-safety-orange transition-colors">15-5</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-5.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-5 Standard Table-Top Equipment Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">150x100x53mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-5.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 15-8 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/15-series/product-15-8.html"><img src="/images/enhanced/15-8(B9)%20100x71x36.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="15-8" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/15-series/product-15-8.html" class="hover:text-safety-orange transition-colors">15-8</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Plastic Cabinet 15 Series</td>
+              <td class="p-4"><a href="/products/15-series/product-15-8.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">15-8 Compact Bench Instrument Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100x71x36mm</td>
+              <td class="p-4 text-right"><a href="/products/15-series/product-15-8.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-12.html"><img src="/images/enhanced/18-12(72)%20240x187x106.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-12.html" class="hover:text-safety-orange transition-colors">18-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-12 Large Sloped-Front Console (CP-18-12)</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">240x187x106mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-27 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-27.html"><img src="/images/enhanced/18-27%20140x106x38mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-27" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-27.html" class="hover:text-safety-orange transition-colors">18-27</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-27.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-27 Compact Slanted Control Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">140x106x38mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-27.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-4 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-4.html"><img src="/images/enhanced/18-4(B18)%20272x200x83.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-4" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-4.html" class="hover:text-safety-orange transition-colors">18-4</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-4.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-4 Sloped Desktop Console Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">272x200x83mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-4.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-5 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-5.html"><img src="/images/enhanced/18-5(B19)%20188x134x59.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-5" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-5.html" class="hover:text-safety-orange transition-colors">18-5</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-5.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-5 Sloped Compact Desktop Console</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">188x134x59mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-5.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-6 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-6.html"><img src="/images/enhanced/18-6(CP-1A)%20177x130x52.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-6" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-6.html" class="hover:text-safety-orange transition-colors">18-6</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-6.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-6 Desktop Instrument Box (Vented)</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">177x130x52mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-6.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-7 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-7.html"><img src="/images/enhanced/18-7(CP-1B)%20177x131x52.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-7" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-7.html" class="hover:text-safety-orange transition-colors">18-7</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-7.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-7 Ergonomic Desktop Terminal Case</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">177x131x52mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-7.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 18-8 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/18-series/product-18-8.html"><img src="/images/enhanced/18-8(13-10)%20201x150x82.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="18-8" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/18-series/product-18-8.html" class="hover:text-safety-orange transition-colors">18-8</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Desk-Top Enclosure 18 Series</td>
+              <td class="p-4"><a href="/products/18-series/product-18-8.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">18-8 Dual-Tone Desktop Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">201x150x82mm</td>
+              <td class="p-4 text-right"><a href="/products/18-series/product-18-8.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 19-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/19-series/product-19-12.html"><img src="/images/enhanced/19-12(69)%20180x120x41.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="19-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/19-series/product-19-12.html" class="hover:text-safety-orange transition-colors">19-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Wall-Mounting Enclosure 19 Series</td>
+              <td class="p-4"><a href="/products/19-series/product-19-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">19-12 Wall-Mount Surface Enclosure (Small)</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">180x120x41mm</td>
+              <td class="p-4 text-right"><a href="/products/19-series/product-19-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 19-13 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/19-series/product-19-13.html"><img src="/images/enhanced/19-13(90)%20226x237x69.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="19-13" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/19-series/product-19-13.html" class="hover:text-safety-orange transition-colors">19-13</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Wall-Mounting Enclosure 19 Series</td>
+              <td class="p-4"><a href="/products/19-series/product-19-13.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">19-13 Wall-Mount Display / Controller Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">226x237x69mm</td>
+              <td class="p-4 text-right"><a href="/products/19-series/product-19-13.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 19-27D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/19-series/product-19-27d.html"><img src="/images/enhanced/19-27D%20109x70x40.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="19-27D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/19-series/product-19-27d.html" class="hover:text-safety-orange transition-colors">19-27D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Wall-Mounting Enclosure 19 Series</td>
+              <td class="p-4"><a href="/products/19-series/product-19-27d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">19-27D Multi-Gang Wall Control Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">109x70x40mm</td>
+              <td class="p-4 text-right"><a href="/products/19-series/product-19-27d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-11 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-11.html"><img src="/images/enhanced/20-11(206)%20100x60x25.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-11" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-11.html" class="hover:text-safety-orange transition-colors">20-11</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-11.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-11 Mini IoT / Sensor Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100x60x25mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-11.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-12.html"><img src="/images/enhanced/20-12(207)%2085x50x21.5.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-12.html" class="hover:text-safety-orange transition-colors">20-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-12 Standard IoT Sensor Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">85x50x21.5mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-13 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-13.html"><img src="/images/enhanced/20-13(208)%2070x45x18.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-13" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-13.html" class="hover:text-safety-orange transition-colors">20-13</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-13.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-13 Medium Utility Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">70x45x18mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-13.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-30 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-30.html"><img src="/images/enhanced/20-30%20size%2040x40x32.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-30" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-30.html" class="hover:text-safety-orange transition-colors">20-30</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-30.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-30 Industrial Utility Terminal Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">40x40x32.5mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-30.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-32 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-32.html"><img src="/images/enhanced/20-32%20size%2060x35x25mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-32" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-32.html" class="hover:text-safety-orange transition-colors">20-32</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-32.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-32 Square IoT / Automation Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">60x35x25mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-32.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-35D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-35d.html"><img src="/images/enhanced/20-35D%20size%20100x60x40mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-35D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-35d.html" class="hover:text-safety-orange transition-colors">20-35D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-35d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-35D Flanged Electrical Connection Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100x60x40mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-35d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-38D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-38d.html"><img src="/images/enhanced/20-38D%20size%20130x62x17mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-38D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-38d.html" class="hover:text-safety-orange transition-colors">20-38D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-38d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-38D Compact Cable Distribution Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">130x62x17mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-38d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-39D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-39d.html"><img src="/images/enhanced/20-39D%20size%20140x70x30mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-39D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-39d.html" class="hover:text-safety-orange transition-colors">20-39D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-39d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-39D Medium Electrical Junction Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">140x70x30mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-39d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-40D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-40d.html"><img src="/images/enhanced/20-40D%20size%20153x73x28mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-40D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-40d.html" class="hover:text-safety-orange transition-colors">20-40D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-40d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-40D Deep Electrical Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">153x73x28mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-40d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 20-46 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/20-series/product-20-46.html"><img src="/images/enhanced/20-46%20size%2061x34x18mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="20-46" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/20-series/product-20-46.html" class="hover:text-safety-orange transition-colors">20-46</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Electrical Junction Box 20 Series</td>
+              <td class="p-4"><a href="/products/20-series/product-20-46.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">20-46 Heavy-Duty Multi-Terminal Junction Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">61x34x18mm</td>
+              <td class="p-4 text-right"><a href="/products/20-series/product-20-46.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-103D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-103d.html"><img src="/images/enhanced/21-103D%20size%20178.5x77x35.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-103D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-103d.html" class="hover:text-safety-orange transition-colors">21-103D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-103d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-103D Black Handheld Instrument Case</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">178.5x77x35.5mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-103d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-114D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-114d.html"><img src="/images/enhanced/21-114D%20size%20140x62.5x30.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-114D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-114d.html" class="hover:text-safety-orange transition-colors">21-114D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-114d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-114D Ergonomic Smart-Tester Handheld Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">140x62.5x30.5mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-114d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-12 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-12.html"><img src="/images/enhanced/21-12(47)%20size%20140x82x23mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-12" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-12.html" class="hover:text-safety-orange transition-colors">21-12</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-12.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-12 Pocket Remote Control Case</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">140x82x23mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-12.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-20 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-20.html"><img src="/images/enhanced/21-20(79)%20size%20180x100x40.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-20" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-20.html" class="hover:text-safety-orange transition-colors">21-20</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-20.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-20 Ergonomic Handheld Enclosure (Plain)</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">180x100x40.5mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-20.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-20D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-20d.html"><img src="/images/enhanced/21-20D(79A)%20size%20180x100x40.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-20D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-20d.html" class="hover:text-safety-orange transition-colors">21-20D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-20d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-20D Handheld Enclosure with Display Window</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">180x100x40.5mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-20d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-22 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-22.html"><img src="/images/enhanced/21-22(80)%2021-22D%20size%20.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-22" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-22.html" class="hover:text-safety-orange transition-colors">21-22</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-22.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-22 ElectraGrip Handheld Display Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">Standard Modular Form Factor</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-22.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-26 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-26.html"><img src="/images/enhanced/21-26(213)%20size%20195x102x34mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-26" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-26.html" class="hover:text-safety-orange transition-colors">21-26</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-26.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-26 Compact Diagnostic Wand Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">195x102x34mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-26.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-34D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-34d.html"><img src="/images/enhanced/21-34D(248)%20size%2090x35x21mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-34D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-34d.html" class="hover:text-safety-orange transition-colors">21-34D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-34d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-34D Handheld Meter Box with Display & Battery Door</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">90x35x21mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-34d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-36 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-36.html"><img src="/images/enhanced/21-36(256)%20size%2075x46x19mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-36" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-36.html" class="hover:text-safety-orange transition-colors">21-36</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-36.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-36 Wide-Display Handheld Instrument Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">75x46x19mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-36.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-53D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-53d.html"><img src="/images/enhanced/21-53D%20size%20209x110x40mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-53D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-53d.html" class="hover:text-safety-orange transition-colors">21-53D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-53d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-53D Mini Remote / Pager Case</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">209x110x40mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-53d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-63D -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-63d.html"><img src="/images/enhanced/21-63D%20size%20156x36.6x16.5mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-63D" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-63d.html" class="hover:text-safety-orange transition-colors">21-63D</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-63d.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-63D Industrial Handheld Controller (Display Model)</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">156x36.6x16.5mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-63d.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 21-99A -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/21-series/product-21-99a.html"><img src="/images/enhanced/21-99A%2021-99D%20size%20110x51.3x23mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="21-99A" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/21-series/product-21-99a.html" class="hover:text-safety-orange transition-colors">21-99A</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Hand-Held Enclosure 21 Series</td>
+              <td class="p-4"><a href="/products/21-series/product-21-99a.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">21-99A Rugged Handheld Terminal Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">110x51.3x23mm</td>
+              <td class="p-4 text-right"><a href="/products/21-series/product-21-99a.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 22-20 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/22-series/product-22-20.html"><img src="/images/enhanced/22-20(PC33)%20size%20250x110x100.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="22-20" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/22-series/product-22-20.html" class="hover:text-safety-orange transition-colors">22-20</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Industrial Control Enclosure 22 Series</td>
+              <td class="p-4"><a href="/products/22-series/product-22-20.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">22-20 Multi-Hole Industrial Operator Station</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">250x110x100mm</td>
+              <td class="p-4 text-right"><a href="/products/22-series/product-22-20.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-103 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-103.html"><img src="/images/enhanced/23-103%20Size%20154x75x71mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-103" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-103.html" class="hover:text-safety-orange transition-colors">23-103</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-103.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-103 Multi-Tier Terminal DIN-Rail Box</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">154x75x71mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-103.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-110A -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-110a.html"><img src="/images/enhanced/23-110A%20Size%2075x90x105mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-110A" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-110a.html" class="hover:text-safety-orange transition-colors">23-110A</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-110a.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-110A Modular DIN-Rail Instrument Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">75x90x105mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-110a.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-119 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-119.html"><img src="/images/enhanced/23-119%20Size%20116x100x41mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-119" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-119.html" class="hover:text-safety-orange transition-colors">23-119</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-119.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-119 Industrial Modular DIN-Rail Case</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">116x100x41mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-119.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-20 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-20.html"><img src="/images/enhanced/23-20(42A)%20Size%2081.8x45x99mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-20" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-20.html" class="hover:text-safety-orange transition-colors">23-20</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-20.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-20 Compact Snap-On DIN-Rail Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">81.8x45x99mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-20.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-4 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-4.html"><img src="/images/enhanced/23-4(BS10-A)%20Size%20100x70x112.6mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-4" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-4.html" class="hover:text-safety-orange transition-colors">23-4</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-4.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-4 4-Module DIN-Rail Electronic Housing</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">100x70x112.6mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-4.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            <!-- 23-6 -->
+            <tr class="hover:bg-surface-container-low transition-colors group">
+              <td class="p-3"><a href="/products/23-series/product-23-6.html"><img src="/images/enhanced/23-6(PC32B)%20Size%20104.5x75x45mm.jpg" class="w-12 h-12 object-contain mix-blend-multiply rounded bg-slate-surface border border-cad-blue/20" alt="23-6" /></a></td>
+              <td class="p-4 font-bold text-deep-navy text-sm"><a href="/products/23-series/product-23-6.html" class="hover:text-safety-orange transition-colors">23-6</a></td>
+              <td class="p-4 font-medium text-xs font-technical-data text-cad-blue">Standard DIN-Rail Enclosure 23 Series</td>
+              <td class="p-4"><a href="/products/23-series/product-23-6.html" class="hover:text-safety-orange font-medium text-deep-navy transition-colors text-sm">23-6 6-Module DIN-Rail Equipment Enclosure</a></td>
+              <td class="p-4 text-on-surface-variant font-technical-data text-xs">104.5x75x45mm</td>
+              <td class="p-4 text-right"><a href="/products/23-series/product-23-6.html" class="bg-deep-navy text-white hover:bg-safety-orange font-label-caps text-[10px] tracking-wider px-2.5 py-1 rounded inline-block transition-colors">SPECS</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
   </main>
 
   <div id="footer-container"></div>
+
   <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>
