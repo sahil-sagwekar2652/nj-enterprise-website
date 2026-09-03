@@ -14,7 +14,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-16T%20Size%20250%20x%20190%20x%2099mm.JPG',
-      link: '/product-11-16t.html',
+      link: '/products/11-series/product-11-16t.html',
       badges: ['Transparent Lid', 'IP67 Ingress Rated', 'UV Stabilized']
     },
     {
@@ -28,7 +28,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-27%20Size%20318%20x%20238%20x%20101mm.JPG',
-      link: '/product-11-27.html',
+      link: '/products/11-series/product-11-27.html',
       badges: ['Heavy-Duty Volume', 'PLC Automation Ready', 'Impact Resistant']
     },
     {
@@ -42,7 +42,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-14%20(F10-1)%20Size%20211%20x%20160%20x%2071mm.JPG',
-      link: '/product-11-14.html',
+      link: '/products/11-series/product-11-14.html',
       badges: ['External Flanges', 'Rapid Surface Mount', 'IP67 Waterproof']
     },
     {
@@ -56,7 +56,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-4T%20%20(F4)%20Size%20100%20x%2068%20x%2050mm.JPG',
-      link: '/product-11-4t.html',
+      link: '/products/11-series/product-11-4t.html',
       badges: ['Compact 100x68mm', 'Clear Window', 'Probe Ready']
     },
     {
@@ -70,7 +70,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-19%20T%20(2536)%20Size%20250%20x%20360%20x%20155mm.JPG',
-      link: '/product-11-19t.html',
+      link: '/products/11-series/product-11-19t.html',
       badges: ['155mm Extra Depth', 'Multi-Layer PCB Stacks', 'Industrial Sealing']
     },
     {
@@ -84,7 +84,7 @@ export function initHomeCarousel() {
       rating: 'IP67 / NEMA 4X',
       temp: '-40°C to +80°C',
       image: '/images/enhanced/11-23%20Size%20295%20x%20255%20x%20111mm.JPG',
-      link: '/product-11-23.html',
+      link: '/products/11-series/product-11-23.html',
       badges: ['Solid Gray RAL 7035', 'Solar & Utility Ready', 'Corrosion Proof']
     }
   ];

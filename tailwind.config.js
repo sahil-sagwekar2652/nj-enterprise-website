@@ -2,6 +2,7 @@
 export default {
   content: [
     "./*.html",
+    "./products/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx,html}",
   ],
   darkMode: "class",

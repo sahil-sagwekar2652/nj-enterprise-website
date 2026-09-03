@@ -6,12 +6,27 @@ import { Resend } from 'resend';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
-  // Automatically discover all HTML entry points in the root directory
-  const htmlFiles = fs.readdirSync(__dirname).filter(file => file.endsWith('.html'));
+  // Automatically discover all HTML entry points recursively in root and subdirectories
+  function getAllHtmlFiles(dir, fileList = []) {
+    const items = fs.readdirSync(dir);
+    items.forEach(item => {
+      const fullPath = resolve(dir, item);
+      if (fs.statSync(fullPath).isDirectory()) {
+        if (item !== 'node_modules' && item !== 'dist' && item !== '.git') {
+          getAllHtmlFiles(fullPath, fileList);
+        }
+      } else if (item.endsWith('.html')) {
+        fileList.push(fullPath);
+      }
+    });
+    return fileList;
+  }
+
+  const htmlFiles = getAllHtmlFiles(__dirname);
   const inputs = {};
   htmlFiles.forEach(file => {
-    const key = file.replace(/\.html$/, '');
-    inputs[key] = resolve(__dirname, file);
+    const relativeKey = file.replace(__dirname + '/', '').replace(/\.html$/, '');
+    inputs[relativeKey] = file;
   });
 
   return {
