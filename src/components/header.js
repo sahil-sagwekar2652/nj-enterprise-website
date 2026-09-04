@@ -15,16 +15,11 @@ export function renderHeader() {
       <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
         <!-- Brand Logo & Name -->
         <div class="flex items-center gap-6 lg:gap-10">
-          <a class="flex items-center gap-3.5 group focus:outline-none" href="/index.html">
-            <img src="/nj-logo.svg" alt="NJ Enterprises Official Logo" class="h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
-            <div class="flex flex-col">
-              <span class="font-headline-md text-lg sm:text-xl font-extrabold tracking-tight text-deep-navy leading-none group-hover:text-safety-orange transition-colors">
-                NJ ENTERPRISES
-              </span>
-              <span class="text-[10px] font-technical-data tracking-widest text-on-surface-variant font-semibold uppercase mt-1">
-                Precision Enclosures
-              </span>
-            </div>
+          <a class="flex items-center gap-3 group focus:outline-none" href="/index.html">
+            <img src="/nj-logo.svg" alt="NJ Enterprises Official Logo" class="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
+            <span class="font-headline-md text-lg sm:text-xl font-extrabold tracking-tight text-deep-navy leading-none group-hover:text-safety-orange transition-colors whitespace-nowrap">
+              NJ ENTERPRISES
+            </span>
           </a>
 
           <!-- Desktop Navigation Bar -->
@@ -140,11 +135,14 @@ export function renderHeader() {
         </div>
 
         <!-- Right Side CTA Actions & Mobile Toggle -->
-        <div class="flex items-center gap-3">
-          <a href="/catalog.html" class="lg:hidden text-xs font-semibold text-deep-navy border border-cad-blue/30 px-3 py-2 rounded-lg hover:bg-slate-surface transition-colors">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Mobile only: Catalog pill button -->
+          <a href="/catalog.html" class="lg:hidden text-xs font-semibold text-deep-navy border border-cad-blue/30 px-3 py-1.5 rounded-lg hover:bg-slate-surface transition-colors whitespace-nowrap">
             Catalog
           </a>
-          <a href="/product-detail.html" class="bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs sm:text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm flex items-center gap-1.5 font-bold">
+
+          <!-- Desktop only: Request Quote button -->
+          <a href="/product-detail.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
             <span class="material-symbols-outlined text-base">request_quote</span>
             <span>Request Quote</span>
           </a>
@@ -214,10 +212,18 @@ export function renderHeader() {
             <span>About Us</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/contact.html" class="hover:text-safety-orange py-1 flex items-center justify-between">
+          <a href="/contact.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Contact</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
+
+          <!-- Mobile Drawer CTA Button -->
+          <div class="pt-2">
+            <a href="/product-detail.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
+              <span class="material-symbols-outlined text-base">request_quote</span>
+              <span>Request Quote</span>
+            </a>
+          </div>
         </nav>
       </div>
     </header>

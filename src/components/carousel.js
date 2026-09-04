@@ -80,23 +80,26 @@ export function initHomeCarousel() {
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
           <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none"></div>
 
-          <!-- Sleek Minimal Floating Title Badge -->
-          <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 z-20 bg-black/70 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 flex items-center gap-2.5 shadow-lg max-w-[85%] sm:max-w-none">
-            <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
-            <span id="hero-product-title" class="text-white text-xs sm:text-sm font-technical-data font-semibold truncate">
-              ${slidesData[activeIndex].title}
-            </span>
-          </div>
+          <!-- Bottom Floating Info & Action Overlay (Flex container prevents any element collision) -->
+          <div class="absolute bottom-3 sm:bottom-6 inset-x-3 sm:inset-x-6 z-20 flex items-center justify-between gap-2 pointer-events-none">
+            <!-- Sleek Minimal Floating Title Badge -->
+            <div class="bg-black/75 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-white/15 flex items-center gap-2 shadow-lg min-w-0 flex-1 max-w-[62%] sm:max-w-none pointer-events-auto">
+              <span class="w-2 h-2 rounded-full bg-safety-orange flex-shrink-0"></span>
+              <span id="hero-product-title" class="text-white text-[11px] sm:text-sm font-technical-data font-semibold truncate">
+                ${slidesData[activeIndex].title}
+              </span>
+            </div>
 
-          <!-- Direct Minimal Action Buttons -->
-          <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2.5">
-            <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg transition-all font-bold flex items-center gap-1.5 active:scale-95">
-              <span>EXPLORE SERIES</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-            <a href="/catalog.html" class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 text-white border border-white/20 font-label-caps text-xs px-4 py-3 rounded-xl transition-colors font-semibold">
-              CATALOG
-            </a>
+            <!-- Direct Minimal Action Buttons -->
+            <div class="flex items-center gap-2 flex-shrink-0 pointer-events-auto">
+              <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-[11px] sm:text-xs px-3.5 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg transition-all font-bold flex items-center gap-1 active:scale-95 whitespace-nowrap">
+                <span>EXPLORE SERIES</span>
+                <span class="material-symbols-outlined text-xs sm:text-sm">arrow_forward</span>
+              </a>
+              <a href="/catalog.html" class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 text-white border border-white/20 font-label-caps text-xs px-4 py-3 rounded-xl transition-colors font-semibold whitespace-nowrap">
+                CATALOG
+              </a>
+            </div>
           </div>
 
           <!-- Minimal Floating Navigation Arrows -->
