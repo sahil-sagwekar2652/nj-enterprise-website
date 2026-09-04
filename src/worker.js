@@ -2,12 +2,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // API route for RFQ quote request
-    if (url.pathname === '/api/quote') {
+    // API route for RFQ quote / Contact request
+    if (url.pathname === '/api/quote' || url.pathname === '/api/rfq') {
       if (request.method === 'POST') {
         try {
           const body = await request.json();
-          const { sku, finish, email, notes, name, company } = body;
+          const { sku, finish, email, phone, notes, name, company } = body;
 
           const apiKey = 
             env?.RESEND_API_KEY || 
@@ -17,7 +17,7 @@ export default {
           if (!apiKey) {
             return new Response(JSON.stringify({ 
               success: false, 
-              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please ensure it is added under Worker Settings > Variables and Secrets (or Pages Environment Variables).' 
+              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please email us directly at sales@njenterprisesgroup.in or reach out on WhatsApp.' 
             }), {
               status: 500,
               headers: { 'Content-Type': 'application/json' },
@@ -33,15 +33,16 @@ export default {
             body: JSON.stringify({
               from: 'onboarding@resend.dev',
               to: 'sahilss2652@gmail.com',
-              subject: `New RFQ: ${sku || 'Enclosure Product'} - ${company || name || 'Client'}`,
+              subject: `Inquiry / RFQ: ${sku || 'Product Inquiry'} - ${company || name || 'Client'}`,
               html: `
-                <h2>New Quote Request Received</h2>
+                <h2>New Inquiry Received</h2>
                 <ul>
-                  <li><strong>SKU:</strong> ${sku || 'N/A'}</li>
-                  <li><strong>Selected Finish / Option:</strong> ${finish || 'Standard'}</li>
+                  <li><strong>Product / Inquiry Type:</strong> ${sku || 'General Inquiry'}</li>
+                  <li><strong>Option / Source:</strong> ${finish || 'Standard'}</li>
                   <li><strong>Name:</strong> ${name || 'N/A'}</li>
                   <li><strong>Company:</strong> ${company || 'N/A'}</li>
                   <li><strong>Client Email:</strong> ${email || 'N/A'}</li>
+                  <li><strong>Client Phone:</strong> ${phone || 'N/A'}</li>
                   <li><strong>Notes / Requirements:</strong> ${notes || 'None'}</li>
                 </ul>
               `
@@ -68,6 +69,17 @@ export default {
     }
 
     // Serve static frontend assets from dist/
-    return env.ASSETS.fetch(request);
+    const response = await env.ASSETS.fetch(request);
+    if (response.status === 404) {
+      // Fallback to custom 404 page
+      const notFoundUrl = new URL('/404.html', request.url);
+      const notFoundResponse = await env.ASSETS.fetch(notFoundUrl);
+      return new Response(notFoundResponse.body, {
+        status: 404,
+        headers: notFoundResponse.headers
+      });
+    }
+
+    return response;
   }
 };
