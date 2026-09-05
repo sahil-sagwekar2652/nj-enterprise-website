@@ -37,8 +37,8 @@ export function renderHeader() {
               </button>
 
               <!-- Dropdown Menu Canvas -->
-              <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute left-0 top-full pt-3 w-[560px] z-50">
-                <div class="bg-surface border border-cad-blue/30 rounded-2xl shadow-2xl p-4 grid grid-cols-2 gap-2 backdrop-blur-xl">
+              <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute left-0 top-full pt-3 w-[780px] z-50">
+                <div class="bg-surface border border-cad-blue/30 rounded-2xl shadow-2xl p-4 grid grid-cols-3 gap-2 backdrop-blur-xl">
                   <!-- 11 Series -->
                   <a href="/products/11-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
@@ -111,8 +111,17 @@ export function renderHeader() {
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Snap-on distribution panel housings</span>
                   </a>
 
+                  <!-- Indian Series -->
+                  <a href="/products/indian-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
+                    <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
+                      <span>Indian Series</span>
+                      <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded">Special</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Instrument cases, handhelds & clamps</span>
+                  </a>
+
                   <!-- Bottom Banner Link -->
-                  <div class="col-span-2 pt-2 mt-1 border-t border-cad-blue/15 flex justify-between items-center px-3">
+                  <div class="col-span-3 pt-2 mt-1 border-t border-cad-blue/15 flex justify-between items-center px-3">
                     <span class="text-[11px] font-technical-data text-on-surface-variant">Full Manufacturing Range</span>
                     <a href="/catalog.html" class="text-xs font-bold text-safety-orange hover:underline flex items-center gap-1">
                       View All Products <span class="material-symbols-outlined text-xs">arrow_forward</span>
@@ -204,6 +213,10 @@ export function renderHeader() {
               <a href="/products/23-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>DIN-Rail 23 Series (Panel Module)</span>
+              </a>
+              <a href="/products/indian-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>Indian Series Enclosures & Clamps</span>
               </a>
             </div>
           </details>
