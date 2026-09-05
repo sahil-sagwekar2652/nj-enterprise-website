@@ -25,7 +25,7 @@ export function renderFooter() {
           <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/catalog.html">Master Catalog</a>
           <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/about.html">About Us</a>
           <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/contact.html">Contact Us</a>
-          <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/product-detail.html">Request RFQ</a>
+          <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/search.html">Request RFQ</a>
         </div>
         <div class="flex flex-col gap-2.5">
           <h4 class="text-surface-bright font-label-caps text-sm font-bold mb-1">Direct Contact</h4>

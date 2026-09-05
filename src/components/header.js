@@ -8,7 +8,7 @@ export function renderHeader() {
   const isAbout = currentPath === '/about.html';
   const isContact = currentPath === '/contact.html';
   const isProducts = currentPath.includes('/products/') || currentPath === '/category.html';
-  const isCustomRfq = currentPath === '/product-detail.html';
+  const isCustomRfq = currentPath === '/product-detail.html' || currentPath === '/search.html';
 
   container.innerHTML = `
     <header class="bg-surface border-b border-cad-blue sticky top-0 z-50 shadow-sm backdrop-blur-md bg-opacity-95">
@@ -142,7 +142,7 @@ export function renderHeader() {
           </a>
 
           <!-- Desktop only: Request Quote button -->
-          <a href="/product-detail.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
+          <a href="/search.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
             <span class="material-symbols-outlined text-base">request_quote</span>
             <span>Request Quote</span>
           </a>
@@ -219,7 +219,7 @@ export function renderHeader() {
 
           <!-- Mobile Drawer CTA Button -->
           <div class="pt-2">
-            <a href="/product-detail.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
+            <a href="/search.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
               <span class="material-symbols-outlined text-base">request_quote</span>
               <span>Request Quote</span>
             </a>
