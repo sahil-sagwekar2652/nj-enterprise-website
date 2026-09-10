@@ -4,6 +4,7 @@ export function renderHeader() {
 
   const currentPath = window.location.pathname;
 
+  const isHome = currentPath === '/' || currentPath === '/index.html';
   const isCatalog = currentPath === '/catalog.html';
   const isAbout = currentPath === '/about.html';
   const isContact = currentPath === '/contact.html';
@@ -24,6 +25,11 @@ export function renderHeader() {
 
           <!-- Desktop Navigation Bar -->
           <nav class="hidden lg:flex items-center gap-7 text-[15px] font-semibold">
+            <!-- Home Link -->
+            <a class="${isHome ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/index.html">
+              Home
+            </a>
+
             <!-- Catalog Link -->
             <a class="${isCatalog ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/catalog.html">
               Catalog
@@ -144,9 +150,14 @@ export function renderHeader() {
         </div>
 
         <!-- Right Side CTA Actions & Mobile Toggle -->
-        <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-2.5">
+          <!-- Mobile only: Home pill button -->
+          <a href="/index.html" class="lg:hidden text-xs font-semibold ${isHome ? 'text-safety-orange border-safety-orange font-bold bg-slate-surface' : 'text-deep-navy border-cad-blue/30'} border px-2.5 py-1.5 rounded-lg hover:bg-slate-surface transition-colors whitespace-nowrap">
+            Home
+          </a>
+
           <!-- Mobile only: Catalog pill button -->
-          <a href="/catalog.html" class="lg:hidden text-xs font-semibold text-deep-navy border border-cad-blue/30 px-3 py-1.5 rounded-lg hover:bg-slate-surface transition-colors whitespace-nowrap">
+          <a href="/catalog.html" class="lg:hidden text-xs font-semibold ${isCatalog ? 'text-safety-orange border-safety-orange font-bold bg-slate-surface' : 'text-deep-navy border-cad-blue/30'} border px-2.5 py-1.5 rounded-lg hover:bg-slate-surface transition-colors whitespace-nowrap">
             Catalog
           </a>
 
