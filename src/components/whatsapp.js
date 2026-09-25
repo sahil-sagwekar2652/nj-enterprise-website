@@ -8,8 +8,8 @@ export function renderWhatsAppButton() {
 
   const phoneNumber = '918976557664';
   const ownerName = 'Shrikant Naik';
-  const ownerRole = 'Owner, NJ Enterprises';
-  const defaultMessage = encodeURIComponent('Hello Shrikant, I am interested in Precision Enclosures from NJ Enterprises.');
+  const ownerRole = 'Technical Director, PlastoGuard';
+  const defaultMessage = encodeURIComponent('Hello Shrikant, I am interested in Precision Enclosures from PlastoGuard.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
   container.innerHTML = `
@@ -41,10 +41,10 @@ export function renderWhatsAppButton() {
       <div class="p-4 bg-[#ECE5DD]/40 relative min-h-[120px] flex flex-col justify-center">
         <div class="bg-white rounded-lg rounded-tl-none p-3 shadow-sm border border-gray-200/60 max-w-[90%] text-sm text-gray-800">
           <p class="leading-relaxed">
-            Hi there! 👋 Welcome to <strong>NJ Enterprises</strong>.
+            Hi there! 👋 Welcome to <strong>PlastoGuard</strong>.
           </p>
           <p class="mt-1.5 text-xs text-gray-600">
-            Need pricing, dimensions, or technical advice for our waterproof enclosures? Chat with me directly!
+            Need pricing, dimensions, or technical advice for our precision enclosures? Chat with me directly!
           </p>
           <span class="block text-[10px] text-gray-400 text-right mt-1">Just now</span>
         </div>

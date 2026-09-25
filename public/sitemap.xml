@@ -20,8 +20,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://njenterprisesgroup.in/company-profile.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://njenterprisesgroup.in/about.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -36,6 +42,12 @@
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://njenterprisesgroup.in/custom-rfq.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Series Category Index Pages -->
@@ -687,6 +699,12 @@
   </url>
 
   <!-- INDIAN-SERIES Products -->
+  <url>
+    <loc>https://njenterprisesgroup.in/products/indian-series/product-desoldering-pump.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://njenterprisesgroup.in/products/indian-series/product-nj-159-a-02.html</loc>
     <lastmod>2026-09-04</lastmod>

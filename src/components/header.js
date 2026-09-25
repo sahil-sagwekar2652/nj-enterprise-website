@@ -6,25 +6,26 @@ export function renderHeader() {
 
   const isHome = currentPath === '/' || currentPath === '/index.html';
   const isCatalog = currentPath === '/catalog.html';
+  const isProfile = currentPath === '/company-profile.html';
   const isAbout = currentPath === '/about.html';
   const isContact = currentPath === '/contact.html';
   const isProducts = currentPath.includes('/products/') || currentPath === '/category.html';
-  const isCustomRfq = currentPath === '/product-detail.html' || currentPath === '/search.html';
+  const isCustomRfq = currentPath === '/custom-rfq.html' || currentPath === '/product-detail.html' || currentPath === '/search.html';
 
   container.innerHTML = `
     <header class="bg-surface border-b border-cad-blue sticky top-0 z-50 shadow-sm backdrop-blur-md bg-opacity-95">
       <div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
         <!-- Brand Logo & Name -->
-        <div class="flex items-center gap-6 lg:gap-10">
+        <div class="flex items-center gap-6 lg:gap-8">
           <a class="flex items-center gap-3 group focus:outline-none" href="/index.html">
-            <img src="/nj-logo.svg" alt="NJ Enterprises Official Logo" class="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
+            <img src="/nj-logo.svg" alt="PlastoGuard Official Logo" class="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
             <span class="font-headline-md text-lg sm:text-xl font-extrabold tracking-tight text-deep-navy leading-none group-hover:text-safety-orange transition-colors whitespace-nowrap">
-              NJ ENTERPRISES
+              PLASTOGUARD
             </span>
           </a>
 
           <!-- Desktop Navigation Bar -->
-          <nav class="hidden lg:flex items-center gap-7 text-[15px] font-semibold">
+          <nav class="hidden lg:flex items-center gap-6 text-[15px] font-semibold">
             <!-- Home Link -->
             <a class="${isHome ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/index.html">
               Home
@@ -48,25 +49,25 @@ export function renderHeader() {
                   <!-- 11 Series -->
                   <a href="/products/11-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Water-Proof 11 Series</span>
-                      <span class="text-[9px] font-technical-data bg-deep-navy text-white px-1.5 py-0.5 rounded">IP67</span>
+                      <span>11 Series Plastic Enclosures</span>
+                      <span class="text-[9px] font-technical-data bg-deep-navy text-white px-1.5 py-0.5 rounded">IP65/67</span>
                     </span>
-                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Outdoor weatherproof sealed boxes</span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Sealed weatherproof enclosures</span>
                   </a>
 
                   <!-- 15 Series -->
                   <a href="/products/15-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Plastic Cabinet 15 Series</span>
+                      <span>15 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">Lab</span>
                     </span>
-                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Sloped benchtop & instrument cases</span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Sloped benchtop instrument housings</span>
                   </a>
 
                   <!-- 18 Series -->
                   <a href="/products/18-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Desk-Top 18 Series</span>
+                      <span>18 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">Console</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Angled desktop operator consoles</span>
@@ -75,7 +76,7 @@ export function renderHeader() {
                   <!-- 19 Series -->
                   <a href="/products/19-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Wall-Mount 19 Series</span>
+                      <span>19 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">Surface</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Flush wall & RFID controller housings</span>
@@ -84,7 +85,7 @@ export function renderHeader() {
                   <!-- 20 Series -->
                   <a href="/products/20-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Junction Box 20 Series</span>
+                      <span>20 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">Junction</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Modular wiring & IoT sensor pods</span>
@@ -93,7 +94,7 @@ export function renderHeader() {
                   <!-- 21 Series -->
                   <a href="/products/21-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Hand-Held 21 Series</span>
+                      <span>21 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">Portable</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Field testers & remote casings</span>
@@ -102,7 +103,7 @@ export function renderHeader() {
                   <!-- 22 Series -->
                   <a href="/products/22-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Control 22 Series</span>
+                      <span>22 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">22mm</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Pushbutton & E-stop switch boxes</span>
@@ -111,24 +112,24 @@ export function renderHeader() {
                   <!-- 23 Series -->
                   <a href="/products/23-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>DIN-Rail 23 Series</span>
+                      <span>23 Series Plastic Enclosures</span>
                       <span class="text-[9px] font-technical-data bg-slate-surface text-deep-navy border border-cad-blue/20 px-1.5 py-0.5 rounded">35mm</span>
                     </span>
-                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Snap-on distribution panel housings</span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Snap-on DIN-rail panel housings</span>
                   </a>
 
                   <!-- Indian Series -->
                   <a href="/products/indian-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
-                      <span>Indian Series</span>
-                      <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded">Special</span>
+                      <span>Indian Series Plastic Enclosures</span>
+                      <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded">Featured</span>
                     </span>
-                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Instrument cases, handhelds & clamps</span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Instrument cases, tools & hardware</span>
                   </a>
 
                   <!-- Bottom Banner Link -->
                   <div class="col-span-3 pt-2 mt-1 border-t border-cad-blue/15 flex justify-between items-center px-3">
-                    <span class="text-[11px] font-technical-data text-on-surface-variant">Full Manufacturing Range</span>
+                    <span class="text-[11px] font-technical-data text-on-surface-variant">Complete Product Range</span>
                     <a href="/catalog.html" class="text-xs font-bold text-safety-orange hover:underline flex items-center gap-1">
                       View All Products <span class="material-symbols-outlined text-xs">arrow_forward</span>
                     </a>
@@ -136,6 +137,11 @@ export function renderHeader() {
                 </div>
               </div>
             </div>
+
+            <!-- Company Profile Link -->
+            <a class="${isProfile ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/company-profile.html">
+              Company Profile
+            </a>
 
             <!-- About Us Link -->
             <a class="${isAbout ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/about.html">
@@ -161,9 +167,9 @@ export function renderHeader() {
             Catalog
           </a>
 
-          <!-- Desktop only: Request Quote button -->
-          <a href="/search.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
-            <span class="material-symbols-outlined text-base">request_quote</span>
+          <!-- Desktop only: Custom RFQ button -->
+          <a href="/custom-rfq.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2.5 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
+            <span class="material-symbols-outlined text-base">precision_manufacturing</span>
             <span>Request Quote</span>
           </a>
 
@@ -195,43 +201,47 @@ export function renderHeader() {
             <div class="pl-3 pt-3 flex flex-col gap-2.5 text-sm font-normal text-on-surface-variant">
               <a href="/products/11-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Water-Proof 11 Series (IP67)</span>
+                <span>11 Series Plastic Enclosures</span>
               </a>
               <a href="/products/15-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Plastic Cabinet 15 Series (Lab)</span>
+                <span>15 Series Plastic Enclosures</span>
               </a>
               <a href="/products/18-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Desk-Top 18 Series (Console)</span>
+                <span>18 Series Plastic Enclosures</span>
               </a>
               <a href="/products/19-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Wall-Mounting 19 Series (Surface)</span>
+                <span>19 Series Plastic Enclosures</span>
               </a>
               <a href="/products/20-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Junction Box 20 Series (Sensors)</span>
+                <span>20 Series Plastic Enclosures</span>
               </a>
               <a href="/products/21-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Hand-Held 21 Series (Portable)</span>
+                <span>21 Series Plastic Enclosures</span>
               </a>
               <a href="/products/22-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Industrial Control 22 Series (22mm)</span>
+                <span>22 Series Plastic Enclosures</span>
               </a>
               <a href="/products/23-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>DIN-Rail 23 Series (Panel Module)</span>
+                <span>23 Series Plastic Enclosures</span>
               </a>
               <a href="/products/indian-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
-                <span>Indian Series Enclosures & Clamps</span>
+                <span>Indian Series Plastic Enclosures</span>
               </a>
             </div>
           </details>
 
+          <a href="/company-profile.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+            <span>Company Profile</span>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+          </a>
           <a href="/about.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>About Us</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
@@ -243,9 +253,9 @@ export function renderHeader() {
 
           <!-- Mobile Drawer CTA Button -->
           <div class="pt-2">
-            <a href="/search.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
-              <span class="material-symbols-outlined text-base">request_quote</span>
-              <span>Request Quote</span>
+            <a href="/custom-rfq.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
+              <span class="material-symbols-outlined text-base">precision_manufacturing</span>
+              <span>Request Custom Quote</span>
             </a>
           </div>
         </nav>

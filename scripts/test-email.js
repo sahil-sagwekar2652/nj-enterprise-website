@@ -16,9 +16,9 @@ async function testEmail() {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'sahilss2652@gmail.com',
-      subject: 'Test RFQ Notification - NJ Enterprises',
+      subject: 'Test RFQ Notification - PlastoGuard',
       html: `
-        <h2>Test Email from NJ Enterprises Website</h2>
+        <h2>Test Email from PlastoGuard Website</h2>
         <p>If you received this email, your Resend API key is working correctly!</p>
         <ul>
           <li><strong>SKU:</strong> 11-1</li>

@@ -11,11 +11,11 @@ export function renderFooter() {
           <div class="flex flex-col gap-4 lg:col-span-4">
             <div class="flex items-center gap-3">
               <div class="w-11 h-11 rounded-lg bg-white p-1.5 flex items-center justify-center shadow-sm flex-shrink-0">
-                <img src="/nj-logo.svg" alt="NJ Enterprises Logo" class="w-full h-full object-contain" />
+                <img src="/nj-logo.svg" alt="PlastoGuard Official Logo" class="w-full h-full object-contain" />
               </div>
               <div>
-                <span class="font-headline-md text-headline-md font-bold text-surface-bright tracking-tight block">NJ ENTERPRISES</span>
-                <span class="text-[11px] font-technical-data text-safety-orange tracking-wider uppercase block font-semibold">Instrument Cabinets / Enclosure Cases / Industrial Products</span>
+                <span class="font-headline-md text-headline-md font-bold text-surface-bright tracking-tight block">PLASTOGUARD</span>
+                <span class="text-[11px] font-technical-data text-safety-orange tracking-wider uppercase block font-semibold">Plastic Enclosures / Instrument Cabinets / Industrial Products</span>
               </div>
             </div>
             <p class="text-primary-fixed-dim font-body-md text-sm leading-relaxed">
@@ -33,9 +33,10 @@ export function renderFooter() {
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/index.html">Home</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/catalog.html">Master Catalog</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/products/indian-series/index.html">Indian Series</a>
+            <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/company-profile.html">Company Profile</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/about.html">About Us</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/contact.html">Contact Us</a>
-            <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/search.html">Request Quote</a>
+            <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/custom-rfq.html">Request Quote (RFQ)</a>
           </div>
 
           <!-- Col 3: Direct Contact (lg:col-span-3) -->
@@ -98,7 +99,7 @@ export function renderFooter() {
 
         <!-- Bottom Copyright Row -->
         <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-primary-fixed-dim font-technical-data">
-          <p>© 2026 NJ Enterprises. All Rights Reserved.</p>
+          <p>© 2026 PlastoGuard. All Rights Reserved.</p>
           <p class="text-slate-400 text-center sm:text-right">GSTIN/UIN: 27ACRPN5102D1ZQ | Mumbai, Maharashtra, India</p>
         </div>
       </div>

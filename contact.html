@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Contact Us - Get Quotes & Custom Enclosure Inquiries | NJ Enterprises</title>
-  <meta name="description" content="Contact NJ Enterprises for standard enclosure orders, custom CNC machining, IP67 waterproof box inquiries, or bulk OEM pricing. Direct phone: +91 8976557664." />
+  <title>Contact Us - Get Quotes & Custom Enclosure Inquiries | PlastoGuard</title>
+  <meta name="description" content="Contact PlastoGuard for standard enclosure orders, custom CNC machining, IP65/IP67 waterproof box inquiries, or bulk OEM pricing. Direct phone: +91 8976557664." />
   <link rel="canonical" href="https://njenterprisesgroup.in/contact.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -30,7 +30,7 @@
         <span class="text-xs font-technical-data text-safety-orange tracking-wider uppercase font-bold">DIRECT FACTORY ASSISTANCE</span>
       </div>
       <h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl font-extrabold text-white mb-4">
-        Get in Touch with NJ Enterprises
+        Get in Touch with PlastoGuard
       </h1>
       <p class="font-body-md text-gray-300 text-base md:text-xl max-w-3xl leading-relaxed">
         Speak directly with our engineering and sales team for product inquiries, bulk order pricing, prototype samples, or custom enclosure modifications.
@@ -116,7 +116,7 @@
               <span class="text-xs font-technical-data text-emerald-800 uppercase tracking-wider font-semibold">Instant Messaging</span>
               <h3 class="font-bold text-emerald-950 text-base">WhatsApp Support</h3>
               <p class="text-xs text-emerald-800 mt-1 mb-3">Chat with Shrikant Naik directly for quick quotes and stock availability.</p>
-              <a href="https://wa.me/918976557664?text=Hello%20Shrikant%20ji,%20I%20am%20interested%20in%20NJ%20Enterprises%20enclosures" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-label-caps text-xs px-4 py-2 rounded-lg transition-colors shadow">
+              <a href="https://wa.me/918976557664?text=Hello%20Shrikant%20ji,%20I%20am%20interested%20in%20PlastoGuard%20enclosures" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-label-caps text-xs px-4 py-2 rounded-lg transition-colors shadow">
                 <span>START WHATSAPP CHAT</span>
                 <span class="material-symbols-outlined text-sm">open_in_new</span>
               </a>
@@ -186,7 +186,7 @@
 
             <div class="flex flex-col gap-1.5">
               <label class="font-label-caps text-xs text-on-surface-variant font-semibold" for="c-message">Message & Requirements *</label>
-              <textarea class="bg-surface-container-lowest border border-cad-blue/30 rounded-lg px-4 py-3 font-technical-data text-sm focus:border-safety-orange focus:ring-1 focus:ring-safety-orange outline-none transition-shadow resize-y" id="c-message" name="notes" rows="4" required placeholder="Please mention preferred models (e.g. 11-1, 15-4, 23-4), quantity, dimensions, or custom requirements..."></textarea>
+              <textarea class="bg-surface-container-lowest border border-cad-blue/30 rounded-lg px-4 py-3 font-technical-data text-sm focus:border-safety-orange focus:ring-1 focus:ring-safety-orange outline-none transition-shadow resize-y" id="c-message" name="notes" rows="4" required placeholder="Please mention preferred models (e.g. 11-1, 15-4, 23-4, Indian Series), quantity, dimensions, or custom requirements..."></textarea>
             </div>
 
             <button id="contact-submit-btn" class="mt-2 w-full bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-sm py-4 rounded-xl transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg font-bold" type="submit">
@@ -203,7 +203,6 @@
 
   <script type="module" src="/src/js/main.js"></script>
   <script type="module">
-    import { setupContactForm } from '/src/js/rfq-form.js';
     const form = document.getElementById('contact-page-form');
     const status = document.getElementById('contact-status');
     const btn = document.getElementById('contact-submit-btn');
@@ -226,7 +225,7 @@
         };
 
         try {
-          const res = await fetch('/api/rfq', {
+          const res = await fetch('/api/quote', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -234,7 +233,7 @@
 
           if (res.ok) {
             status.className = 'mb-6 p-4 rounded-xl text-sm font-technical-data bg-emerald-50 text-emerald-800 border border-emerald-300 block';
-            status.innerHTML = '<strong>Inquiry Sent Successfully!</strong> Thank you for contacting NJ Enterprises. Our team will reach out to you shortly.';
+            status.innerHTML = '<strong>Inquiry Sent Successfully!</strong> Thank you for contacting PlastoGuard. Our team will reach out to you shortly.';
             form.reset();
           } else {
             throw new Error('Failed to send');
@@ -243,7 +242,7 @@
           // Graceful mailto fallback
           const subject = encodeURIComponent('Inquiry from ' + formData.name + ' - ' + formData.company);
           const body = encodeURIComponent('Name: ' + formData.name + '\nCompany: ' + formData.company + '\nPhone: ' + formData.phone + '\nType: ' + formData.sku + '\n\nMessage:\n' + formData.notes);
-          const mailto = 'mailto:sales@njenterprisesgroup.in?subject=' + subject + '&body=' + body;
+          const mailto = 'mailto:acct.njenterprises@gmail.com?subject=' + subject + '&body=' + body;
           status.className = 'mb-6 p-4 rounded-xl text-sm font-technical-data bg-blue-50 text-blue-900 border border-blue-300 block';
           status.innerHTML = 'Thank you! If the direct submission does not connect, <a href="' + mailto + '" class="font-bold underline text-safety-orange">click here to send directly via Email</a> or message us on WhatsApp.';
         } finally {

@@ -1,2 +1,4 @@
-/product-detail.html /search.html 301
-/product-detail /search.html 301
+/product-detail.html /catalog.html 301
+/product-detail /catalog.html 301
+/rfq /custom-rfq.html 301
+/quote /custom-rfq.html 301
