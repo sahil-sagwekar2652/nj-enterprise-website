@@ -5,7 +5,7 @@ export function initHomeCarousel() {
   const slidesData = [
     {
       sku: '11-16T',
-      title: 'Water-Proof 11 Series • Sealed IP67 Outdoor Enclosure',
+      title: 'Water-Proof 11 Series • Sealed IP65 Outdoor Enclosure',
       typedPhrase: 'Outdoor Telemetry & Solar',
       image: '/images/hero/hero_enclosure_waterproof_1788528155266.jpg',
       link: '/products/11-series/index.html'

@@ -50,7 +50,7 @@ export function renderHeader() {
                   <a href="/products/11-series/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-transparent hover:border-cad-blue/20">
                     <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
                       <span>11 Series Plastic Enclosures</span>
-                      <span class="text-[9px] font-technical-data bg-deep-navy text-white px-1.5 py-0.5 rounded">IP65/67</span>
+                      <span class="text-[9px] font-technical-data bg-deep-navy text-white px-1.5 py-0.5 rounded">IP65</span>
                     </span>
                     <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Sealed weatherproof enclosures</span>
                   </a>
