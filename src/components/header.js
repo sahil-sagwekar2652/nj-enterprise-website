@@ -21,7 +21,7 @@ export function renderHeader() {
         <!-- Brand Logo & Name -->
         <div class="flex items-center gap-6 lg:gap-8">
           <a class="flex items-center gap-3 group focus:outline-none" href="/index.html">
-            <img src="/nj-logo.svg" alt="PlastoGuard Official Logo" class="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
+            <img src="/plastoguard-logo.png" alt="PlastoGuard Official Logo" class="h-9 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-105" />
             <span class="font-headline-md text-lg sm:text-xl font-extrabold tracking-tight text-deep-navy leading-none group-hover:text-safety-orange transition-colors whitespace-nowrap">
               PLASTOGUARD
             </span>

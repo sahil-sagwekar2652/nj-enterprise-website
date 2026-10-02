@@ -11,7 +11,7 @@ export function renderFooter() {
           <div class="flex flex-col gap-4 lg:col-span-4">
             <div class="flex items-center gap-3">
               <div class="w-11 h-11 rounded-lg bg-white p-1.5 flex items-center justify-center shadow-sm flex-shrink-0">
-                <img src="/nj-logo.svg" alt="PlastoGuard Official Logo" class="w-full h-full object-contain" />
+                <img src="/plastoguard-logo.png" alt="PlastoGuard Official Logo" class="w-full h-full object-contain" />
               </div>
               <div>
                 <span class="font-headline-md text-headline-md font-bold text-surface-bright tracking-tight block">PLASTOGUARD</span>
