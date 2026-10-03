@@ -2,18 +2,22 @@ export function renderHeader() {
   const container = document.getElementById('header-container');
   if (!container) return;
 
-  const currentPath = window.location.pathname;
+  const rawPath = window.location.pathname;
+  const currentPath = rawPath.replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '') || '/';
 
-  const isHome = currentPath === '/' || currentPath === '/index.html';
-  const isCatalog = currentPath === '/catalog.html';
-  const isProfile = currentPath === '/company-profile.html';
-  const isAbout = currentPath === '/about.html';
-  const isContact = currentPath === '/contact.html';
-  const isProducts = currentPath.includes('/products/') || currentPath === '/category.html';
-  const isCustomRfq = currentPath === '/custom-rfq.html' || currentPath === '/product-detail.html' || currentPath === '/search.html';
+  const isHome = currentPath === '/';
+  const isCatalog = currentPath === '/catalog';
+  const isProfile = currentPath === '/company-profile';
+  const isAbout = currentPath === '/about';
+  const isContact = currentPath === '/contact';
+  const isProducts = currentPath.startsWith('/products') || currentPath === '/category';
+  const isCustomRfq = currentPath === '/custom-rfq' || currentPath === '/product-detail' || currentPath === '/search';
 
   const urlParams = new URLSearchParams(window.location.search);
   const initialSearchQ = (urlParams.get('q') || '').replace(/"/g, '&quot;');
+
+  const activeLinkClass = 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold';
+  const inactiveLinkClass = 'text-deep-navy hover:text-safety-orange border-b-2 border-transparent hover:border-safety-orange pb-1';
 
   container.innerHTML = `
     <header class="bg-surface border-b border-cad-blue sticky top-0 z-50 shadow-sm backdrop-blur-md bg-opacity-95">
@@ -30,18 +34,18 @@ export function renderHeader() {
           <!-- Desktop Navigation Bar -->
           <nav class="hidden lg:flex items-center gap-5 text-[15px] font-semibold">
             <!-- Home Link -->
-            <a class="${isHome ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/index.html">
+            <a class="${isHome ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/index.html">
               Home
             </a>
 
             <!-- Catalog Link -->
-            <a class="${isCatalog ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/catalog.html">
+            <a class="${isCatalog ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/catalog.html">
               Catalog
             </a>
 
             <!-- Products Mega Dropdown -->
             <div class="relative group" id="nav-products-dropdown">
-              <button type="button" class="flex items-center gap-1.5 ${isProducts ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200 focus:outline-none py-2" aria-expanded="false">
+              <button type="button" class="flex items-center gap-1.5 ${isProducts ? activeLinkClass : inactiveLinkClass} transition-colors duration-200 focus:outline-none" aria-expanded="false">
                 <span>Products</span>
                 <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180">expand_more</span>
               </button>
@@ -142,17 +146,17 @@ export function renderHeader() {
             </div>
 
             <!-- Company Profile Link -->
-            <a class="${isProfile ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/company-profile.html">
+            <a class="${isProfile ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/company-profile.html">
               Company Profile
             </a>
 
             <!-- About Us Link -->
-            <a class="${isAbout ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/about.html">
+            <a class="${isAbout ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/about.html">
               About Us
             </a>
 
             <!-- Contact Link -->
-            <a class="${isContact ? 'text-safety-orange border-b-2 border-safety-orange pb-1 font-bold' : 'text-deep-navy hover:text-safety-orange'} transition-colors duration-200" href="/contact.html">
+            <a class="${isContact ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/contact.html">
               Contact
             </a>
           </nav>
@@ -198,18 +202,18 @@ export function renderHeader() {
         </form>
 
         <nav class="flex flex-col gap-3.5 text-base font-semibold text-deep-navy">
-          <a href="/index.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/index.html" class="${isHome ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Home</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/catalog.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/catalog.html" class="${isCatalog ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Catalog</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
           
           <!-- Mobile Products Collapsible -->
-          <details class="group/mob py-1 border-b border-cad-blue/10 pb-2">
-            <summary class="flex justify-between items-center cursor-pointer list-none hover:text-safety-orange">
+          <details class="group/mob py-1 border-b border-cad-blue/10 pb-2" ${isProducts ? 'open' : ''}>
+            <summary class="flex justify-between items-center cursor-pointer list-none ${isProducts ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'}">
               <span>All Products & Series</span>
               <span class="material-symbols-outlined text-sm group-open/mob:rotate-180 transition-transform">expand_more</span>
             </summary>
@@ -253,15 +257,15 @@ export function renderHeader() {
             </div>
           </details>
 
-          <a href="/company-profile.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/company-profile.html" class="${isProfile ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Company Profile</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/about.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/about.html" class="${isAbout ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>About Us</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/contact.html" class="hover:text-safety-orange py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/contact.html" class="${isContact ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Contact</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
