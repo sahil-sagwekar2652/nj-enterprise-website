@@ -194,85 +194,85 @@ export function renderHeader() {
       </div>
 
       <!-- Mobile Navigation Drawer -->
-      <div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-cad-blue/20 bg-surface px-gutter py-4 shadow-xl">
+      <div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-cad-blue/20 bg-surface px-gutter py-4 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto transition-all duration-200">
         <!-- Mobile Drawer Search Bar -->
         <form action="/search.html" method="GET" class="relative flex items-center mb-3">
           <span class="material-symbols-outlined text-cad-blue/60 text-lg absolute left-3 pointer-events-none">search</span>
           <input type="search" name="q" value="${initialSearchQ}" placeholder="Search by SKU, size, or series..." class="w-full bg-white border border-cad-blue/30 focus:border-safety-orange rounded-xl pl-9 pr-4 py-2 text-sm text-deep-navy outline-none transition-all shadow-sm" />
         </form>
 
-        <nav class="flex flex-col gap-3.5 text-base font-semibold text-deep-navy">
-          <a href="/index.html" class="${isHome ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+        <nav class="flex flex-col gap-3 text-base font-semibold text-deep-navy">
+          <a href="/index.html" class="${isHome ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Home</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/catalog.html" class="${isCatalog ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/catalog.html" class="${isCatalog ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Catalog</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
           
           <!-- Mobile Products Collapsible -->
           <details class="group/mob py-1 border-b border-cad-blue/10 pb-2" ${isProducts ? 'open' : ''}>
-            <summary class="flex justify-between items-center cursor-pointer list-none ${isProducts ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'}">
+            <summary class="flex justify-between items-center cursor-pointer list-none ${isProducts ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-0.5">
               <span>All Products & Series</span>
               <span class="material-symbols-outlined text-sm group-open/mob:rotate-180 transition-transform">expand_more</span>
             </summary>
-            <div class="pl-3 pt-3 flex flex-col gap-2.5 text-sm font-normal text-on-surface-variant">
-              <a href="/products/11-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+            <div class="pl-3 pt-3 pb-1 flex flex-col gap-2.5 text-sm font-normal text-on-surface-variant">
+              <a href="/products/11-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>11 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/15-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/15-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>15 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/18-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/18-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>18 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/19-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/19-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>19 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/20-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/20-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>20 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/21-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/21-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>21 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/22-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/22-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>22 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/23-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/23-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>23 Series Plastic Enclosures</span>
               </a>
-              <a href="/products/indian-series/index.html" class="hover:text-safety-orange flex items-center gap-2">
+              <a href="/products/indian-series/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
                 <span>Indian Series Plastic Enclosures</span>
               </a>
             </div>
           </details>
 
-          <a href="/company-profile.html" class="${isProfile ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/company-profile.html" class="${isProfile ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Company Profile</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/about.html" class="${isAbout ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/about.html" class="${isAbout ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>About Us</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/contact.html" class="${isContact ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/contact.html" class="${isContact ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
             <span>Contact</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
 
           <!-- Mobile Drawer CTA Button -->
-          <div class="pt-2">
-            <a href="/custom-rfq.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold">
+          <div class="pt-2 pb-1">
+            <a href="/custom-rfq.html" class="w-full bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs py-3.5 px-4 rounded-xl shadow-sm flex items-center justify-center gap-1.5 font-bold transition-all active:scale-[0.98]">
               <span class="material-symbols-outlined text-base">precision_manufacturing</span>
               <span>Request Custom Quote</span>
             </a>
@@ -287,15 +287,52 @@ export function renderHeader() {
   const mobileDrawer = document.getElementById('mobile-nav-drawer');
   const toggleIcon = document.getElementById('menu-toggle-icon');
 
+  function closeMobileDrawer() {
+    if (!mobileDrawer || !mobileBtn) return;
+    mobileDrawer.classList.add('hidden');
+    mobileBtn.setAttribute('aria-expanded', 'false');
+    if (toggleIcon) toggleIcon.textContent = 'menu';
+  }
+
+  function openMobileDrawer() {
+    if (!mobileDrawer || !mobileBtn) return;
+    mobileDrawer.classList.remove('hidden');
+    mobileBtn.setAttribute('aria-expanded', 'true');
+    if (toggleIcon) toggleIcon.textContent = 'close';
+  }
+
   if (mobileBtn && mobileDrawer) {
-    mobileBtn.addEventListener('click', () => {
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isHidden = mobileDrawer.classList.contains('hidden');
       if (isHidden) {
-        mobileDrawer.classList.remove('hidden');
-        if (toggleIcon) toggleIcon.textContent = 'close';
+        openMobileDrawer();
       } else {
-        mobileDrawer.classList.add('hidden');
-        if (toggleIcon) toggleIcon.textContent = 'menu';
+        closeMobileDrawer();
+      }
+    });
+
+    // Close when clicking any link inside drawer
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileDrawer();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileDrawer.classList.contains('hidden')) {
+        closeMobileDrawer();
+      }
+    });
+
+    // Close when clicking outside of header
+    document.addEventListener('click', (e) => {
+      if (!mobileDrawer.classList.contains('hidden')) {
+        const headerEl = mobileDrawer.closest('header');
+        if (headerEl && !headerEl.contains(e.target)) {
+          closeMobileDrawer();
+        }
       }
     });
   }

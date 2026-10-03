@@ -6,6 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>404 - Page Not Found | PlastoGuard Precision Enclosures</title>
   <meta name="description" content="The page you are looking for could not be found. Explore our complete industrial enclosure catalog or contact PlastoGuard directly." />
+  <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="https://njenterprisesgroup.in/404.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
@@ -34,9 +35,18 @@
         We Couldn't Find That Specification or Page
       </h2>
 
-      <p class="font-body-md text-on-surface-variant text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-        The enclosure model, document, or link you requested may have been moved, renamed, or is temporarily unavailable. Let's get you back on track:
+      <p class="font-body-md text-on-surface-variant text-base sm:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+        The enclosure model, document, or link you requested may have been moved, renamed, or is temporarily unavailable. Search our catalog or jump to a section below:
       </p>
+
+      <!-- Instant Search Form on 404 -->
+      <form action="/search.html" method="GET" class="max-w-md mx-auto mb-10 relative flex items-center">
+        <span class="material-symbols-outlined text-cad-blue/60 text-xl absolute left-4 pointer-events-none">search</span>
+        <input type="search" name="q" placeholder="Search by SKU, series, or dimensions..." class="w-full bg-white border border-cad-blue/30 focus:border-safety-orange focus:ring-1 focus:ring-safety-orange rounded-full pl-11 pr-24 py-3 text-sm text-deep-navy outline-none shadow-sm transition-all" />
+        <button type="submit" class="absolute right-1.5 bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs px-4 py-2 rounded-full font-bold transition-colors">
+          Search
+        </button>
+      </form>
 
       <!-- Primary Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
