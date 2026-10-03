@@ -97,7 +97,7 @@ export function initHomeCarousel() {
             
             <div class="inline-flex items-center gap-2 mb-3 sm:mb-4 text-xs font-technical-data tracking-widest text-safety-orange uppercase font-bold w-fit">
               <span class="w-2 h-2 rounded-full bg-safety-orange animate-ping"></span>
-              <span>PRECISION INDUSTRIAL ENCLOSURES</span>
+              <span>PlastoGuard Industries</span>
             </div>
 
             <!-- Greatly Increased Typography Size with 2-line reserved space to prevent layout shifts -->
