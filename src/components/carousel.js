@@ -56,7 +56,7 @@ export function initHomeCarousel() {
   let isPaused = false;
   let typingTimeout = null;
 
-  // Minimalist Full-Width Layout
+  // Split-Screen Layout: Left (Big Typewriter Text & Brand Value) / Right (Slideshow & Peeking Deck)
   container.innerHTML = `
     <style>
       .deck-card {
@@ -69,13 +69,13 @@ export function initHomeCarousel() {
         border-color: rgba(255, 255, 255, 0.1);
       }
       .deck-card-inactive:hover {
-        transform: translateY(-5px);
+        transform: translateY(-4px);
         opacity: 0.95;
         border-color: rgba(249, 115, 22, 0.5);
         background-color: rgba(25, 36, 54, 0.9);
       }
       .deck-card-active {
-        transform: translateY(-10px) scale(1.02);
+        transform: translateY(-8px) scale(1.02);
         opacity: 1;
         background-color: #0f172a;
         border-color: #F97316;
@@ -83,108 +83,144 @@ export function initHomeCarousel() {
       }
     </style>
 
-    <div class="relative w-full bg-[#080d15] text-white py-8 md:py-12 overflow-hidden border-b border-cad-blue/20">
+    <div class="relative w-full bg-[#080d15] text-white py-10 lg:py-16 overflow-hidden border-b border-cad-blue/20">
       <!-- Ambient subtle background glow -->
       <div class="absolute inset-0 bg-radial from-slate-900/50 via-[#080d15] to-[#080d15] pointer-events-none"></div>
 
-      <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-6 md:gap-7">
+      <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Single-Line Animated Typography Header -->
-        <div class="text-center">
-          <div class="inline-flex items-center gap-2 mb-2 text-[11px] font-technical-data tracking-widest text-safety-orange uppercase font-bold">
-            <span class="w-2 h-2 rounded-full bg-safety-orange animate-ping"></span>
-            <span>PRECISION INDUSTRIAL ENCLOSURES</span>
-          </div>
+        <!-- 2-Column Split Hero Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
           
-          <h1 class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight flex items-center justify-center gap-2 flex-wrap">
-            <span class="text-gray-200">Engineered for</span>
-            <span class="text-safety-orange underline decoration-safety-orange/40 font-black inline-flex items-center">
-              <span id="animated-typed-text">${slidesData[activeIndex].typedPhrase}</span>
-              <span id="typewriter-cursor" class="inline-block w-1 h-5 md:h-8 bg-safety-orange ml-1 animate-pulse"></span>
-            </span>
-          </h1>
-        </div>
-
-        <!-- Centered Showcase Window & Sliding Deck (Balanced Proportions) -->
-        <div class="w-full max-w-[960px] mx-auto flex flex-col gap-5 sm:gap-6 relative">
-          
-          <!-- Product Showcase Stage -->
-          <div id="hero-showcase-stage" class="relative w-full h-[380px] sm:h-[460px] md:h-[500px] lg:h-[520px] bg-black/90 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+          <!-- LEFT COLUMN: Large Animated Headline & Value Prop (5 cols on lg) -->
+          <div class="lg:col-span-5 flex flex-col justify-center text-left">
             
-            <!-- Background Void Image with Smooth Crossfade -->
-            <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
-            
-            <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
-
-            <!-- Top Left Floating Badge -->
-            <div class="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 pointer-events-auto">
-              <div class="bg-black/75 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-lg border border-white/15 flex items-center gap-2 shadow-md">
-                <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
-                <span id="hero-badge-text" class="text-white text-[11px] sm:text-xs font-technical-data font-bold tracking-wider uppercase">
-                  ${slidesData[activeIndex].name} • Model: ${slidesData[activeIndex].sku}
-                </span>
-              </div>
+            <div class="inline-flex items-center gap-2 mb-3 sm:mb-4 text-xs font-technical-data tracking-widest text-safety-orange uppercase font-bold w-fit">
+              <span class="w-2 h-2 rounded-full bg-safety-orange animate-ping"></span>
+              <span>PRECISION INDUSTRIAL ENCLOSURES</span>
             </div>
 
-            <!-- Bottom Floating Action Buttons -->
-            <div class="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-20 flex items-center gap-2 pointer-events-auto">
-              <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-xl transition-all font-bold flex items-center gap-1.5 active:scale-95 whitespace-nowrap">
+            <!-- Greatly Increased Typography Size -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+              <span class="block text-gray-200">Engineered for</span>
+              <span class="block text-safety-orange underline decoration-safety-orange/40 font-black mt-1">
+                <span id="animated-typed-text">${slidesData[activeIndex].typedPhrase}</span>
+                <span id="typewriter-cursor" class="inline-block w-1.5 h-7 sm:h-9 md:h-11 xl:h-12 bg-safety-orange ml-1 align-baseline animate-pulse"></span>
+              </span>
+            </h1>
+
+            <p class="text-sm sm:text-base md:text-lg text-slate-300 font-body-md leading-relaxed mt-4 sm:mt-6 max-w-xl">
+              Precision injection-molded plastic enclosures engineered for demanding instrumentation, electrical distribution, and automation controls across India.
+            </p>
+
+            <!-- Primary CTAs on Left -->
+            <div class="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-8 flex-wrap">
+              <a id="hero-main-cta" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-xl shadow-safety-orange/20 transition-all font-bold flex items-center gap-2 active:scale-95 whitespace-nowrap">
                 <span>EXPLORE SERIES</span>
                 <span class="material-symbols-outlined text-sm sm:text-base">arrow_forward</span>
               </a>
-              <a href="/catalog.html" class="hidden sm:inline-flex bg-black/60 hover:bg-white/20 text-white border border-white/20 font-label-caps text-xs px-4 py-3 rounded-xl transition-colors font-semibold backdrop-blur-md whitespace-nowrap">
-                CATALOG
+              <a href="/catalog.html" class="bg-slate-800/80 hover:bg-slate-700 text-white border border-white/20 font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl transition-colors font-semibold backdrop-blur-md whitespace-nowrap">
+                FULL CATALOG
               </a>
             </div>
 
-            <!-- Minimal Floating Navigation Arrows -->
-            <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-              <span class="material-symbols-outlined text-lg">arrow_back</span>
-            </button>
-            <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-              <span class="material-symbols-outlined text-lg">arrow_forward</span>
-            </button>
+            <!-- Key Industrial Specifications / Badges -->
+            <div class="grid grid-cols-3 gap-3 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10 text-slate-400 font-technical-data text-[11px] sm:text-xs">
+              <div class="flex flex-col">
+                <span class="text-white font-bold font-headline-md text-base sm:text-lg">IP65</span>
+                <span>Weatherproof</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-white font-bold font-headline-md text-base sm:text-lg">PC / ABS</span>
+                <span>Virgin Polymers</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-white font-bold font-headline-md text-base sm:text-lg">100% Direct</span>
+                <span>OEM Tooling</span>
+              </div>
+            </div>
 
           </div>
 
-          <!-- Revealing Product Card Deck Peeking From Below -->
-          <div class="flex flex-col gap-2.5">
-            <div class="flex sm:grid sm:grid-cols-5 gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar snap-x scroll-smooth pt-3 pb-2 px-1" id="hero-deck">
-              ${slidesData.map((s, idx) => `
-                <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-1 min-w-[145px] sm:min-w-0 snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
-                  <div class="flex items-center gap-2 sm:gap-2.5 mb-1.5">
-                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg overflow-hidden bg-black/60 border border-white/10 shrink-0">
-                      <img src="${s.image}" alt="${s.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                    </div>
-                    <div class="min-w-0 flex-1">
-                      <span class="text-[10px] font-technical-data font-bold text-safety-orange tracking-wider uppercase block truncate">${s.name}</span>
-                      <span class="text-[11px] sm:text-xs font-semibold text-white truncate block leading-tight">${s.tagline}</span>
-                    </div>
-                  </div>
-                  <!-- Progress bar fill line -->
-                  <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
-                    <div class="deck-progress-fill h-full bg-safety-orange rounded-full" style="width: 0%;"></div>
-                  </div>
-                </button>
-              `).join('')}
+          <!-- RIGHT COLUMN: Slideshow Stage & Peeking Sliding Card Deck (7 cols on lg) -->
+          <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5 w-full">
+            
+            <!-- Product Showcase Stage -->
+            <div id="hero-showcase-stage" class="relative w-full h-[320px] sm:h-[400px] md:h-[450px] lg:h-[460px] xl:h-[480px] bg-black/90 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+              
+              <!-- Background Void Image with Smooth Crossfade -->
+              <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
+              
+              <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
+
+              <!-- Top Left Floating Badge -->
+              <div class="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 pointer-events-auto">
+                <div class="bg-black/75 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-lg border border-white/15 flex items-center gap-2 shadow-md">
+                  <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
+                  <span id="hero-badge-text" class="text-white text-[11px] sm:text-xs font-technical-data font-bold tracking-wider uppercase">
+                    ${slidesData[activeIndex].name} • Model: ${slidesData[activeIndex].sku}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Floating Action Button inside Stage -->
+              <div class="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-20 flex items-center gap-2 pointer-events-auto">
+                <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-xl transition-all font-bold flex items-center gap-1.5 active:scale-95 whitespace-nowrap">
+                  <span>VIEW DETAILS</span>
+                  <span class="material-symbols-outlined text-sm sm:text-base">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Minimal Floating Navigation Arrows -->
+              <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
+                <span class="material-symbols-outlined text-lg">arrow_back</span>
+              </button>
+              <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+              </button>
+
             </div>
 
-            <!-- Deck Status & Play/Pause Controls Bar -->
-            <div class="flex items-center justify-between gap-4 px-2 pt-1 text-xs font-technical-data text-gray-400">
-              <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-gray-400">
-                <span class="material-symbols-outlined text-sm text-safety-orange">touch_app</span>
-                <span>Click any card to reveal series</span>
-              </span>
+            <!-- Revealing Product Card Deck Peeking From Below -->
+            <div class="flex flex-col gap-2">
+              <div class="flex sm:grid sm:grid-cols-5 gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar snap-x scroll-smooth pt-2.5 pb-2 px-1" id="hero-deck">
+                ${slidesData.map((s, idx) => `
+                  <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-1 min-w-[135px] sm:min-w-0 snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-black/60 border border-white/10 shrink-0">
+                        <img src="${s.image}" alt="${s.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      </div>
+                      <div class="min-w-0 flex-1">
+                        <span class="text-[10px] font-technical-data font-bold text-safety-orange tracking-wider uppercase block truncate">${s.name}</span>
+                        <span class="text-[11px] font-semibold text-white truncate block leading-tight">${s.tagline}</span>
+                      </div>
+                    </div>
+                    <!-- Progress bar fill line -->
+                    <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                      <div class="deck-progress-fill h-full bg-safety-orange rounded-full" style="width: 0%;"></div>
+                    </div>
+                  </button>
+                `).join('')}
+              </div>
 
-              <div class="flex items-center gap-3 ml-auto">
-                <span id="hero-slide-num" class="text-white font-bold">0${activeIndex + 1}</span> / 0${slidesData.length}
-                <button id="hero-pause-btn" aria-label="Pause Carousel" class="text-gray-400 hover:text-white transition-colors p-1">
-                  <span id="hero-pause-icon" class="material-symbols-outlined text-base">pause</span>
-                </button>
+              <!-- Deck Status & Play/Pause Controls Bar -->
+              <div class="flex items-center justify-between gap-4 px-1 pt-1 text-xs font-technical-data text-gray-400">
+                <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-gray-400">
+                  <span class="material-symbols-outlined text-sm text-safety-orange">touch_app</span>
+                  <span>Click card to reveal series</span>
+                </span>
+
+                <div class="flex items-center gap-3 ml-auto">
+                  <span id="hero-slide-num" class="text-white font-bold">0${activeIndex + 1}</span> / 0${slidesData.length}
+                  <button id="hero-pause-btn" aria-label="Pause Carousel" class="text-gray-400 hover:text-white transition-colors p-1">
+                    <span id="hero-pause-icon" class="material-symbols-outlined text-base">pause</span>
+                  </button>
+                </div>
               </div>
             </div>
+
           </div>
 
         </div>
@@ -196,6 +232,7 @@ export function initHomeCarousel() {
   const heroImg = document.getElementById('hero-landscape-img');
   const heroBadge = document.getElementById('hero-badge-text');
   const heroLink = document.getElementById('hero-product-link');
+  const heroMainCta = document.getElementById('hero-main-cta');
   const typedTextEl = document.getElementById('animated-typed-text');
   const slideNumEl = document.getElementById('hero-slide-num');
   const prevBtn = document.getElementById('hero-prev-btn');
@@ -246,7 +283,6 @@ export function initHomeCarousel() {
         if (progressBar) {
           progressBar.style.transition = 'none';
           progressBar.style.width = '0%';
-          // Force layout reflow before starting CSS transition
           void progressBar.offsetWidth;
           if (!isPaused) {
             progressBar.style.transition = `width ${slideDuration}ms linear`;
@@ -254,7 +290,6 @@ export function initHomeCarousel() {
           }
         }
 
-        // On mobile, scroll active card into view
         if (window.innerWidth < 640) {
           card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
@@ -289,6 +324,7 @@ export function initHomeCarousel() {
 
     if (heroBadge) heroBadge.textContent = `${s.name} • Model: ${s.sku}`;
     if (heroLink) heroLink.href = s.link;
+    if (heroMainCta) heroMainCta.href = s.link;
     if (slideNumEl) slideNumEl.textContent = `0${index + 1}`;
 
     typeWriterEffect(s.typedPhrase);
