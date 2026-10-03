@@ -70,63 +70,66 @@ export function initHomeCarousel() {
           </h1>
         </div>
 
-        <!-- Product Showcase Stage (3:2 Aspect Ratio, Compact & Less Horizontal) -->
-        <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[3/2] max-h-[480px] bg-black/80 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
-          
-          <!-- Background Void Image with Smooth Crossfade -->
-          <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover transition-all duration-700 ease-out" />
-          
-          <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 pointer-events-none"></div>
+        <!-- Centered Showcase Window (Less Wide, More Tall) -->
+        <div class="w-full max-w-[960px] mx-auto flex flex-col gap-4 sm:gap-5">
+          <!-- Product Showcase Stage -->
+          <div class="relative w-full h-[400px] sm:h-[480px] md:h-[540px] lg:h-[560px] bg-black/90 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+            
+            <!-- Background Void Image with Smooth Crossfade -->
+            <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
+            
+            <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
 
-          <!-- Bottom Floating Info & Action Overlay (Flex container prevents any element collision) -->
-          <div class="absolute bottom-3 sm:bottom-6 inset-x-3 sm:inset-x-6 z-20 flex items-center justify-between gap-2 pointer-events-none">
-            <!-- Sleek Minimal Floating Title Badge -->
-            <div class="bg-black/75 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-white/15 flex items-center gap-2 shadow-lg min-w-0 flex-1 max-w-[62%] sm:max-w-none pointer-events-auto">
-              <span class="w-2 h-2 rounded-full bg-safety-orange flex-shrink-0"></span>
-              <span id="hero-product-title" class="text-white text-[11px] sm:text-sm font-technical-data font-semibold truncate">
-                ${slidesData[activeIndex].title}
-              </span>
+            <!-- Bottom Floating Info & Action Overlay (Flex container prevents any element collision) -->
+            <div class="absolute bottom-3 sm:bottom-5 inset-x-3 sm:inset-x-5 z-20 flex items-center justify-between gap-2 pointer-events-none">
+              <!-- Sleek Minimal Floating Title Badge -->
+              <div class="bg-black/75 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-white/15 flex items-center gap-2 shadow-lg min-w-0 flex-1 max-w-[62%] sm:max-w-none pointer-events-auto">
+                <span class="w-2 h-2 rounded-full bg-safety-orange flex-shrink-0"></span>
+                <span id="hero-product-title" class="text-white text-[11px] sm:text-sm font-technical-data font-semibold truncate">
+                  ${slidesData[activeIndex].title}
+                </span>
+              </div>
+
+              <!-- Direct Minimal Action Buttons -->
+              <div class="flex items-center gap-2 flex-shrink-0 pointer-events-auto">
+                <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-[11px] sm:text-xs px-3.5 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg transition-all font-bold flex items-center gap-1 active:scale-95 whitespace-nowrap">
+                  <span>EXPLORE SERIES</span>
+                  <span class="material-symbols-outlined text-xs sm:text-sm">arrow_forward</span>
+                </a>
+                <a href="/catalog.html" class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 text-white border border-white/20 font-label-caps text-xs px-4 py-3 rounded-xl transition-colors font-semibold whitespace-nowrap">
+                  CATALOG
+                </a>
+              </div>
             </div>
 
-            <!-- Direct Minimal Action Buttons -->
-            <div class="flex items-center gap-2 flex-shrink-0 pointer-events-auto">
-              <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-[11px] sm:text-xs px-3.5 sm:px-6 py-2 sm:py-3 rounded-xl shadow-lg transition-all font-bold flex items-center gap-1 active:scale-95 whitespace-nowrap">
-                <span>EXPLORE SERIES</span>
-                <span class="material-symbols-outlined text-xs sm:text-sm">arrow_forward</span>
-              </a>
-              <a href="/catalog.html" class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 text-white border border-white/20 font-label-caps text-xs px-4 py-3 rounded-xl transition-colors font-semibold whitespace-nowrap">
-                CATALOG
-              </a>
-            </div>
-          </div>
-
-          <!-- Minimal Floating Navigation Arrows -->
-          <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-            <span class="material-symbols-outlined text-lg">arrow_back</span>
-          </button>
-          <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-            <span class="material-symbols-outlined text-lg">arrow_forward</span>
-          </button>
-
-        </div>
-
-        <!-- Minimalist Indicator Bar -->
-        <div class="flex items-center justify-between gap-4 px-2">
-          <!-- Slide dots -->
-          <div class="flex items-center gap-2" id="hero-dots">
-            ${slidesData.map((_, idx) => `
-              <button data-index="${idx}" aria-label="Slide ${idx + 1}" class="hero-dot w-8 sm:w-12 h-1.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-safety-orange' : 'bg-white/20 hover:bg-white/40'}"></button>
-            `).join('')}
-          </div>
-
-          <!-- Progress & Play/Pause -->
-          <div class="flex items-center gap-3 text-xs font-technical-data text-gray-400">
-            <span id="hero-slide-num" class="text-white font-bold">0${activeIndex + 1}</span> / 0${slidesData.length}
-            <button id="hero-pause-btn" class="text-gray-400 hover:text-white transition-colors ml-1 p-1">
-              <span id="hero-pause-icon" class="material-symbols-outlined text-base">pause</span>
+            <!-- Minimal Floating Navigation Arrows -->
+            <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
+              <span class="material-symbols-outlined text-lg">arrow_back</span>
             </button>
+            <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </button>
+
+          </div>
+
+          <!-- Minimalist Indicator Bar -->
+          <div class="flex items-center justify-between gap-4 px-2">
+            <!-- Slide dots -->
+            <div class="flex items-center gap-2" id="hero-dots">
+              ${slidesData.map((_, idx) => `
+                <button data-index="${idx}" aria-label="Slide ${idx + 1}" class="hero-dot w-8 sm:w-12 h-1.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-safety-orange' : 'bg-white/20 hover:bg-white/40'}"></button>
+              `).join('')}
+            </div>
+
+            <!-- Progress & Play/Pause -->
+            <div class="flex items-center gap-3 text-xs font-technical-data text-gray-400">
+              <span id="hero-slide-num" class="text-white font-bold">0${activeIndex + 1}</span> / 0${slidesData.length}
+              <button id="hero-pause-btn" class="text-gray-400 hover:text-white transition-colors ml-1 p-1">
+                <span id="hero-pause-icon" class="material-symbols-outlined text-base">pause</span>
+              </button>
+            </div>
           </div>
         </div>
 
