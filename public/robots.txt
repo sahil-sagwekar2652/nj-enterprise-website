@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://njenterprisesgroup.in/sitemap.xml
+Sitemap: https://plastoguard.com/sitemap.xml
