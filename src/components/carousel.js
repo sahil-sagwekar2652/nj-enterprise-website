@@ -5,37 +5,37 @@ export function initHomeCarousel() {
   const slidesData = [
     {
       sku: '11-16T',
-      title: 'Water-Proof 11 Series • Sealed IP65 Outdoor Enclosure',
+      title: '11 Series Plastic Enclosures • Sealed IP65 Weatherproof Casing',
       typedPhrase: 'Outdoor Telemetry & Solar',
-      image: '/images/hero/hero_enclosure_waterproof_1788528155266.jpg',
+      image: '/images/hero/hero_11_series.jpg',
       link: '/products/11-series/index.html'
     },
     {
       sku: '15-4',
-      title: 'Plastic Cabinet 15 Series • Modular Benchtop Cabinet',
+      title: '15 Series Plastic Enclosures • Modular Benchtop Cabinet',
       typedPhrase: 'Laboratory & Test Instruments',
-      image: '/images/hero/hero_enclosure_cabinet_1788528178694.jpg',
+      image: '/images/hero/hero_15_series.jpg',
       link: '/products/15-series/index.html'
     },
     {
       sku: '18-12',
-      title: 'Desk-Top 18 Series • Ergonomic Angled Console',
+      title: '18 Series Plastic Enclosures • Ergonomic Sloped Console',
       typedPhrase: 'Desktop Operator Consoles',
-      image: '/images/hero/hero_enclosure_desktop_1788528204896.jpg',
+      image: '/images/hero/hero_18_series.jpg',
       link: '/products/18-series/index.html'
     },
     {
       sku: '23-4',
-      title: 'DIN-Rail 23 Series • Snap-On Automation Module',
+      title: '23 Series Plastic Enclosures • Snap-On DIN-Rail Module',
       typedPhrase: '35mm DIN-Rail Electrical Panels',
-      image: '/images/hero/hero_enclosure_dinrail_1788528228808.jpg',
+      image: '/images/hero/hero_23_series.jpg',
       link: '/products/23-series/index.html'
     },
     {
       sku: '21-20D',
-      title: 'Hand-Held 21 Series • Portable Diagnostic Casing',
+      title: '21 Series Plastic Enclosures • Portable Handheld Casing',
       typedPhrase: 'Handheld Field Diagnostics',
-      image: '/images/hero/hero_enclosure_handheld_1788528254056.jpg',
+      image: '/images/hero/hero_21_series.jpg',
       link: '/products/21-series/index.html'
     }
   ];
@@ -70,8 +70,8 @@ export function initHomeCarousel() {
           </h1>
         </div>
 
-        <!-- Landscape Image Showcase Stage -->
-        <div class="relative w-full aspect-[16/9] md:aspect-[21/9] max-h-[560px] bg-black/80 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+        <!-- Product Showcase Stage (3:2 Aspect Ratio, Compact & Less Horizontal) -->
+        <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[3/2] max-h-[480px] bg-black/80 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
           
           <!-- Background Void Image with Smooth Crossfade -->
           <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover transition-all duration-700 ease-out" />
