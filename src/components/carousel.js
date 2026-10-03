@@ -100,12 +100,12 @@ export function initHomeCarousel() {
               <span>PRECISION INDUSTRIAL ENCLOSURES</span>
             </div>
 
-            <!-- Greatly Increased Typography Size -->
+            <!-- Greatly Increased Typography Size with 2-line reserved space to prevent layout shifts -->
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
               <span class="block text-gray-200">Engineered for</span>
-              <span class="block text-safety-orange underline decoration-safety-orange/40 font-black mt-1">
-                <span id="animated-typed-text">${slidesData[activeIndex].typedPhrase}</span>
-                <span id="typewriter-cursor" class="inline-block w-1.5 h-7 sm:h-9 md:h-11 xl:h-12 bg-safety-orange ml-1 align-baseline animate-pulse"></span>
+              <span class="block text-safety-orange font-black mt-1 min-h-[2.4em] leading-[1.15]">
+                <span id="animated-typed-text" class="underline decoration-safety-orange/40">${slidesData[activeIndex].typedPhrase}</span>
+                <span id="typewriter-cursor" class="inline-block w-1.5 h-[0.9em] bg-safety-orange ml-1 align-baseline animate-pulse no-underline"></span>
               </span>
             </h1>
 
