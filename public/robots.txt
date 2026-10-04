@@ -1,4 +1,19 @@
-User-agent: *
+# Google Search & Image Crawlers
+User-agent: Googlebot
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /api/
+
+# Google Ads Crawlers (explicitly declared as AdsBot does not match wildcard *)
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
 Allow: /
 
+# General Search Engine Crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
 Sitemap: https://plastoguard.com/sitemap.xml
+Sitemap: https://www.plastoguard.com/sitemap.xml
