@@ -61,7 +61,7 @@ export default defineConfig(({ mode }) => {
                   const resend = new Resend(apiKey);
                   const result = await resend.emails.send({
                     from: 'onboarding@resend.dev',
-                    to: 'sahilss2652@gmail.com',
+                    to: 'shrikantcn@gmail.com',
                     subject: `New RFQ: ${data.sku || 'Enclosure Product'} - ${data.company || data.name || 'Client'}`,
                     html: `
                       <h2>New Quote Request Received</h2>

@@ -15,7 +15,7 @@ async function testEmail() {
   try {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'sahilss2652@gmail.com',
+      to: 'shrikantcn@gmail.com',
       subject: 'Test RFQ Notification - PlastoGuard',
       html: `
         <h2>Test Email from PlastoGuard Website</h2>
@@ -23,7 +23,7 @@ async function testEmail() {
         <ul>
           <li><strong>SKU:</strong> 11-1</li>
           <li><strong>Selected Option:</strong> Standard Gray (RAL 7035)</li>
-          <li><strong>Client Email:</strong> sahilss2652@gmail.com</li>
+          <li><strong>Client Email:</strong> shrikantcn@gmail.com</li>
         </ul>
       `,
     });

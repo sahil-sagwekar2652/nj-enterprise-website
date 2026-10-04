@@ -66,7 +66,7 @@ export function renderFooter() {
               <span class="text-[11px] font-technical-data uppercase tracking-wider text-slate-400">Email</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-safety-orange text-base flex-shrink-0">mail</span>
-                <a href="mailto:acct.njenterprises@gmail.com" class="text-white hover:text-safety-orange transition-colors text-xs font-technical-data break-all">acct.njenterprises@gmail.com</a>
+                <a href="mailto:shrikantcn@gmail.com" class="text-white hover:text-safety-orange transition-colors text-xs font-technical-data break-all">shrikantcn@gmail.com</a>
               </div>
             </div>
 

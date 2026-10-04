@@ -27,7 +27,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'onboarding@resend.dev',
-        to: 'sahilss2652@gmail.com',
+        to: 'shrikantcn@gmail.com',
         subject: `New RFQ: ${sku || 'Enclosure Product'} - ${company || name || 'Client'}`,
         html: `
           <h2>New Quote Request Received</h2>

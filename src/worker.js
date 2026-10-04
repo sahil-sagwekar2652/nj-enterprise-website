@@ -17,7 +17,7 @@ export default {
           if (!apiKey) {
             return new Response(JSON.stringify({ 
               success: false, 
-              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please email us directly at sales@njenterprisesgroup.in or reach out on WhatsApp.' 
+              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please email us directly at shrikantcn@gmail.com or reach out on WhatsApp.' 
             }), {
               status: 500,
               headers: { 'Content-Type': 'application/json' },
@@ -32,7 +32,7 @@ export default {
             },
             body: JSON.stringify({
               from: 'onboarding@resend.dev',
-              to: 'sahilss2652@gmail.com',
+              to: 'shrikantcn@gmail.com',
               subject: `Inquiry / RFQ: ${sku || 'Product Inquiry'} - ${company || name || 'Client'}`,
               html: `
                 <h2>New Inquiry Received</h2>

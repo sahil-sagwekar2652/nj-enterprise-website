@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (rfqStatus) {
         const mailSubject = encodeURIComponent(`RFQ Request: ${skuVal} - ${companyVal || nameVal}`);
         const mailBody = encodeURIComponent(`Product SKU: ${skuVal}\nOption/Finish: ${finishVal}\nName: ${nameVal}\nCompany: ${companyVal}\nEmail: ${emailVal}\n\nRequirements:\n${notesVal}`);
-        const mailHref = `mailto:sales@njenterprisesgroup.in?subject=${mailSubject}&body=${mailBody}`;
+        const mailHref = `mailto:shrikantcn@gmail.com?subject=${mailSubject}&body=${mailBody}`;
         const waHref = `https://wa.me/918976557664?text=${encodeURIComponent(`Hi Shrikant ji, I would like a quote for ${skuVal}. Name: ${nameVal}, Company: ${companyVal}`)}`;
 
         rfqStatus.classList.remove('hidden');
