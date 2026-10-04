@@ -290,8 +290,15 @@ export function initHomeCarousel() {
           }
         }
 
-        if (window.innerWidth < 640) {
-          card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        if (deckContainer && window.innerWidth < 640 && deckContainer.scrollWidth > deckContainer.clientWidth) {
+          const cardRect = card.getBoundingClientRect();
+          const containerRect = deckContainer.getBoundingClientRect();
+          const cardLeftInContainer = cardRect.left - containerRect.left + deckContainer.scrollLeft;
+          const targetScrollLeft = cardLeftInContainer - (deckContainer.clientWidth / 2) + (card.offsetWidth / 2);
+          deckContainer.scrollTo({
+            left: Math.max(0, targetScrollLeft),
+            behavior: 'smooth'
+          });
         }
       } else {
         card.classList.remove('deck-card-active');
