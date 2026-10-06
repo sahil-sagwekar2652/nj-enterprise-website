@@ -14,6 +14,19 @@ export default {
             (typeof globalThis !== 'undefined' ? globalThis.RESEND_API_KEY : undefined) ||
             (typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : undefined);
 
+          const recipientEmail = 
+            env?.QUOTE_RECIPIENT_EMAIL || 
+            env?.NOTIFICATION_EMAIL || 
+            (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
+            (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
+            'shrikantcn@gmail.com';
+
+          const fromEmail = 
+            env?.FROM_EMAIL || 
+            (typeof globalThis !== 'undefined' ? globalThis.FROM_EMAIL : undefined) ||
+            (typeof process !== 'undefined' && process.env ? process.env.FROM_EMAIL : undefined) ||
+            'onboarding@resend.dev';
+
           if (!apiKey) {
             return new Response(JSON.stringify({ 
               success: false, 
@@ -31,8 +44,8 @@ export default {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              from: 'onboarding@resend.dev',
-              to: 'shrikantcn@gmail.com',
+              from: fromEmail,
+              to: recipientEmail,
               subject: `Inquiry / RFQ: ${sku || 'Product Inquiry'} - ${company || name || 'Client'}`,
               html: `
                 <h2>New Inquiry Received</h2>

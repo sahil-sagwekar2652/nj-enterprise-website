@@ -9,13 +9,15 @@ if (!apiKey || apiKey === 're_xxxxxxxxx') {
 }
 
 const resend = new Resend(apiKey);
+const recipientEmail = process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL || 'shrikantcn@gmail.com';
+const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
 async function testEmail() {
-  console.log('🚀 Sending test email via Resend API...');
+  console.log(`🚀 Sending test email via Resend API to ${recipientEmail} from ${fromEmail}...`);
   try {
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'shrikantcn@gmail.com',
+      from: fromEmail,
+      to: recipientEmail,
       subject: 'Test RFQ Notification - PlastoGuard',
       html: `
         <h2>Test Email from PlastoGuard Website</h2>

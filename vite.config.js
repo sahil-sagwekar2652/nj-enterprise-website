@@ -59,9 +59,11 @@ export default defineConfig(({ mode }) => {
                   }
 
                   const resend = new Resend(apiKey);
+                  const recipientEmail = env.QUOTE_RECIPIENT_EMAIL || env.NOTIFICATION_EMAIL || process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL || 'shrikantcn@gmail.com';
+                  const fromEmail = env.FROM_EMAIL || process.env.FROM_EMAIL || 'onboarding@resend.dev';
                   const result = await resend.emails.send({
-                    from: 'onboarding@resend.dev',
-                    to: 'shrikantcn@gmail.com',
+                    from: fromEmail,
+                    to: recipientEmail,
                     subject: `New RFQ: ${data.sku || 'Enclosure Product'} - ${data.company || data.name || 'Client'}`,
                     html: `
                       <h2>New Quote Request Received</h2>

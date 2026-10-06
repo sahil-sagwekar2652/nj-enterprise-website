@@ -3,11 +3,24 @@ export async function onRequestPost(context) {
     const body = await context.request.json();
     const { sku, finish, email, notes, name, company } = body;
 
-    // Retrieve RESEND_API_KEY from environment variables
+    // Retrieve environment variables
     const apiKey = 
       context.env?.RESEND_API_KEY || 
       (typeof globalThis !== 'undefined' ? globalThis.RESEND_API_KEY : undefined) ||
       (typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : undefined);
+
+    const recipientEmail = 
+      context.env?.QUOTE_RECIPIENT_EMAIL || 
+      context.env?.NOTIFICATION_EMAIL || 
+      (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
+      (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
+      'shrikantcn@gmail.com';
+
+    const fromEmail = 
+      context.env?.FROM_EMAIL || 
+      (typeof globalThis !== 'undefined' ? globalThis.FROM_EMAIL : undefined) ||
+      (typeof process !== 'undefined' && process.env ? process.env.FROM_EMAIL : undefined) ||
+      'onboarding@resend.dev';
 
     if (!apiKey) {
       return new Response(JSON.stringify({ 
@@ -26,8 +39,8 @@ export async function onRequestPost(context) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'onboarding@resend.dev',
-        to: 'shrikantcn@gmail.com',
+        from: fromEmail,
+        to: recipientEmail,
         subject: `New RFQ: ${sku || 'Enclosure Product'} - ${company || name || 'Client'}`,
         html: `
           <h2>New Quote Request Received</h2>
