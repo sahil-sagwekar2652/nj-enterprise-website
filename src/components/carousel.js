@@ -56,6 +56,12 @@ export function initHomeCarousel() {
   let isPaused = false;
   let typingTimeout = null;
 
+  // Preload all hero slide images for instantaneous crossfading
+  slidesData.forEach(slide => {
+    const preloader = new Image();
+    preloader.src = slide.image;
+  });
+
   // Split-Screen Layout: Left (Big Typewriter Text & Brand Value) / Right (Slideshow & Peeking Deck)
   container.innerHTML = `
     <style>
@@ -149,7 +155,7 @@ export function initHomeCarousel() {
             <div id="hero-showcase-stage" class="relative w-full h-[320px] sm:h-[400px] md:h-[450px] lg:h-[460px] xl:h-[480px] bg-black/90 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
               
               <!-- Background Void Image with Smooth Crossfade -->
-              <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
+              <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
               
               <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
@@ -190,7 +196,7 @@ export function initHomeCarousel() {
                   <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-1 min-w-[135px] sm:min-w-0 snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
                     <div class="flex items-center gap-2 mb-1.5">
                       <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-black/60 border border-white/10 shrink-0">
-                        <img src="${s.image}" alt="${s.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                        <img src="${s.image}" alt="${s.name}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       </div>
                       <div class="min-w-0 flex-1">
                         <span class="text-[10px] font-technical-data font-bold text-safety-orange tracking-wider uppercase block truncate">${s.name}</span>
