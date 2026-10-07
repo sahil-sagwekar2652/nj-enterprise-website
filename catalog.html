@@ -378,14 +378,26 @@
         </div>
       </a>
 
-      <!-- Horizontal Series Banner Card: Indian Series Plastic Enclosures -->
-      <a href="/products/indian-series/index.html" class="group bg-surface border border-cad-blue/25 rounded-3xl p-6 sm:p-8 lg:p-10 hover:border-safety-orange transition-all duration-300 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 shadow-sm hover:shadow-xl">
+      <!-- Horizontal Series Banner Card: Indian Series Plastic Enclosures (Exclusive Highlight) -->
+      <a href="/products/indian-series/index.html" class="group relative overflow-hidden bg-white border-2 border-safety-orange rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 shadow-md hover:shadow-2xl ring-4 ring-safety-orange/15 hover:ring-safety-orange/30">
+        <!-- Exclusive Diagonal Ribbon -->
+        <div class="absolute top-0 right-0 w-32 h-32 overflow-hidden pointer-events-none z-10">
+          <div class="absolute top-6 -right-8 w-36 bg-safety-orange text-white text-center font-technical-data text-xs font-extrabold uppercase tracking-widest py-1.5 shadow-md transform rotate-45">
+            EXCLUSIVE
+          </div>
+        </div>
+
         <!-- Left Content: Badge, Title, Simple Practical Description, Common Uses, CTA -->
         <div class="w-full lg:w-3/5 flex flex-col justify-between">
           <div>
-            <div class="mb-3">
-              <span class="inline-flex items-center gap-1.5 bg-deep-navy text-white text-[11px] font-technical-data px-3.5 py-1 rounded-md tracking-wider uppercase font-bold">
+            <div class="mb-3 flex items-center gap-2 flex-wrap">
+              <span class="inline-flex items-center gap-1.5 bg-safety-orange text-white text-[11px] font-technical-data px-3.5 py-1 rounded-md tracking-wider uppercase font-bold shadow-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                 INDIAN SERIES PLASTIC ENCLOSURES
+              </span>
+              <span class="inline-flex items-center gap-1 text-[11px] font-technical-data font-bold text-safety-orange bg-orange-50 border border-safety-orange/30 px-2.5 py-0.5 rounded-md uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[14px]">verified</span>
+                FEATURED & EXCLUSIVE
               </span>
             </div>
             
@@ -398,23 +410,30 @@
             </p>
             
             <!-- Simple Practical Uses for Indian Audience -->
-            <div class="text-sm font-body-md text-deep-navy bg-slate-surface border border-cad-blue/20 rounded-xl p-4 mb-6 shadow-inner">
+            <div class="text-sm font-body-md text-deep-navy bg-orange-50/60 border border-safety-orange/20 rounded-xl p-4 mb-6 shadow-inner">
               <strong class="text-deep-navy font-bold">Common Applications:</strong>
               <span class="text-on-surface-variant block sm:inline sm:ml-1 mt-1 sm:mt-0">Process instrumentation, test monitors, handheld field units, and electronic hardware mounting.</span>
             </div>
           </div>
 
-          <div class="pt-4 border-t border-cad-blue/10 flex items-center text-xs sm:text-sm font-label-caps text-safety-orange font-bold gap-2">
-            <span>EXPLORE FULL SERIES & MODELS</span>
-            <span class="material-symbols-outlined text-base group-hover:translate-x-2 transition-transform duration-200">arrow_forward</span>
+          <div class="pt-4 border-t border-safety-orange/20 flex items-center justify-between flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 text-white text-xs sm:text-sm font-extrabold font-technical-data px-5 py-2.5 rounded-xl shadow-md transition-all duration-200 group-hover:scale-105">
+              <span>EXPLORE FULL SERIES & MODELS</span>
+              <span class="material-symbols-outlined text-base group-hover:translate-x-1.5 transition-transform duration-200">arrow_forward</span>
+            </span>
+            <span class="text-xs font-technical-data font-bold text-safety-orange uppercase tracking-wider flex items-center gap-1">
+              <span>Direct Factory Tooling</span>
+              <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+            </span>
           </div>
         </div>
 
         <!-- Right Visual Stage: Large & Prominent Instrument Image -->
-        <div class="w-full lg:w-2/5 min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-slate-surface border border-cad-blue/20 rounded-2xl p-6 sm:p-8 flex items-center justify-center relative overflow-hidden group-hover:bg-white transition-colors shadow-inner">
+        <div class="w-full lg:w-2/5 min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] bg-slate-surface border-2 border-safety-orange/30 rounded-2xl p-6 sm:p-8 flex items-center justify-center relative overflow-hidden group-hover:bg-white transition-colors shadow-inner">
           <img src="/images/indian-series/Desoldering%20tools.jpg" alt="Indian Series Plastic Enclosures" class="w-full h-full max-h-[300px] object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300 drop-shadow-xl" decoding="async" loading="lazy" />
-          <span class="absolute bottom-4 right-4 bg-deep-navy/90 backdrop-blur-sm text-white text-xs font-technical-data px-3.5 py-1 rounded-md tracking-widest font-bold shadow">
-            SERIES INDIAN
+          <span class="absolute bottom-4 right-4 bg-safety-orange text-white text-xs font-technical-data px-3.5 py-1 rounded-md tracking-widest font-bold shadow flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">verified</span>
+            EXCLUSIVE SERIES
           </span>
         </div>
       </a>
@@ -431,6 +450,43 @@
         <div>
           <input id="sku-filter" type="text" placeholder="Search SKU, series, or size..." class="bg-surface border border-cad-blue/30 rounded-lg px-4 py-2 text-sm font-technical-data focus:border-safety-orange outline-none w-full md:w-80 shadow-inner" />
         </div>
+      </div>
+
+      <!-- Quick Filter Tabs: Series Navigation with Highlighted Indian Series Tab -->
+      <div class="mb-6 flex flex-wrap items-center gap-2" id="catalog-series-tabs">
+        <button type="button" data-series="all" class="catalog-tab active px-3.5 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-deep-navy bg-deep-navy text-white shadow-sm">
+          All Series
+        </button>
+        <button type="button" data-series="11 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          11 Series
+        </button>
+        <button type="button" data-series="15 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          15 Series
+        </button>
+        <button type="button" data-series="18 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          18 Series
+        </button>
+        <button type="button" data-series="19 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          19 Series
+        </button>
+        <button type="button" data-series="20 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          20 Series
+        </button>
+        <button type="button" data-series="21 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          21 Series
+        </button>
+        <button type="button" data-series="22 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          22 Series
+        </button>
+        <button type="button" data-series="23 Series" class="catalog-tab px-3 py-1.5 rounded-lg text-xs font-semibold font-technical-data transition-all border border-cad-blue/30 bg-surface text-deep-navy hover:border-safety-orange hover:text-safety-orange">
+          23 Series
+        </button>
+        <!-- Highlighted Indian Series Tab -->
+        <button type="button" data-series="Indian Series" class="catalog-tab px-3.5 py-1.5 rounded-lg text-xs font-bold font-technical-data transition-all border-2 border-safety-orange bg-orange-50 text-safety-orange hover:bg-safety-orange hover:text-white shadow-sm flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-safety-orange animate-pulse"></span>
+          <span>Indian Series</span>
+          <span class="text-[9px] bg-safety-orange text-white px-1.5 py-0.5 rounded font-extrabold uppercase tracking-wide">Featured</span>
+        </button>
       </div>
 
       <div class="bg-surface border border-cad-blue/30 rounded-xl overflow-hidden shadow-sm">
