@@ -13,40 +13,40 @@ export function initHomeCarousel() {
       link: '/products/11-series/index.html'
     },
     {
-      sku: '15-4',
-      name: '15 Series',
-      tagline: 'Modular Cabinet',
-      title: '15 Series Plastic Enclosures • Modular Benchtop Cabinet',
-      typedPhrase: 'Laboratory & Test Instruments',
-      image: '/images/hero/hero_15_series.jpg',
-      link: '/products/15-series/index.html'
+      sku: 'NJ-48-01',
+      name: 'Indian Series',
+      tagline: 'DIN Instrument Case',
+      title: 'Indian Series • NJ-48-01 DIN Instrument Case',
+      typedPhrase: 'Process Meters & Panel Instrumentation',
+      image: '/images/hero/hero_nj_48_01.jpg',
+      link: '/products/indian-series/product-nj-48-01.html'
     },
     {
-      sku: '18-12',
-      name: '18 Series',
-      tagline: 'Desktop Console',
-      title: '18 Series Plastic Enclosures • Ergonomic Sloped Console',
-      typedPhrase: 'Desktop Operator Consoles',
-      image: '/images/hero/hero_18_series.jpg',
-      link: '/products/18-series/index.html'
-    },
-    {
-      sku: '23-4',
-      name: '23 Series',
-      tagline: 'DIN-Rail Module',
-      title: '23 Series Plastic Enclosures • Snap-On DIN-Rail Module',
-      typedPhrase: '35mm DIN-Rail Electrical Panels',
-      image: '/images/hero/hero_23_series.jpg',
-      link: '/products/23-series/index.html'
-    },
-    {
-      sku: '21-20D',
-      name: '21 Series',
+      sku: 'NJ-28-01',
+      name: 'Indian Series',
       tagline: 'Handheld Casing',
-      title: '21 Series Plastic Enclosures • Portable Handheld Casing',
-      typedPhrase: 'Handheld Field Diagnostics',
-      image: '/images/hero/hero_21_series.jpg',
-      link: '/products/21-series/index.html'
+      title: 'Indian Series • NJ-28-01 Handheld Field Casing',
+      typedPhrase: 'Portable Field Testing & Diagnostics',
+      image: '/images/hero/hero_nj_28_01.jpg',
+      link: '/products/indian-series/product-nj-28-01.html'
+    },
+    {
+      sku: 'NJ-939-B-BC',
+      name: 'Indian Series',
+      tagline: 'Remote Enclosure',
+      title: 'Indian Series • NJ-939-B-BC Precision Remote Enclosure',
+      typedPhrase: 'Wireless Transmitters & Smart Nodes',
+      image: '/images/hero/hero_nj_939_b_bc.jpg',
+      link: '/products/indian-series/product-nj-939-b-bc.html'
+    },
+    {
+      sku: 'NJ 20-34',
+      name: 'Indian Series',
+      tagline: 'Solid Housing',
+      title: 'Indian Series • NJ 20-34 Solid Instrument Enclosure',
+      typedPhrase: 'Rugged Electrical & Sensor Housings',
+      image: '/images/hero/hero_nj_20_34.jpg',
+      link: '/products/indian-series/product-nj-20-34.html'
     }
   ];
 
