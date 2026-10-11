@@ -4,49 +4,85 @@ export function initHomeCarousel() {
 
   const slidesData = [
     {
-      sku: '11-16T',
-      name: '11 Series',
-      tagline: 'IP65 Weatherproof',
-      title: '11 Series Plastic Enclosures • Sealed IP65 Weatherproof Casing',
-      typedPhrase: 'Outdoor Telemetry & Solar',
-      image: '/images/hero/hero_11_series.jpg',
-      link: '/products/11-series/index.html'
-    },
-    {
       sku: 'NJ-48-01',
       name: 'Indian Series',
       tagline: 'DIN Instrument Case',
       title: 'Indian Series • NJ-48-01 DIN Instrument Case',
-      typedPhrase: 'Process Meters & Panel Instrumentation',
-      image: '/images/hero/hero_nj_48_01.jpg',
+      typedPhrase: 'Panel Meters & Industrial Instruments',
+      image: '/images/hero/hero_indian_series.jpg',
       link: '/products/indian-series/product-nj-48-01.html'
     },
     {
-      sku: 'NJ-28-01',
-      name: 'Indian Series',
+      sku: '11-16T',
+      name: '11 Series',
+      tagline: 'IP65 Weatherproof',
+      title: '11 Series Plastic Enclosures • Sealed IP65 Weatherproof Casing',
+      typedPhrase: 'Outdoor Telemetry & Solar Systems',
+      image: '/images/hero/hero_11_series.jpg',
+      link: '/products/11-series/index.html'
+    },
+    {
+      sku: '15-4',
+      name: '15 Series',
+      tagline: 'Benchtop Cabinet',
+      title: '15 Series Plastic Enclosures • Sloped Benchtop Cabinet',
+      typedPhrase: 'Laboratory & Test Instruments',
+      image: '/images/hero/hero_15_series.jpg',
+      link: '/products/15-series/product-15-4.html'
+    },
+    {
+      sku: '18-5',
+      name: '18 Series',
+      tagline: 'Desktop Console',
+      title: '18 Series Plastic Enclosures • Ergonomic Sloped Console',
+      typedPhrase: 'Desktop Operator Consoles',
+      image: '/images/hero/hero_18_series.jpg',
+      link: '/products/18-series/product-18-5.html'
+    },
+    {
+      sku: '19-12',
+      name: '19 Series',
+      tagline: 'Wall Controller',
+      title: '19 Series Plastic Enclosures • Flush Wall Mounting Housing',
+      typedPhrase: 'Building Automation & Access Control',
+      image: '/images/hero/hero_19_series.jpg',
+      link: '/products/19-series/product-19-12.html'
+    },
+    {
+      sku: '20-11',
+      name: '20 Series',
+      tagline: 'Junction Box',
+      title: '20 Series Plastic Enclosures • Modular Electronic Junction Box',
+      typedPhrase: 'IoT Sensors & Distribution Nodes',
+      image: '/images/hero/hero_20_series.jpg',
+      link: '/products/20-series/product-20-11.html'
+    },
+    {
+      sku: '21-20',
+      name: '21 Series',
       tagline: 'Handheld Casing',
-      title: 'Indian Series • NJ-28-01 Handheld Field Casing',
+      title: '21 Series Plastic Enclosures • Portable Handheld Diagnostic Casing',
       typedPhrase: 'Portable Field Testing & Diagnostics',
-      image: '/images/hero/hero_nj_28_01.jpg',
-      link: '/products/indian-series/product-nj-28-01.html'
+      image: '/images/hero/hero_21_series.jpg',
+      link: '/products/21-series/product-21-20.html'
     },
     {
-      sku: 'NJ-939-B-BC',
-      name: 'Indian Series',
-      tagline: 'Remote Enclosure',
-      title: 'Indian Series • NJ-939-B-BC Precision Remote Enclosure',
-      typedPhrase: 'Wireless Transmitters & Smart Nodes',
-      image: '/images/hero/hero_nj_939_b_bc.jpg',
-      link: '/products/indian-series/product-nj-939-b-bc.html'
+      sku: '22-20',
+      name: '22 Series',
+      tagline: 'Control Station',
+      title: '22 Series Plastic Enclosures • Heavy-Duty Control Station',
+      typedPhrase: 'Industrial Machinery & Pushbutton Panels',
+      image: '/images/hero/hero_22_series.jpg',
+      link: '/products/22-series/product-22-20.html'
     },
     {
-      sku: 'NJ 20-34',
-      name: 'Indian Series',
-      tagline: 'Solid Housing',
-      title: 'Indian Series • NJ 20-34 Solid Instrument Enclosure',
-      typedPhrase: 'Rugged Electrical & Sensor Housings',
-      image: '/images/hero/hero_nj_20_34.jpg',
-      link: '/products/indian-series/product-nj-20-34.html'
+      sku: '23-119',
+      name: '23 Series',
+      tagline: 'DIN-Rail Module',
+      title: '23 Series Plastic Enclosures • Ventilated DIN-Rail Module',
+      typedPhrase: '35mm DIN-Rail Electrical Panels',
+      image: '/images/hero/hero_23_series.jpg',
+      link: '/products/23-series/product-23-119.html'
     }
   ];
 
@@ -191,9 +227,9 @@ export function initHomeCarousel() {
 
             <!-- Revealing Product Card Deck Peeking From Below -->
             <div class="flex flex-col gap-2">
-              <div class="flex sm:grid sm:grid-cols-5 gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar snap-x scroll-smooth pt-2.5 pb-2 px-1" id="hero-deck">
+              <div class="flex gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar snap-x scroll-smooth pt-2.5 pb-2 px-1" id="hero-deck">
                 ${slidesData.map((s, idx) => `
-                  <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-1 min-w-[135px] sm:min-w-0 snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
+                  <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-shrink-0 min-w-[125px] sm:min-w-[140px] snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
                     <div class="flex items-center gap-2 mb-1.5">
                       <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-black/60 border border-white/10 shrink-0">
                         <img src="${s.image}" alt="${s.name}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -296,7 +332,7 @@ export function initHomeCarousel() {
           }
         }
 
-        if (deckContainer && window.innerWidth < 640 && deckContainer.scrollWidth > deckContainer.clientWidth) {
+        if (deckContainer && deckContainer.scrollWidth > deckContainer.clientWidth) {
           const cardRect = card.getBoundingClientRect();
           const containerRect = deckContainer.getBoundingClientRect();
           const cardLeftInContainer = cardRect.left - containerRect.left + deckContainer.scrollLeft;
