@@ -31,22 +31,13 @@ export function initHomeCarousel() {
       link: '/products/15-series/product-15-4.html'
     },
     {
-      sku: '18-5',
+      sku: '18-4',
       name: '18 Series',
       tagline: 'Desktop Console',
       title: '18 Series Plastic Enclosures • Ergonomic Sloped Console',
       typedPhrase: 'Desktop Operator Consoles',
       image: '/images/hero/hero_18_series.jpg',
-      link: '/products/18-series/product-18-5.html'
-    },
-    {
-      sku: '19-12',
-      name: '19 Series',
-      tagline: 'Wall Controller',
-      title: '19 Series Plastic Enclosures • Flush Wall Mounting Housing',
-      typedPhrase: 'Building Automation & Access Control',
-      image: '/images/hero/hero_19_series.jpg',
-      link: '/products/19-series/product-19-12.html'
+      link: '/products/18-series/product-18-4.html'
     },
     {
       sku: '20-11',
