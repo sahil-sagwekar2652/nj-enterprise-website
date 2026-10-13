@@ -114,6 +114,17 @@ export function initHomeCarousel() {
         border-color: #F97316;
         box-shadow: 0 16px 32px -8px rgba(249, 115, 22, 0.25), 0 0 0 1px rgba(249, 115, 22, 0.6);
       }
+      #hero-deck::-webkit-scrollbar,
+      .no-scrollbar::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+      #hero-deck,
+      .no-scrollbar {
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+      }
     </style>
 
     <div class="relative w-full bg-[#080d15] text-white py-10 lg:py-16 overflow-hidden border-b border-cad-blue/20">
