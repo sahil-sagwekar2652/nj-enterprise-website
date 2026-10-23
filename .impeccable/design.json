@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T06:28:00Z",
+  "title": "Design System: PlastoGuard Industries",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Signal Safety Orange",
+        "canonical": "#F97316",
+        "tonalRamp": ["#431407", "#7c2d12", "#9a3412", "#c2410c", "#ea580c", "#f97316", "#fb923c", "#ffedd5"]
+      },
+      "machinery-navy": {
+        "role": "secondary",
+        "displayName": "Machinery Deep Navy",
+        "canonical": "#020617",
+        "tonalRamp": ["#020617", "#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#cbd5e1", "#f8f9ff"]
+      },
+      "cad-slate": {
+        "role": "secondary",
+        "displayName": "Drafting CAD Slate",
+        "canonical": "#334155",
+        "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#475569", "#64748b", "#94a3b8", "#cbd5e1", "#f1f5f9"]
+      },
+      "surface-ice": {
+        "role": "neutral",
+        "displayName": "Technical Surface Ice",
+        "canonical": "#f8f9ff",
+        "tonalRamp": ["#0b1c30", "#1e293b", "#334155", "#64748b", "#94a3b8", "#dce9ff", "#eff4ff", "#f8f9ff"]
+      },
+      "surface-white": {
+        "role": "neutral",
+        "displayName": "Clean Room White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1e293b", "#334155", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f8fafc", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Hanken Grotesk)",
+        "purpose": "Hero headlines and primary catalog titles."
+      },
+      "headline": {
+        "displayName": "Headline (Hanken Grotesk)",
+        "purpose": "Section titles and major series groupings."
+      },
+      "title": {
+        "displayName": "Title (Hanken Grotesk)",
+        "purpose": "Card titles, modal dialog headers, and SKU group titles."
+      },
+      "body": {
+        "displayName": "Body (Inter)",
+        "purpose": "Technical product specifications and company descriptions."
+      },
+      "label": {
+        "displayName": "Label (JetBrains Mono)",
+        "purpose": "Product SKUs, exact dimensions, IP ingress ratings, and badges."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Default resting card elevation."
+      },
+      {
+        "name": "shadow-md",
+        "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "purpose": "Elevated buttons, ribbons, and floating action triggers."
+      },
+      {
+        "name": "shadow-xl",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Interactive hover state for enclosure cards."
+      },
+      {
+        "name": "shadow-2xl",
+        "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "purpose": "Featured hero card elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions."
+      },
+      {
+        "name": "duration-fast",
+        "value": "200ms",
+        "purpose": "Button hover and border color transitions."
+      },
+      {
+        "name": "duration-smooth",
+        "value": "300ms",
+        "purpose": "Card elevation lift and dropdown reveals."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-intent conversion button used for RFQs and series exploration.",
+      "html": "<button class=\"ds-btn-primary\"><span>REQUEST QUOTE</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #F97316; color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 22px; border: none; border-radius: 9999px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { background: #ea580c; transform: translateY(-1px) scale(1.02); box-shadow: 0 10px 15px -3px rgba(249,115,22,0.3); } .ds-btn-primary:active { transform: translateY(0) scale(0.98); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Authoritative navy button used for navigation, catalog filters, and secondary actions.",
+      "html": "<button class=\"ds-btn-secondary\"><span>VIEW SPECIFICATIONS</span></button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #020617; color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 9999px; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-secondary:hover { background: #334155; transform: translateY(-1px); }"
+    },
+    {
+      "name": "Technical Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Form input styled for engineering RFQ entries and parametric searches.",
+      "html": "<div class=\"ds-input-wrapper\"><label class=\"ds-input-label\">PRODUCT SKU / MODEL *</label><input type=\"text\" class=\"ds-input-field\" placeholder=\"e.g. NJ 10106\" /></div>",
+      "css": ".ds-input-wrapper { display: flex; flex-direction: column; gap: 6px; font-family: 'Inter', sans-serif; } .ds-input-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; color: #020617; text-transform: uppercase; letter-spacing: 0.08em; } .ds-input-field { width: 100%; background: #f8fafc; border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 12px; padding: 10px 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #020617; outline: none; transition: border-color 0.2s, box-shadow 0.2s; } .ds-input-field:focus { border-color: #F97316; box-shadow: 0 0 0 1px #F97316; background: #ffffff; }"
+    },
+    {
+      "name": "Series Filter Tab",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Filter tab for series directory and product category switching.",
+      "html": "<button class=\"ds-chip ds-chip-active\">INDIAN SERIES</button><button class=\"ds-chip\">11 SERIES</button>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; padding: 8px 18px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; background: #f8fafc; color: #334155; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s ease; margin-right: 8px; } .ds-chip:hover { border-color: #F97316; color: #F97316; background: #ffffff; } .ds-chip-active { background: #020617; color: #ffffff; border-color: #020617; font-weight: 700; }"
+    },
+    {
+      "name": "Technical Specification Badge",
+      "kind": "chip",
+      "refersTo": "badge-spec",
+      "description": "Compact technical label for IP ratings, material certifications, and status indicators.",
+      "html": "<span class=\"ds-badge-spec\"><span class=\"ds-badge-dot\"></span>IP67 WATERPROOF</span>",
+      "css": ".ds-badge-spec { display: inline-flex; align-items: center; gap: 6px; background: rgba(249, 115, 22, 0.1); color: #F97316; border: 1px solid rgba(249, 115, 22, 0.3); font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 6px; } .ds-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #F97316; }"
+    },
+    {
+      "name": "Enclosure Card Container",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Standard product card with tactile hover elevation and blueprint boundary.",
+      "html": "<div class=\"ds-card-enclosure\"><div class=\"ds-card-badge\">FEATURED</div><h3 class=\"ds-card-title\">NJ 10106 Enclosure</h3><p class=\"ds-card-spec\">Polycarbonate & ABS • IP65/67</p></div>",
+      "css": ".ds-card-enclosure { background: #ffffff; border: 1px solid rgba(51, 65, 85, 0.2); border-radius: 20px; padding: 24px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; } .ds-card-enclosure:hover { border-color: #F97316; transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); } .ds-card-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; color: #F97316; margin-bottom: 8px; text-transform: uppercase; } .ds-card-title { font-family: 'Hanken Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #020617; margin: 0 0 6px 0; } .ds-card-spec { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #45464d; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Industrial Precision Bench",
+    "overview": "PlastoGuard's visual system evokes the cleanliness, exactness, and mechanical certainty of a high-end electronics prototyping and testing laboratory. Enclosure models are engineered hardware products, not consumer gadgets; every surface communicates dimensional precision, ingress protection integrity, and factory-direct capability. The interface uses generous, cool-tinted negative space (Technical Surface Ice) overlaid with subtle CAD-inspired blueprint dot grids, crisp drafting borders, and authoritative Machinery Deep Navy structural headers.\n\nSignal Safety Orange is deployed as a high-contrast functional accent—mirroring physical safety flags, IP rating seals, and urgent procurement triggers. Typography balances the architectural solidity of Hanken Grotesk for section titles with the immaculate legibility of Inter for specifications, punctuated by JetBrains Mono for exact dimensions, SKUs, and tolerances.\n\nThe visual system strictly avoids consumer e-commerce frivolity: no soft pastel gradients, no bubbly floating cards, and no generic office stock photography. Every piece of imagery focuses on authentic plastic injection enclosures, precision CNC milling details, PCB mounting bosses, and real manufacturing assets.",
+    "keyCharacteristics": [
+      "CAD Drafting Precision: Clean 1px boundary lines (#334155 at low opacity), blueprint dot grids, and monospace technical labels.",
+      "High-Contrast Safety Accents: Purposeful Signal Safety Orange (#F97316) reserved for primary RFQ actions, verified IP badges, and series flags.",
+      "Physical Hardware Depth: Surfaces sit flat or subtly grounded at rest (shadow-sm), elevating with tangible lift (-translate-y-1.5 and shadow-xl) on hover.",
+      "Spec-First Hierarchy: Technical measurements (L × W × H mm), material compounds (Polycarbonate/ABS), and ingress seals take visual priority over generic sales copy."
+    ],
+    "rules": [
+      {
+        "name": "The Signal Scarcity Rule",
+        "body": "Signal Safety Orange is strictly reserved for actionable moments, active states, and verified certification emblems. It never coats whole backgrounds or decorative flourishes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blueprint Framing Rule",
+        "body": "Secondary cards and structural panels must use hairline 1px CAD borders (#334155 at 15–30% opacity) rather than heavy drop shadows to define boundaries.",
+        "section": "colors"
+      },
+      {
+        "name": "The Spec-Mono Rule",
+        "body": "All numeric measurements (mm, IP ratings, operating temperatures, PCB mounting hole dimensions, and product SKU codes) must be rendered in JetBrains Mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Architectural Heading Rule",
+        "body": "Section headlines in Hanken Grotesk must always be paired with an uppercase JetBrains Mono eyebrow category label above them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hardware Elevation Rule",
+        "body": "Surfaces never cast heavy shadows while at rest. Elevation is an active response to user focus or cursor hover, reinforcing tactile inspection.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do format all dimensions in millimetres using JetBrains Mono (e.g. 150 × 100 × 60 mm).",
+      "Do pair every section title with an uppercase mono eyebrow tracking badge in Signal Safety Orange.",
+      "Do use hairline CAD Slate borders (1px solid rgba(51, 65, 85, 0.2)) to delineate specifications tables and cards.",
+      "Do ensure interactive cards lift smoothly on hover (hover:-translate-y-1.5 with duration-300).",
+      "Do feature verified ingress protection ratings (IP65, IP67, NEMA 4X) prominently in badge callouts."
+    ],
+    "donts": [
+      "Don't use pastel, neon, or gradient backgrounds behind technical enclosure photography.",
+      "Don't apply full-screen saturated orange backgrounds; orange is strictly a signal and CTA accent.",
+      "Don't use generic stock photography of smiling corporate office workers; use genuine enclosure CAD renders, CNC machining tools, or physical product models.",
+      "Don't use low-contrast gray text on gray backgrounds; maintain high-contrast dark text (#0b1c30 or #020617) for engineering spec legibility.",
+      "Don't round corners excessively into cartoonish bubbles; maintain crisp 2px to 16px industrial engineering radii."
+    ]
+  }
+}

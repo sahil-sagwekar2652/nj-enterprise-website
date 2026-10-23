@@ -30,7 +30,15 @@ export function renderFooter() {
           <!-- Col 2: Quick Links (lg:col-span-2) -->
           <div class="flex flex-col gap-2.5 lg:col-span-2">
             <h4 class="text-surface-bright font-label-caps text-sm font-bold mb-1 tracking-wider uppercase">Navigation</h4>
-            <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/index.html">Home</a>
+            <a class="text-white font-bold text-sm hover:text-safety-orange transition-colors flex items-center gap-1" href="/pipes-and-fittings/index.html">
+              <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+              <span>Pipes & Fittings Hub</span>
+            </a>
+            <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/electrofusion/index.html">Electro Fusion</a>
+            <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/butt-fusion/index.html">Butt Fusion</a>
+            <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/flanges/index.html">Flanges & Rings</a>
+            <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/fabricated/index.html">Fabricated Fittings</a>
+            <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors pt-1" href="/index.html">Home</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/catalog.html">Master Catalog</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/products/indian-series/index.html">Indian Series</a>
             <a class="text-primary-fixed-dim text-sm hover:text-safety-orange transition-colors" href="/company-profile.html">Company Profile</a>

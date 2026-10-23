@@ -20,7 +20,7 @@
 }
 
 .technical-grid {
-  background-image: radial-gradient(#334155 1px, transparent 1px);
+  background-image: radial-gradient(rgba(51, 65, 85, 0.25) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 

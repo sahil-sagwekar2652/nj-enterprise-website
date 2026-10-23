@@ -7,6 +7,7 @@ export function renderHeader() {
 
   const isHome = currentPath === '/';
   const isCatalog = currentPath === '/catalog';
+  const isFittings = currentPath.startsWith('/pipes-and-fittings');
   const isProfile = currentPath === '/company-profile';
   const isAbout = currentPath === '/about';
   const isContact = currentPath === '/contact';
@@ -42,6 +43,68 @@ export function renderHeader() {
             <a class="${isCatalog ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/catalog.html">
               Catalog
             </a>
+
+            <!-- Pipes & Fittings Priority Dropdown -->
+            <div class="relative group" id="nav-fittings-dropdown">
+              <a href="/pipes-and-fittings/index.html" class="flex items-center gap-1.5 ${isFittings ? activeLinkClass : inactiveLinkClass} transition-colors duration-200">
+                <span class="inline-flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
+                  <span class="font-extrabold">Pipes & Fittings</span>
+                </span>
+                <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded font-extrabold uppercase tracking-wider">Priority</span>
+                <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+              </a>
+
+              <!-- Dropdown Menu Canvas for Pipes & Fittings -->
+              <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute left-0 top-full pt-3 w-[720px] z-50">
+                <div class="bg-surface border border-cad-blue/30 rounded-2xl shadow-2xl p-4 grid grid-cols-2 gap-3 backdrop-blur-xl">
+                  <!-- 1. Electro Fusion -->
+                  <a href="/pipes-and-fittings/electrofusion/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-cad-blue/20 bg-white hover:border-safety-orange shadow-sm">
+                    <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
+                      <span>1. Electro Fusion Fittings</span>
+                      <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded font-bold">20–630mm</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">PE100 SDR11/17 with embedded heating wire coils</span>
+                  </a>
+
+                  <!-- 2. Butt Fusion -->
+                  <a href="/pipes-and-fittings/butt-fusion/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-cad-blue/20 bg-white hover:border-safety-orange shadow-sm">
+                    <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
+                      <span>2. Butt Fusion Fittings</span>
+                      <span class="text-[9px] font-technical-data bg-deep-navy text-white px-1.5 py-0.5 rounded font-bold">Up to 1200mm</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Short & Long Spigot molded elbows, tees, reducers & stubs</span>
+                  </a>
+
+                  <!-- 3. Flanges & Backing Rings -->
+                  <a href="/pipes-and-fittings/flanges/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-cad-blue/20 bg-white hover:border-safety-orange shadow-sm">
+                    <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
+                      <span>3. Flanges & Backing Rings</span>
+                      <span class="text-[9px] font-technical-data bg-slate-200 text-deep-navy px-1.5 py-0.5 rounded font-bold">DIN / ANSI</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Steel-reinforced PP slip-on, blind, and metallic rings</span>
+                  </a>
+
+                  <!-- 4. Fabricated Pipe Fittings -->
+                  <a href="/pipes-and-fittings/fabricated/index.html" class="p-3 rounded-xl hover:bg-slate-surface transition-colors flex flex-col group/item border border-cad-blue/20 bg-white hover:border-safety-orange shadow-sm">
+                    <span class="text-xs font-bold text-deep-navy group-hover/item:text-safety-orange flex items-center justify-between">
+                      <span>4. Fabricated Pipe Fittings</span>
+                      <span class="text-[9px] font-technical-data bg-orange-100 text-safety-orange px-1.5 py-0.5 rounded font-bold">IS 8360</span>
+                    </span>
+                    <span class="text-[11px] text-on-surface-variant mt-1 leading-snug">Segmented multi-piece 22.5°–90° bends & branch tees</span>
+                  </a>
+
+                  <!-- Master Hub Link Bar -->
+                  <div class="col-span-2 pt-2 border-t border-cad-blue/15 flex justify-between items-center px-2">
+                    <span class="text-[11px] font-technical-data text-on-surface-variant">Full Infrastructure Piping Range</span>
+                    <a href="/pipes-and-fittings/index.html" class="text-xs font-bold text-safety-orange hover:underline flex items-center gap-1">
+                      <span>Explore Pipes & Fittings Master Hub</span>
+                      <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- Products Mega Dropdown -->
             <div class="relative group" id="nav-products-dropdown">
@@ -211,6 +274,40 @@ export function renderHeader() {
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
           
+          <!-- Mobile Pipes & Fittings Priority Collapsible -->
+          <details class="group/fittings py-1 border-b border-cad-blue/10 pb-2" ${isFittings ? 'open' : ''}>
+            <summary class="flex justify-between items-center cursor-pointer list-none ${isFittings ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-0.5">
+              <span class="flex items-center gap-1.5 font-bold text-deep-navy">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>Pipes & Fittings</span>
+                <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.2 rounded font-bold uppercase ml-1">Priority</span>
+              </span>
+              <span class="material-symbols-outlined text-sm group-open/fittings:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="pl-3 pt-3 pb-1 flex flex-col gap-2.5 text-sm font-normal text-on-surface-variant">
+              <a href="/pipes-and-fittings/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5 font-bold text-deep-navy">
+                <span class="material-symbols-outlined text-[15px] text-safety-orange">hub</span>
+                <span>Pipes & Fittings Master Hub</span>
+              </a>
+              <a href="/pipes-and-fittings/electrofusion/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>1. Electro Fusion Fittings (20–630mm)</span>
+              </a>
+              <a href="/pipes-and-fittings/butt-fusion/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>2. Butt Fusion Fittings (Short & Long)</span>
+              </a>
+              <a href="/pipes-and-fittings/flanges/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>3. Flanges & Backing Rings</span>
+              </a>
+              <a href="/pipes-and-fittings/fabricated/index.html" class="hover:text-safety-orange flex items-center gap-2 py-0.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span>4. Fabricated Pipe Fittings (IS 8360)</span>
+              </a>
+            </div>
+          </details>
+
           <!-- Mobile Products Collapsible -->
           <details class="group/mob py-1 border-b border-cad-blue/10 pb-2" ${isProducts ? 'open' : ''}>
             <summary class="flex justify-between items-center cursor-pointer list-none ${isProducts ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-0.5">
