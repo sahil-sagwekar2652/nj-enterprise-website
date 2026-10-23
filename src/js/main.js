@@ -3,12 +3,14 @@ import { renderHeader } from '../components/header.js';
 import { renderFooter } from '../components/footer.js';
 import { renderWhatsAppButton } from '../components/whatsapp.js';
 import { initHomeCarousel } from '../components/carousel.js';
+import { initPipesCarousel } from '../components/pipes-carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
   renderFooter();
   renderWhatsAppButton();
   initHomeCarousel();
+  initPipesCarousel();
 
   // Setup client-side table filter & tabs on catalog page if present
   const filterInput = document.getElementById('sku-filter');

@@ -39,19 +39,13 @@ export function renderHeader() {
               Home
             </a>
 
-            <!-- Catalog Link -->
-            <a class="${isCatalog ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/catalog.html">
-              Catalog
-            </a>
-
-            <!-- Pipes & Fittings Priority Dropdown -->
+            <!-- Pipes & Fittings Dropdown -->
             <div class="relative group" id="nav-fittings-dropdown">
               <a href="/pipes-and-fittings/index.html" class="flex items-center gap-1.5 ${isFittings ? activeLinkClass : inactiveLinkClass} transition-colors duration-200">
                 <span class="inline-flex items-center gap-1.5">
                   <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
                   <span class="font-extrabold">Pipes & Fittings</span>
                 </span>
-                <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.5 rounded font-extrabold uppercase tracking-wider">Priority</span>
                 <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
               </a>
 
@@ -106,14 +100,14 @@ export function renderHeader() {
               </div>
             </div>
 
-            <!-- Products Mega Dropdown -->
-            <div class="relative group" id="nav-products-dropdown">
+            <!-- Enclosures Mega Dropdown -->
+            <div class="relative group" id="nav-enclosures-dropdown">
               <button type="button" class="flex items-center gap-1.5 ${isProducts ? activeLinkClass : inactiveLinkClass} transition-colors duration-200 focus:outline-none" aria-expanded="false">
-                <span>Products</span>
+                <span>Enclosures</span>
                 <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180">expand_more</span>
               </button>
 
-              <!-- Dropdown Menu Canvas -->
+              <!-- Dropdown Menu Canvas for Enclosures -->
               <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 absolute left-0 top-full pt-3 w-[780px] z-50">
                 <div class="bg-surface border border-cad-blue/30 rounded-2xl shadow-2xl p-4 grid grid-cols-3 gap-2 backdrop-blur-xl">
                   <!-- Indian Series -->
@@ -199,14 +193,20 @@ export function renderHeader() {
 
                   <!-- Bottom Banner Link -->
                   <div class="col-span-3 pt-2 mt-1 border-t border-cad-blue/15 flex justify-between items-center px-3">
-                    <span class="text-[11px] font-technical-data text-on-surface-variant">Complete Product Range</span>
+                    <span class="text-[11px] font-technical-data text-on-surface-variant">Complete Enclosure Range</span>
                     <a href="/catalog.html" class="text-xs font-bold text-safety-orange hover:underline flex items-center gap-1">
-                      View All Products <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                      <span>View All Enclosures in Master Catalog</span>
+                      <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Catalog Link -->
+            <a class="${isCatalog ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/catalog.html">
+              Catalog
+            </a>
 
             <!-- Company Profile Link -->
             <a class="${isProfile ? activeLinkClass : inactiveLinkClass} transition-colors duration-200" href="/company-profile.html">
@@ -244,7 +244,7 @@ export function renderHeader() {
           </a>
 
           <!-- Desktop only: Custom RFQ button -->
-          <a href="/custom-rfq.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-sm px-4 py-2 border-b-2 border-transparent hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
+          <a href="/custom-rfq.html" class="hidden lg:flex bg-deep-navy hover:bg-slate-800 text-white font-label-caps text-xs px-4 py-2 border border-cad-blue/40 hover:border-safety-orange transition-all duration-200 rounded-lg shadow-sm items-center gap-1.5 font-bold whitespace-nowrap">
             <span class="material-symbols-outlined text-base">precision_manufacturing</span>
             <span>Request Quote</span>
           </a>
@@ -274,13 +274,12 @@ export function renderHeader() {
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
           
-          <!-- Mobile Pipes & Fittings Priority Collapsible -->
+          <!-- Mobile Pipes & Fittings Collapsible -->
           <details class="group/fittings py-1 border-b border-cad-blue/10 pb-2" ${isFittings ? 'open' : ''}>
             <summary class="flex justify-between items-center cursor-pointer list-none ${isFittings ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-0.5">
-              <span class="flex items-center gap-1.5 font-bold text-deep-navy">
-                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+              <span class="flex items-center gap-2 font-bold text-deep-navy">
+                <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
                 <span>Pipes & Fittings</span>
-                <span class="text-[9px] font-technical-data bg-safety-orange text-white px-1.5 py-0.2 rounded font-bold uppercase ml-1">Priority</span>
               </span>
               <span class="material-symbols-outlined text-sm group-open/fittings:rotate-180 transition-transform">expand_more</span>
             </summary>
@@ -308,10 +307,12 @@ export function renderHeader() {
             </div>
           </details>
 
-          <!-- Mobile Products Collapsible -->
+          <!-- Mobile Enclosures Collapsible -->
           <details class="group/mob py-1 border-b border-cad-blue/10 pb-2" ${isProducts ? 'open' : ''}>
             <summary class="flex justify-between items-center cursor-pointer list-none ${isProducts ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-0.5">
-              <span>All Products & Series</span>
+              <span class="flex items-center gap-2 font-semibold text-deep-navy">
+                <span>Enclosures</span>
+              </span>
               <span class="material-symbols-outlined text-sm group-open/mob:rotate-180 transition-transform">expand_more</span>
             </summary>
             <div class="pl-3 pt-3 pb-1 flex flex-col gap-2.5 text-sm font-normal text-on-surface-variant">
