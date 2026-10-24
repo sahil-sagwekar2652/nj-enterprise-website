@@ -395,10 +395,14 @@ export function initPipesCarousel() {
         }
       });
 
-      // Scroll active tab into view on smaller mobile screens
+      // Keep active tab centered in horizontal overflow container on mobile
       const activeBtn = tabButtons[index];
-      if (activeBtn && typeof activeBtn.scrollIntoView === 'function') {
-        activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+      const tabsParent = tabsNavEl.parentElement;
+      if (activeBtn && tabsParent && tabsParent.scrollWidth > tabsParent.clientWidth) {
+        tabsParent.scrollTo({
+          left: activeBtn.offsetLeft - tabsParent.offsetWidth / 2 + activeBtn.offsetWidth / 2,
+          behavior: 'smooth'
+        });
       }
     }
 
