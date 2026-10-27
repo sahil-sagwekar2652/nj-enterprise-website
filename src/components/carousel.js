@@ -4,265 +4,374 @@ export function initHomeCarousel() {
 
   const slidesData = [
     {
-      sku: 'NJ-48-01',
-      name: 'Indian Series',
-      tagline: 'DIN Instrument Case',
-      title: 'Indian Series • NJ-48-01 DIN Instrument Case',
-      typedPhrase: 'Panel Meters & Industrial Instruments',
+      id: 'slide-1',
+      division: 'Pipes & Fittings',
+      family: 'Electrofusion Fittings',
+      typedPhrase: 'HDPE Pipes &\nFittings',
+      badge: 'PE100 • SDR11',
+      name: 'Electrofusion Coupler',
+      spec: 'Range: 20mm to 630mm • PN16 Water & Gas',
+      standards: 'IS 8360 / ISO 4427',
+      image: '/images/fittings/electrofusion/coupler.png',
+      imageAlt: 'PlastoGuard Electrofusion Coupler Range 20mm to 630mm',
+      link: '/pipes-and-fittings/electrofusion/index.html',
+      ctaText: 'Explore Range',
+      isFitting: true
+    },
+    {
+      id: 'slide-2',
+      division: 'Precision Enclosures',
+      family: 'Indian Series',
+      typedPhrase: 'Precision Electronic Enclosures',
+      badge: 'ABS / PC • IP65',
+      name: 'NJ-48-01 DIN Instrument Case',
+      spec: 'Flame-Retardant ABS • Panel Meters & Controls',
+      standards: 'DIN 43700 Standard',
       image: '/images/hero/hero_indian_series.jpg',
-      link: '/products/indian-series/product-nj-48-01.html'
+      imageAlt: 'PlastoGuard Indian Series NJ-48-01 DIN Instrument Case',
+      link: '/products/indian-series/product-nj-48-01.html',
+      ctaText: 'View Details',
+      isFitting: false
     },
     {
-      sku: '11-16T',
-      name: '11 Series',
-      tagline: 'IP65 Weatherproof',
-      title: '11 Series Plastic Enclosures • Sealed IP65 Weatherproof Casing',
-      typedPhrase: 'Outdoor Telemetry & Solar Systems',
+      id: 'slide-3',
+      division: 'Pipes & Fittings',
+      family: 'Butt Fusion Fittings',
+      typedPhrase: 'HDPE Pipes &\nFittings',
+      badge: 'Long Spigot • PN16',
+      name: 'Long Spigot 90° Bend',
+      spec: 'Range: 63mm to 630mm • SDR11 / SDR17',
+      standards: 'Virgin PE100 Resin',
+      image: '/images/fittings/butt-fusion/long-bend.png',
+      imageAlt: 'PlastoGuard Butt Fusion 90 Degree Long Spigot Bend',
+      link: '/pipes-and-fittings/butt-fusion/index.html',
+      ctaText: 'Explore Range',
+      isFitting: true
+    },
+    {
+      id: 'slide-4',
+      division: 'Precision Enclosures',
+      family: '11 Series',
+      typedPhrase: 'Precision Electronic Enclosures',
+      badge: 'NEMA 4X • IP65',
+      name: '11-16T Sealed Enclosure',
+      spec: 'Continuous Silicone Gasket • Outdoor Telemetry & Solar',
+      standards: 'UV Stabilized Virgin PC',
       image: '/images/hero/hero_11_series.jpg',
-      link: '/products/11-series/index.html'
+      imageAlt: 'PlastoGuard 11 Series Weatherproof Enclosure',
+      link: '/products/11-series/index.html',
+      ctaText: 'View Details',
+      isFitting: false
     },
     {
-      sku: '15-4',
-      name: '15 Series',
-      tagline: 'Benchtop Cabinet',
-      title: '15 Series Plastic Enclosures • Sloped Benchtop Cabinet',
-      typedPhrase: 'Laboratory & Test Instruments',
-      image: '/images/hero/hero_15_series.jpg',
-      link: '/products/15-series/product-15-4.html'
+      id: 'slide-5',
+      division: 'Pipes & Fittings',
+      family: 'Flanges & Backing Rings',
+      typedPhrase: 'HDPE Pipes &\nFittings',
+      badge: 'DIN & ANSI • PN16',
+      name: 'Steel-Reinforced PP Flange',
+      spec: 'Range: 20mm to 1600mm • Class 150#',
+      standards: 'Encapsulated Steel Core',
+      image: '/images/fittings/flanges/steel-reinforced.png',
+      imageAlt: 'PlastoGuard Steel Reinforced Polypropylene Flange Adapter',
+      link: '/pipes-and-fittings/flanges/index.html',
+      ctaText: 'Explore Range',
+      isFitting: true
     },
     {
-      sku: '18-4',
-      name: '18 Series',
-      tagline: 'Desktop Console',
-      title: '18 Series Plastic Enclosures • Ergonomic Sloped Console',
-      typedPhrase: 'Desktop Operator Consoles',
+      id: 'slide-6',
+      division: 'Precision Enclosures',
+      family: '18 Series',
+      typedPhrase: 'Precision Electronic Enclosures',
+      badge: 'Sloped • Dual Bezel',
+      name: '18-4 Ergonomic Sloped Console',
+      spec: 'Ergonomic Desk Console • HMI & Machine Controls',
+      standards: 'Flame Retardant ABS',
       image: '/images/hero/hero_18_series.jpg',
-      link: '/products/18-series/product-18-4.html'
+      imageAlt: 'PlastoGuard 18 Series Ergonomic Desktop Console',
+      link: '/products/18-series/product-18-4.html',
+      ctaText: 'View Details',
+      isFitting: false
     },
     {
-      sku: '20-11',
-      name: '20 Series',
-      tagline: 'Junction Box',
-      title: '20 Series Plastic Enclosures • Modular Electronic Junction Box',
-      typedPhrase: 'IoT Sensors & Distribution Nodes',
-      image: '/images/hero/hero_20_series.jpg',
-      link: '/products/20-series/product-20-11.html'
+      id: 'slide-7',
+      division: 'Pipes & Fittings',
+      family: 'Fabricated Fittings',
+      typedPhrase: 'HDPE Pipes &\nFittings',
+      badge: 'Segmented • IS 8360',
+      name: 'Segmented Branch Tee',
+      spec: 'Range: 110mm to 630mm (Custom to 1600mm)',
+      standards: 'IS 8360 Part 1-3 Certified',
+      image: '/images/fittings/fabricated/fabricated-tees.png',
+      imageAlt: 'PlastoGuard Segmented Fabricated HDPE Equal and Reducing Tee',
+      link: '/pipes-and-fittings/fabricated/index.html',
+      ctaText: 'Explore Range',
+      isFitting: true
     },
     {
-      sku: '21-20',
-      name: '21 Series',
-      tagline: 'Handheld Casing',
-      title: '21 Series Plastic Enclosures • Portable Handheld Diagnostic Casing',
-      typedPhrase: 'Portable Field Testing & Diagnostics',
-      image: '/images/hero/hero_21_series.jpg',
-      link: '/products/21-series/product-21-20.html'
-    },
-    {
-      sku: '22-20',
-      name: '22 Series',
-      tagline: 'Control Station',
-      title: '22 Series Plastic Enclosures • Heavy-Duty Control Station',
-      typedPhrase: 'Industrial Machinery & Pushbutton Panels',
-      image: '/images/hero/hero_22_series.jpg',
-      link: '/products/22-series/product-22-20.html'
-    },
-    {
-      sku: '23-119',
-      name: '23 Series',
-      tagline: 'DIN-Rail Module',
-      title: '23 Series Plastic Enclosures • Ventilated DIN-Rail Module',
-      typedPhrase: '35mm DIN-Rail Electrical Panels',
+      id: 'slide-8',
+      division: 'Precision Enclosures',
+      family: '23 Series',
+      typedPhrase: 'Precision Electronic Enclosures',
+      badge: '35mm DIN • UL94-V0',
+      name: '23-119 DIN-Rail Module',
+      spec: 'Ventilated Electrical Cabinet Housing',
+      standards: 'Self-Extinguishing Polycarbonate',
       image: '/images/hero/hero_23_series.jpg',
-      link: '/products/23-series/product-23-119.html'
+      imageAlt: 'PlastoGuard 23 Series Modular DIN-Rail Housing',
+      link: '/products/23-series/product-23-119.html',
+      ctaText: 'View Details',
+      isFitting: false
     }
   ];
 
-  // Random initial selection
-  let activeIndex = Math.floor(Math.random() * slidesData.length);
-  const slideDuration = 6000;
+  let activeIndex = 0;
+  const slideDuration = 5500;
   let isPaused = false;
-  let typingTimeout = null;
+  let timer = null;
 
-  // Preload all hero slide images for instantaneous crossfading
+  // Preload all slide images
   slidesData.forEach(slide => {
-    const preloader = new Image();
-    preloader.src = slide.image;
+    const img = new Image();
+    img.src = slide.image;
   });
 
-  // Split-Screen Layout: Left (Big Typewriter Text & Brand Value) / Right (Slideshow & Peeking Deck)
   container.innerHTML = `
     <style>
-      .deck-card {
-        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+      .coverflow-slide {
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+        will-change: transform, opacity;
       }
-      .deck-card-inactive {
-        transform: translateY(0);
-        opacity: 0.7;
-        background-color: rgba(13, 21, 34, 0.85);
-        border-color: rgba(255, 255, 255, 0.1);
-      }
-      .deck-card-inactive:hover {
-        transform: translateY(-4px);
-        opacity: 0.95;
-        border-color: rgba(249, 115, 22, 0.5);
-        background-color: rgba(25, 36, 54, 0.9);
-      }
-      .deck-card-active {
-        transform: translateY(-8px) scale(1.02);
+      .coverflow-center {
+        z-index: 30;
         opacity: 1;
-        background-color: #0f172a;
-        border-color: #F97316;
-        box-shadow: 0 16px 32px -8px rgba(249, 115, 22, 0.25), 0 0 0 1px rgba(249, 115, 22, 0.6);
+        cursor: default;
+        filter: brightness(1);
+        box-shadow: 0 25px 50px -12px rgba(2, 6, 23, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.16);
       }
-      #hero-deck::-webkit-scrollbar,
-      .no-scrollbar::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
+      .coverflow-flank {
+        z-index: 10;
+        opacity: 0.65;
+        cursor: pointer;
+        filter: brightness(0.75);
       }
-      #hero-deck,
-      .no-scrollbar {
-        -ms-overflow-style: none !important;
-        scrollbar-width: none !important;
+      .coverflow-flank:hover {
+        opacity: 0.95;
+        filter: brightness(0.95);
+      }
+      .coverflow-hidden {
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
       }
     </style>
 
-    <div class="relative w-full bg-[#080d15] text-white py-10 lg:py-16 overflow-hidden border-b border-cad-blue/20">
-      <!-- Ambient subtle background glow -->
-      <div class="absolute inset-0 bg-radial from-slate-900/50 via-[#080d15] to-[#080d15] pointer-events-none"></div>
+    <div class="relative w-full bg-[#080d15] text-white py-10 sm:py-14 lg:py-16 overflow-hidden border-b border-cad-blue/20">
+      <!-- Subtle ambient radial grid backdrop -->
+      <div class="absolute inset-0 bg-radial from-slate-900/60 via-[#080d15] to-[#080d15] pointer-events-none"></div>
 
-      <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- 2-Column Split Hero Layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
+        <!-- 2-Column Split Hero Layout: Left (Text & Value Prop & CTAs) | Right (Open 3D Slideshow) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
           
-          <!-- LEFT COLUMN: Large Animated Headline & Value Prop (5 cols on lg) -->
-          <div class="lg:col-span-5 flex flex-col justify-center text-left">
-            
+          <!-- LEFT COLUMN: Brand Narrative, Value Prop, Dual CTAs & Specs (5 cols on lg) -->
+          <div class="lg:col-span-5 flex flex-col justify-center text-left relative z-20 pointer-events-auto">
             <div class="inline-flex items-center gap-2 mb-3 sm:mb-4 text-xs font-technical-data tracking-widest text-safety-orange uppercase font-bold w-fit">
               <span class="w-2 h-2 rounded-full bg-safety-orange animate-ping"></span>
               <span>PlastoGuard Industries</span>
             </div>
 
-            <!-- Greatly Increased Typography Size with 2-line reserved space to prevent layout shifts -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
-              <span class="block text-gray-200">Engineered for</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+              <span class="block text-slate-100">Engineered for</span>
               <span class="block text-safety-orange font-black mt-1 min-h-[2.4em] leading-[1.15]">
-                <span id="animated-typed-text" class="underline decoration-safety-orange/40">${slidesData[activeIndex].typedPhrase}</span>
-                <span id="typewriter-cursor" class="inline-block w-1.5 h-[0.9em] bg-safety-orange ml-1 align-baseline animate-pulse no-underline"></span>
+                <span id="animated-typed-text" class="whitespace-pre-line underline decoration-safety-orange/40">${slidesData[activeIndex].typedPhrase}</span>
+                <span id="typewriter-cursor" class="inline-block w-1.5 h-[0.85em] bg-safety-orange ml-1.5 align-baseline animate-pulse no-underline"></span>
               </span>
             </h1>
 
-            <p class="text-sm sm:text-base md:text-lg text-slate-300 font-body-md leading-relaxed mt-4 sm:mt-6 max-w-xl">
-              Precision injection-molded plastic enclosures engineered for demanding instrumentation, electrical distribution, and automation controls across India.
+            <p class="text-sm sm:text-base text-slate-300 font-body-md leading-relaxed mt-4 sm:mt-5 max-w-xl">
+              PlastoGuard manufactures heavy-duty certified PE100 piping systems alongside IP65/IP67 precision electronic enclosures for India's most critical industrial infrastructure, telemetry, and automation nodes.
             </p>
 
-            <!-- Primary CTAs on Left -->
+            <!-- Dual Primary CTAs (Pipes & Fittings + Enclosures) -->
             <div class="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-8 flex-wrap">
-              <a id="hero-main-cta" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-xl shadow-safety-orange/20 transition-all font-bold flex items-center gap-2 active:scale-95 whitespace-nowrap">
-                <span>EXPLORE SERIES</span>
-                <span class="material-symbols-outlined text-sm sm:text-base">arrow_forward</span>
+              <a href="/pipes-and-fittings/index.html" class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-xl shadow-safety-orange/20 transition-all font-bold active:scale-95 whitespace-nowrap">
+                <span>PIPES & FITTINGS</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
-              <a href="/catalog.html" class="bg-slate-800/80 hover:bg-slate-700 text-white border border-white/20 font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl transition-colors font-semibold backdrop-blur-md whitespace-nowrap">
-                FULL CATALOG
+
+              <a href="/catalog.html" class="inline-flex items-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-white border border-cad-blue/40 font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl transition-all font-bold backdrop-blur-md whitespace-nowrap">
+                <span>ENCLOSURE SERIES</span>
+                <svg class="w-4 h-4 text-safety-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </a>
             </div>
 
-            <!-- Key Industrial Specifications / Badges -->
-            <div class="grid grid-cols-3 gap-3 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10 text-slate-400 font-technical-data text-[11px] sm:text-xs">
+            <!-- Custom RFQ Quick Link -->
+            <div class="mt-4">
+              <a href="/custom-rfq.html" class="inline-flex items-center gap-2 text-xs font-technical-data font-semibold text-slate-400 hover:text-safety-orange transition-colors">
+                <svg class="w-3.5 h-3.5 text-safety-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                <span>Custom Cutouts, Silk-Screening & Fast Project RFQ →</span>
+              </a>
+            </div>
+
+            <!-- Spec Metric Bar (3 Engineering Pillars) -->
+            <div class="grid grid-cols-3 gap-3 pt-6 mt-6 border-t border-white/10 text-slate-400 font-technical-data text-xs">
               <div class="flex flex-col">
-                <span class="text-white font-bold font-headline-md text-base sm:text-lg">IP65</span>
-                <span>Weatherproof</span>
+                <span class="text-white font-bold font-headline-md text-base sm:text-lg">PN6 – PN16</span>
+                <span class="text-slate-400 text-xs">PE100 SDR11/17</span>
               </div>
               <div class="flex flex-col">
-                <span class="text-white font-bold font-headline-md text-base sm:text-lg">PC / ABS</span>
-                <span>Virgin Polymers</span>
+                <span class="text-white font-bold font-headline-md text-base sm:text-lg">IP65 / IP67</span>
+                <span class="text-slate-400 text-xs">Weatherproof PC/ABS</span>
               </div>
               <div class="flex flex-col">
                 <span class="text-white font-bold font-headline-md text-base sm:text-lg">100% Direct</span>
-                <span>OEM Tooling</span>
+                <span class="text-slate-400 text-xs">OEM Custom Tooling</span>
               </div>
             </div>
-
           </div>
 
-          <!-- RIGHT COLUMN: Slideshow Stage & Peeking Sliding Card Deck (7 cols on lg) -->
-          <div class="lg:col-span-7 flex flex-col gap-4 sm:gap-5 w-full">
+          <!-- RIGHT COLUMN: Open 3D Peeking Slideshow (7 cols on lg) -->
+          <div class="lg:col-span-7 flex flex-col justify-center w-full min-w-0">
             
-            <!-- Product Showcase Stage -->
-            <div id="hero-showcase-stage" class="relative w-full h-[320px] sm:h-[400px] md:h-[450px] lg:h-[460px] xl:h-[480px] bg-black/90 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
-              
-              <!-- Background Void Image with Smooth Crossfade -->
-              <img id="hero-landscape-img" src="${slidesData[activeIndex].image}" alt="${slidesData[activeIndex].title}" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center transition-all duration-700 ease-out" />
-              
-              <!-- Subtle Gradient Vignette Overlays for Infinite Void Feel -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-              <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
+            <!-- Top Minimal Hairline Rule for Slideshow (Matching reference mock) -->
+            <div class="flex items-center justify-between pb-3 border-b border-white/15 text-xs font-technical-data text-slate-400 mb-4 sm:mb-6">
+              <div class="flex items-center gap-2.5">
+                <span class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase font-headline-md">
+                  Featured Manufacturing Range
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span class="hidden sm:inline-block text-xs text-slate-400 truncate">
+                  Pipes & Enclosures
+                </span>
+              </div>
 
-              <!-- Top Left Floating Badge -->
-              <div class="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 pointer-events-auto">
-                <div class="bg-black/75 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-lg border border-white/15 flex items-center gap-2 shadow-md">
-                  <span class="w-2 h-2 rounded-full bg-safety-orange"></span>
-                  <span id="hero-badge-text" class="text-white text-[11px] sm:text-xs font-technical-data font-bold tracking-wider uppercase">
-                    ${slidesData[activeIndex].name} • Model: ${slidesData[activeIndex].sku}
-                  </span>
+              <div class="flex items-center gap-2 font-technical-data text-xs sm:text-sm flex-shrink-0">
+                <span id="coverflow-num" class="text-safety-orange font-bold text-base">01</span>
+                <span class="text-slate-500">/</span>
+                <span class="text-slate-400 font-semibold">08</span>
+              </div>
+            </div>
+
+            <!-- Open 3D Peeking Carousel Stage -->
+            <div class="relative w-full h-[390px] sm:h-[440px] md:h-[460px] lg:h-[480px] xl:h-[500px] flex items-center justify-center overflow-visible" id="coverflow-stage">
+              
+              <!-- Floating Chevrons (Translucent circles matching reference mock) -->
+              <button
+                type="button"
+                id="coverflow-prev-btn"
+                aria-label="Previous product"
+                class="absolute left-1 sm:left-3 md:left-[calc(50%-205px)] lg:left-[calc(50%-195px)] xl:left-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                id="coverflow-next-btn"
+                aria-label="Next product"
+                class="absolute right-1 sm:right-3 md:right-[calc(50%-205px)] lg:right-[calc(50%-195px)] xl:right-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <!-- The Slide Cards Array -->
+              ${slidesData.map((s, idx) => `
+                <div
+                  class="coverflow-slide absolute top-1/2 left-1/2 w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[360px] xl:w-[380px] h-[360px] sm:h-[400px] md:h-[430px] lg:h-[450px] xl:h-[470px] rounded-3xl overflow-hidden group select-none ${
+                    idx === 0 ? 'coverflow-center' : 'coverflow-hidden'
+                  }"
+                  data-index="${idx}">
+                  
+                  <!-- Card Background Visual -->
+                  <div class="relative w-full h-full overflow-hidden ${s.isFitting ? 'bg-gradient-to-b from-white to-slate-100' : 'bg-slate-950'}">
+                    <img
+                      src="${s.image}"
+                      alt="${s.imageAlt}"
+                      fetchpriority="${idx === 0 ? 'high' : 'low'}"
+                      loading="${idx < 3 ? 'eager' : 'lazy'}"
+                      decoding="async"
+                      class="w-full h-full ${s.isFitting ? 'object-contain p-6 sm:p-8 filter drop-shadow-xl' : 'object-cover object-center filter drop-shadow-2xl'} transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+
+                    <!-- Vignette Gradient Scrim for crisp typographic legibility -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+
+                    <!-- Floating Top Pill on Card -->
+                    <div class="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 pointer-events-none">
+                      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-technical-data font-bold backdrop-blur-md border ${
+                        s.isFitting
+                          ? 'bg-slate-950/80 text-safety-orange border-safety-orange/40'
+                          : 'bg-slate-950/80 text-cyan-400 border-cyan-400/40'
+                      }">
+                        <span class="w-1.5 h-1.5 rounded-full ${s.isFitting ? 'bg-safety-orange' : 'bg-cyan-400'}"></span>
+                        <span>${s.division}</span>
+                      </span>
+                    </div>
+
+                    <!-- Floating Top Right Badge -->
+                    <div class="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 pointer-events-none">
+                      <span class="inline-flex items-center text-xs font-technical-data font-semibold bg-black/60 text-slate-200 px-2.5 py-1 rounded-full border border-white/15 backdrop-blur-md">
+                        ${s.badge}
+                      </span>
+                    </div>
+
+                    <!-- Lower Card Content Strip -->
+                    <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-20 flex flex-col justify-end text-left pointer-events-auto">
+                      <span class="text-xs font-technical-data font-bold tracking-wider text-slate-400 uppercase">
+                        ${s.family}
+                      </span>
+
+                      <h3 class="font-headline-lg text-lg sm:text-xl md:text-2xl font-extrabold text-white mt-1 leading-tight tracking-tight drop-shadow-md">
+                        ${s.name}
+                      </h3>
+
+                      <p class="text-xs text-slate-300 font-technical-data mt-1 line-clamp-1 drop-shadow-sm">
+                        ${s.spec}
+                      </p>
+
+                      <div class="mt-3.5 pt-3 border-t border-white/15 flex items-center justify-between">
+                        <a
+                          href="${s.link}"
+                          class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs px-4 py-2 rounded-xl font-bold shadow-lg shadow-safety-orange/20 transition-all active:scale-95 whitespace-nowrap">
+                          <span>${s.ctaText}</span>
+                          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </a>
+
+                        <span class="text-xs text-slate-400 font-technical-data hidden sm:inline">
+                          ${s.standards}
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-              </div>
-
-              <!-- Bottom Floating Action Button inside Stage -->
-              <div class="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-20 flex items-center gap-2 pointer-events-auto">
-                <a id="hero-product-link" href="${slidesData[activeIndex].link}" class="bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-xl transition-all font-bold flex items-center gap-1.5 active:scale-95 whitespace-nowrap">
-                  <span>VIEW DETAILS</span>
-                  <span class="material-symbols-outlined text-sm sm:text-base">arrow_forward</span>
-                </a>
-              </div>
-
-              <!-- Minimal Floating Navigation Arrows -->
-              <button id="hero-prev-btn" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-                <span class="material-symbols-outlined text-lg">arrow_back</span>
-              </button>
-              <button id="hero-next-btn" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-safety-orange text-white border border-white/20 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 shadow">
-                <span class="material-symbols-outlined text-lg">arrow_forward</span>
-              </button>
+              `).join('')}
 
             </div>
 
-            <!-- Revealing Product Card Deck Peeking From Below -->
-            <div class="flex flex-col gap-2">
-              <div class="flex gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar snap-x scroll-smooth pt-2.5 pb-2 px-1" id="hero-deck">
-                ${slidesData.map((s, idx) => `
-                  <button type="button" class="deck-card flex flex-col p-2 sm:p-2.5 rounded-xl text-left border backdrop-blur-md cursor-pointer group focus:outline-none flex-shrink-0 min-w-[125px] sm:min-w-[140px] snap-center ${idx === activeIndex ? 'deck-card-active' : 'deck-card-inactive'}" data-index="${idx}" aria-label="Select ${s.name}">
-                    <div class="flex items-center gap-2 mb-1.5">
-                      <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden bg-black/60 border border-white/10 shrink-0">
-                        <img src="${s.image}" alt="${s.name}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                      </div>
-                      <div class="min-w-0 flex-1">
-                        <span class="text-[10px] font-technical-data font-bold text-safety-orange tracking-wider uppercase block truncate">${s.name}</span>
-                        <span class="text-[11px] font-semibold text-white truncate block leading-tight">${s.tagline}</span>
-                      </div>
-                    </div>
-                    <!-- Progress bar fill line -->
-                    <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
-                      <div class="deck-progress-fill h-full bg-safety-orange rounded-full" style="width: 0%;"></div>
-                    </div>
-                  </button>
-                `).join('')}
-              </div>
-
-              <!-- Deck Status & Play/Pause Controls Bar -->
-              <div class="flex items-center justify-between gap-4 px-1 pt-1 text-xs font-technical-data text-gray-400">
-                <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-gray-400">
-                  <span class="material-symbols-outlined text-sm text-safety-orange">touch_app</span>
-                  <span>Click card to reveal series</span>
-                </span>
-
-                <div class="flex items-center gap-3 ml-auto">
-                  <span id="hero-slide-num" class="text-white font-bold">0${activeIndex + 1}</span> / 0${slidesData.length}
-                  <button id="hero-pause-btn" aria-label="Pause Carousel" class="text-gray-400 hover:text-white transition-colors p-1">
-                    <span id="hero-pause-icon" class="material-symbols-outlined text-base">pause</span>
-                  </button>
-                </div>
-              </div>
+            <!-- Minimal Pagination Capsule Indicators (Matching reference mock) -->
+            <div class="flex items-center justify-center gap-2 sm:gap-2.5 mt-5 sm:mt-6" id="coverflow-dots">
+              ${slidesData.map((_, idx) => `
+                <button
+                  type="button"
+                  class="coverflow-dot h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    idx === 0 ? 'w-8 bg-safety-orange' : 'w-2 bg-white/25 hover:bg-white/50'
+                  }"
+                  data-index="${idx}"
+                  aria-label="Jump to slide ${idx + 1}"></button>
+              `).join('')}
             </div>
 
           </div>
@@ -273,23 +382,22 @@ export function initHomeCarousel() {
     </div>
   `;
 
-  const heroImg = document.getElementById('hero-landscape-img');
-  const heroBadge = document.getElementById('hero-badge-text');
-  const heroLink = document.getElementById('hero-product-link');
-  const heroMainCta = document.getElementById('hero-main-cta');
+  const stage = document.getElementById('coverflow-stage');
+  const slideEls = container.querySelectorAll('.coverflow-slide');
+  const dotEls = container.querySelectorAll('.coverflow-dot');
+  const numEl = document.getElementById('coverflow-num');
+  const prevBtn = document.getElementById('coverflow-prev-btn');
+  const nextBtn = document.getElementById('coverflow-next-btn');
   const typedTextEl = document.getElementById('animated-typed-text');
-  const slideNumEl = document.getElementById('hero-slide-num');
-  const prevBtn = document.getElementById('hero-prev-btn');
-  const nextBtn = document.getElementById('hero-next-btn');
-  const pauseBtn = document.getElementById('hero-pause-btn');
-  const pauseIcon = document.getElementById('hero-pause-icon');
-  const deckContainer = document.getElementById('hero-deck');
+  let typingTimeout = null;
 
   function typeWriterEffect(targetText) {
     if (!typedTextEl) return;
     clearTimeout(typingTimeout);
 
     const currentText = typedTextEl.textContent;
+    if (currentText === targetText) return;
+
     let charIndex = currentText.length;
 
     function erase() {
@@ -314,157 +422,164 @@ export function initHomeCarousel() {
     erase();
   }
 
-  function updateDeck(index) {
-    if (!deckContainer) return;
-    const cards = deckContainer.querySelectorAll('.deck-card');
-    cards.forEach((card, idx) => {
-      const progressBar = card.querySelector('.deck-progress-fill');
-      if (idx === index) {
-        card.classList.add('deck-card-active');
-        card.classList.remove('deck-card-inactive');
-        card.setAttribute('aria-selected', 'true');
+  function getStepOffset() {
+    const width = window.innerWidth;
+    if (width >= 1280) return 250;
+    if (width >= 1024) return 215;
+    if (width >= 768) return 195;
+    return width * 0.52;
+  }
 
-        if (progressBar) {
-          progressBar.style.transition = 'none';
-          progressBar.style.width = '0%';
-          void progressBar.offsetWidth;
-          if (!isPaused) {
-            progressBar.style.transition = `width ${slideDuration}ms linear`;
-            progressBar.style.width = '100%';
-          }
-        }
+  function updateCoverflow(newIndex) {
+    activeIndex = (newIndex + slidesData.length) % slidesData.length;
+    const step = getStepOffset();
+    const total = slidesData.length;
+    const half = Math.floor(total / 2);
 
-        if (deckContainer && deckContainer.scrollWidth > deckContainer.clientWidth) {
-          const cardRect = card.getBoundingClientRect();
-          const containerRect = deckContainer.getBoundingClientRect();
-          const cardLeftInContainer = cardRect.left - containerRect.left + deckContainer.scrollLeft;
-          const targetScrollLeft = cardLeftInContainer - (deckContainer.clientWidth / 2) + (card.offsetWidth / 2);
-          deckContainer.scrollTo({
-            left: Math.max(0, targetScrollLeft),
-            behavior: 'smooth'
-          });
-        }
+    slideEls.forEach((el, idx) => {
+      let offset = idx - activeIndex;
+      while (offset > half) offset -= total;
+      while (offset < -half) offset += total;
+
+      el.classList.remove('coverflow-center', 'coverflow-flank', 'coverflow-hidden');
+
+      if (offset === 0) {
+        // Active Center Slide
+        el.classList.add('coverflow-center');
+        el.style.transform = 'translate(-50%, -50%) scale(1)';
+        el.style.zIndex = '30';
+        el.setAttribute('aria-hidden', 'false');
+      } else if (offset === -1) {
+        // Left Flanking Peeking Slide (Sits under/behind Left Text Column)
+        el.classList.add('coverflow-flank');
+        el.style.transform = `translate(calc(-50% - ${step}px), -50%) scale(0.86)`;
+        el.style.zIndex = '10';
+        el.setAttribute('aria-hidden', 'true');
+      } else if (offset === 1) {
+        // Right Flanking Peeking Slide
+        el.classList.add('coverflow-flank');
+        el.style.transform = `translate(calc(-50% + ${step}px), -50%) scale(0.86)`;
+        el.style.zIndex = '10';
+        el.setAttribute('aria-hidden', 'true');
       } else {
-        card.classList.remove('deck-card-active');
-        card.classList.add('deck-card-inactive');
-        card.setAttribute('aria-selected', 'false');
-
-        if (progressBar) {
-          progressBar.style.transition = 'none';
-          progressBar.style.width = '0%';
-        }
+        // Hidden Slide
+        el.classList.add('coverflow-hidden');
+        const sign = Math.sign(offset) || 1;
+        el.style.transform = `translate(calc(-50% + ${sign * (step * 1.5)}px), -50%) scale(0.7)`;
+        el.style.zIndex = '0';
+        el.setAttribute('aria-hidden', 'true');
       }
     });
-  }
 
-  function renderSlide(index) {
-    activeIndex = index;
-    const s = slidesData[index];
-
-    // Animate image transition
-    if (heroImg) {
-      heroImg.style.opacity = '0.35';
-      heroImg.style.transform = 'scale(0.99)';
-      setTimeout(() => {
-        heroImg.src = s.image;
-        heroImg.alt = s.title;
-        heroImg.style.opacity = '1';
-        heroImg.style.transform = 'scale(1)';
-      }, 150);
+    // Update Numerical Counter
+    if (numEl) {
+      numEl.textContent = `0${activeIndex + 1}`;
     }
 
-    if (heroBadge) heroBadge.textContent = `${s.name} • Model: ${s.sku}`;
-    if (heroLink) heroLink.href = s.link;
-    if (heroMainCta) heroMainCta.href = s.link;
-    if (slideNumEl) slideNumEl.textContent = `0${index + 1}`;
+    // Update Pagination Dots
+    dotEls.forEach((dot, idx) => {
+      if (idx === activeIndex) {
+        dot.className = 'coverflow-dot h-1.5 rounded-full transition-all duration-300 cursor-pointer w-8 bg-safety-orange';
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.className = 'coverflow-dot h-1.5 rounded-full transition-all duration-300 cursor-pointer w-2 bg-white/25 hover:bg-white/50';
+        dot.setAttribute('aria-current', 'false');
+      }
+    });
 
-    typeWriterEffect(s.typedPhrase);
-    updateDeck(index);
-    resetTimer();
+    // Update Typewriter Headline (one for pipes & fittings, one for enclosures)
+    if (typedTextEl && slidesData[activeIndex]) {
+      typeWriterEffect(slidesData[activeIndex].typedPhrase);
+    }
   }
-
-  let timer = null;
 
   function resetTimer() {
     if (timer) clearInterval(timer);
     if (!isPaused) {
       timer = setInterval(() => {
-        const nextIdx = (activeIndex + 1) % slidesData.length;
-        renderSlide(nextIdx);
+        updateCoverflow(activeIndex + 1);
       }, slideDuration);
     }
   }
 
+  // Next / Prev Button Clicks
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      const nextIdx = (activeIndex + 1) % slidesData.length;
-      renderSlide(nextIdx);
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      const prevIdx = (activeIndex - 1 + slidesData.length) % slidesData.length;
-      renderSlide(prevIdx);
-    });
-  }
-
-  if (pauseBtn) {
-    pauseBtn.addEventListener('click', () => {
-      isPaused = !isPaused;
-      if (pauseIcon) pauseIcon.textContent = isPaused ? 'play_arrow' : 'pause';
-      const activeCard = deckContainer ? deckContainer.querySelector('.deck-card-active') : null;
-      const progressBar = activeCard ? activeCard.querySelector('.deck-progress-fill') : null;
-
-      if (isPaused) {
-        if (progressBar) {
-          const currentWidth = window.getComputedStyle(progressBar).width;
-          progressBar.style.transition = 'none';
-          progressBar.style.width = currentWidth;
-        }
-      } else {
-        if (progressBar) {
-          progressBar.style.transition = `width ${slideDuration}ms linear`;
-          progressBar.style.width = '100%';
-        }
-      }
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateCoverflow(activeIndex + 1);
       resetTimer();
     });
   }
 
-  // Card click events in deck
-  if (deckContainer) {
-    const cards = deckContainer.querySelectorAll('.deck-card');
-    cards.forEach(card => {
-      card.addEventListener('click', (e) => {
-        const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-        if (idx !== activeIndex) {
-          renderSlide(idx);
-        }
-      });
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateCoverflow(activeIndex - 1);
+      resetTimer();
     });
   }
 
-  // Touch Swipe on showcase stage
-  let touchStartX = 0;
-  let touchEndX = 0;
-  const stage = document.getElementById('hero-showcase-stage') || container;
+  // Card click triggers (Clicking flanking card moves it into center)
+  slideEls.forEach((card) => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
+      const idx = parseInt(card.getAttribute('data-index'), 10);
+      if (idx !== activeIndex) {
+        e.preventDefault();
+        updateCoverflow(idx);
+        resetTimer();
+      }
+    });
+  });
 
-  stage.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
+  // Dot clicks
+  dotEls.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
+      updateCoverflow(idx);
+      resetTimer();
+    });
+  });
 
-  stage.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX < touchStartX - 50) {
-      renderSlide((activeIndex + 1) % slidesData.length);
-    }
-    if (touchEndX > touchStartX + 50) {
-      renderSlide((activeIndex - 1 + slidesData.length) % slidesData.length);
-    }
-  }, { passive: true });
+  // Touch swipe support
+  if (stage) {
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-  // Initial trigger for deck animation
-  updateDeck(activeIndex);
+    stage.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    stage.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchEndX < touchStartX - 40) {
+        updateCoverflow(activeIndex + 1);
+        resetTimer();
+      } else if (touchEndX > touchStartX + 40) {
+        updateCoverflow(activeIndex - 1);
+        resetTimer();
+      }
+    }, { passive: true });
+
+    // Pause on hover
+    stage.addEventListener('mouseenter', () => {
+      isPaused = true;
+      if (timer) clearInterval(timer);
+    });
+    stage.addEventListener('mouseleave', () => {
+      isPaused = false;
+      resetTimer();
+    });
+  }
+
+  // Recalculate on window resize
+  window.addEventListener('resize', () => {
+    updateCoverflow(activeIndex);
+  });
+
+  // Initial trigger
+  updateCoverflow(0);
   resetTimer();
 }
