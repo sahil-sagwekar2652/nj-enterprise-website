@@ -1,19 +1,71 @@
-# Google Search & Image Crawlers
+# ─────────────────────────────────────────────────────────────────────────────
+# robots.txt — PlastoGuard Industries (https://plastoguard.com)
+# Last updated: 2026-10-27
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Google Search & Image Crawlers ───────────────────────────────────────────
 User-agent: Googlebot
 User-agent: Googlebot-Image
 Allow: /
 Disallow: /api/
 
-# Google Ads Crawlers (explicitly declared as AdsBot does not match wildcard *)
+# ── Google Ads Crawlers (must be declared explicitly; don't match wildcard) ──
 User-agent: AdsBot-Google
 User-agent: AdsBot-Google-Mobile
 Allow: /
 
-# General Search Engine Crawlers
+# ── Bing / Microsoft Crawlers ─────────────────────────────────────────────────
+User-agent: Bingbot
+User-agent: msnbot
+Allow: /
+Disallow: /api/
+
+# ── AI / LLM Crawlers — explicitly allowed ────────────────────────────────────
+# OpenAI GPT and web browsing
+User-agent: GPTBot
+Allow: /
+
+# OpenAI ChatGPT real-time web browsing plugin
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Google Gemini / Bard / Vertex AI
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI (Llama-powered assistant)
+User-agent: FacebookBot
+Allow: /
+
+# Apple AI
+User-agent: Applebot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# You.com AI search
+User-agent: YouBot
+Allow: /
+
+# Common Crawl (used to train many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ── General Crawlers & Search Engines ────────────────────────────────────────
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# Sitemaps
+# ── Sitemaps ─────────────────────────────────────────────────────────────────
 Sitemap: https://plastoguard.com/sitemap.xml
 Sitemap: https://www.plastoguard.com/sitemap.xml

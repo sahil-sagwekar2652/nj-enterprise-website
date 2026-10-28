@@ -155,7 +155,7 @@ export function initHomeCarousel() {
         cursor: pointer;
         filter: brightness(0.75);
       }
-      .coverflow-flank:hover {
+      .coverflow-flank:hover, .coverflow-flank:focus-within {
         opacity: 0.95;
         filter: brightness(0.95);
       }
@@ -164,16 +164,20 @@ export function initHomeCarousel() {
         opacity: 0;
         pointer-events: none;
       }
+      /* Mobile: tighten the two-line typewriter heading height */
+      @media (max-width: 639px) {
+        #hero-typed-wrap { min-height: 3em; }
+      }
     </style>
 
-    <div class="relative w-full bg-[#080d15] text-white py-10 sm:py-14 lg:py-16 overflow-hidden border-b border-cad-blue/20">
+    <div class="relative w-full bg-[#080d15] text-white py-8 sm:py-14 lg:py-16 overflow-hidden border-b border-cad-blue/20">
       <!-- Subtle ambient radial grid backdrop -->
       <div class="absolute inset-0 bg-radial from-slate-900/60 via-[#080d15] to-[#080d15] pointer-events-none"></div>
 
       <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- 2-Column Split Hero Layout: Left (Text & Value Prop & CTAs) | Right (Open 3D Slideshow) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 xl:gap-12 items-center">
           
           <!-- LEFT COLUMN: Brand Narrative, Value Prop, Dual CTAs & Specs (5 cols on lg) -->
           <div class="lg:col-span-5 flex flex-col justify-center text-left relative z-20 pointer-events-auto">
@@ -182,28 +186,28 @@ export function initHomeCarousel() {
               <span>PlastoGuard Industries</span>
             </div>
 
-            <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+            <h1 class="text-[1.75rem] leading-[1.2] sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tight">
               <span class="block text-slate-100">Engineered for</span>
-              <span class="block text-safety-orange font-black mt-1 min-h-[2.4em] leading-[1.15]">
+              <span id="hero-typed-wrap" class="block text-safety-orange font-black mt-1 min-h-[2.4em] sm:min-h-[2.4em] leading-[1.15]">
                 <span id="animated-typed-text" class="whitespace-pre-line underline decoration-safety-orange/40">${slidesData[activeIndex].typedPhrase}</span>
                 <span id="typewriter-cursor" class="inline-block w-1.5 h-[0.85em] bg-safety-orange ml-1.5 align-baseline animate-pulse no-underline"></span>
               </span>
             </h1>
 
-            <p class="text-sm sm:text-base text-slate-300 font-body-md leading-relaxed mt-4 sm:mt-5 max-w-xl">
+            <p class="text-sm sm:text-base text-slate-300 font-body-md leading-relaxed mt-3 sm:mt-5 max-w-xl">
               PlastoGuard manufactures heavy-duty certified PE100 piping systems alongside IP65/IP67 precision electronic enclosures for India's most critical industrial infrastructure, telemetry, and automation nodes.
             </p>
 
             <!-- Dual Primary CTAs (Pipes & Fittings + Enclosures) -->
-            <div class="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-8 flex-wrap">
-              <a href="/pipes-and-fittings/index.html" class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-xl shadow-safety-orange/20 transition-all font-bold active:scale-95 whitespace-nowrap">
+            <div class="flex items-center gap-3 sm:gap-4 mt-5 sm:mt-8 flex-wrap">
+              <a href="/pipes-and-fittings/index.html" class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 active:bg-orange-700 text-white font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-xl shadow-safety-orange/20 transition-all font-bold active:scale-95 whitespace-nowrap min-h-[44px]">
                 <span>PIPES & FITTINGS</span>
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
 
-              <a href="/catalog.html" class="inline-flex items-center gap-2 bg-slate-800/90 hover:bg-slate-700 text-white border border-cad-blue/40 font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl transition-all font-bold backdrop-blur-md whitespace-nowrap">
+              <a href="/catalog.html" class="inline-flex items-center gap-2 bg-slate-800/90 hover:bg-slate-700 active:bg-slate-600 text-white border border-cad-blue/40 font-label-caps text-xs sm:text-sm px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl transition-all font-bold backdrop-blur-md whitespace-nowrap min-h-[44px]">
                 <span>ENCLOSURE SERIES</span>
                 <svg class="w-4 h-4 text-safety-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -212,9 +216,9 @@ export function initHomeCarousel() {
             </div>
 
             <!-- Custom RFQ Quick Link -->
-            <div class="mt-4">
-              <a href="/custom-rfq.html" class="inline-flex items-center gap-2 text-xs font-technical-data font-semibold text-slate-400 hover:text-safety-orange transition-colors">
-                <svg class="w-3.5 h-3.5 text-safety-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <div class="mt-3 sm:mt-4">
+              <a href="/custom-rfq.html" class="inline-flex items-center gap-2 text-xs font-technical-data font-semibold text-slate-400 hover:text-safety-orange active:text-safety-orange transition-colors py-1">
+                <svg class="w-3.5 h-3.5 text-safety-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
                 <span>Custom Cutouts, Silk-Screening & Fast Project RFQ →</span>
@@ -222,18 +226,18 @@ export function initHomeCarousel() {
             </div>
 
             <!-- Spec Metric Bar (3 Engineering Pillars) -->
-            <div class="grid grid-cols-3 gap-3 pt-6 mt-6 border-t border-white/10 text-slate-400 font-technical-data text-xs">
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 pt-5 mt-5 sm:pt-6 sm:mt-6 border-t border-white/10 text-slate-400 font-technical-data text-xs">
               <div class="flex flex-col">
-                <span class="text-white font-bold font-headline-md text-base sm:text-lg">PN6 – PN16</span>
-                <span class="text-slate-400 text-xs">PE100 SDR11/17</span>
+                <span class="text-white font-bold font-headline-md text-sm sm:text-base lg:text-lg whitespace-nowrap">PN6 – PN16</span>
+                <span class="text-slate-400 text-[10px] sm:text-xs leading-tight">PE100 SDR11/17</span>
               </div>
               <div class="flex flex-col">
-                <span class="text-white font-bold font-headline-md text-base sm:text-lg">IP65 / IP67</span>
-                <span class="text-slate-400 text-xs">Weatherproof PC/ABS</span>
+                <span class="text-white font-bold font-headline-md text-sm sm:text-base lg:text-lg whitespace-nowrap">IP65 / IP67</span>
+                <span class="text-slate-400 text-[10px] sm:text-xs leading-tight">Weatherproof PC/ABS</span>
               </div>
               <div class="flex flex-col">
-                <span class="text-white font-bold font-headline-md text-base sm:text-lg">100% Direct</span>
-                <span class="text-slate-400 text-xs">OEM Custom Tooling</span>
+                <span class="text-white font-bold font-headline-md text-sm sm:text-base lg:text-lg whitespace-nowrap">100% Direct</span>
+                <span class="text-slate-400 text-[10px] sm:text-xs leading-tight">OEM Custom Tooling</span>
               </div>
             </div>
           </div>
@@ -241,13 +245,13 @@ export function initHomeCarousel() {
           <!-- RIGHT COLUMN: Open 3D Peeking Slideshow (7 cols on lg) -->
           <div class="lg:col-span-7 flex flex-col justify-center w-full min-w-0">
             
-            <!-- Top Minimal Hairline Rule for Slideshow (Matching reference mock) -->
-            <div class="flex items-center justify-between pb-3 border-b border-white/15 text-xs font-technical-data text-slate-400 mb-4 sm:mb-6">
+            <!-- Top Minimal Hairline Rule for Slideshow -->
+            <div class="flex items-center justify-between pb-3 border-b border-white/15 text-xs font-technical-data text-slate-400 mb-3 sm:mb-6">
               <div class="flex items-center gap-2.5">
                 <span class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase font-headline-md">
-                  Featured Manufacturing Range
+                  Featured Range
                 </span>
-                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-safety-orange flex-shrink-0"></span>
                 <span class="hidden sm:inline-block text-xs text-slate-400 truncate">
                   Pipes & Enclosures
                 </span>
@@ -261,14 +265,14 @@ export function initHomeCarousel() {
             </div>
 
             <!-- Open 3D Peeking Carousel Stage -->
-            <div class="relative w-full h-[390px] sm:h-[440px] md:h-[460px] lg:h-[480px] xl:h-[500px] flex items-center justify-center overflow-visible" id="coverflow-stage">
+            <div class="relative w-full h-[330px] xs:h-[360px] sm:h-[440px] md:h-[460px] lg:h-[480px] xl:h-[500px] flex items-center justify-center overflow-visible" id="coverflow-stage">
               
-              <!-- Floating Chevrons (Translucent circles matching reference mock) -->
+              <!-- Floating Chevrons -->
               <button
                 type="button"
                 id="coverflow-prev-btn"
                 aria-label="Previous product"
-                class="absolute left-1 sm:left-3 md:left-[calc(50%-205px)] lg:left-[calc(50%-195px)] xl:left-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none">
+                class="absolute left-1 sm:left-3 md:left-[calc(50%-205px)] lg:left-[calc(50%-195px)] xl:left-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white/20 hover:bg-safety-orange active:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none touch-manipulation">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -278,7 +282,7 @@ export function initHomeCarousel() {
                 type="button"
                 id="coverflow-next-btn"
                 aria-label="Next product"
-                class="absolute right-1 sm:right-3 md:right-[calc(50%-205px)] lg:right-[calc(50%-195px)] xl:right-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none">
+                class="absolute right-1 sm:right-3 md:right-[calc(50%-205px)] lg:right-[calc(50%-195px)] xl:right-[calc(50%-210px)] top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white/20 hover:bg-safety-orange active:bg-safety-orange text-white border border-white/30 backdrop-blur-md flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 focus:outline-none touch-manipulation">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
@@ -287,7 +291,7 @@ export function initHomeCarousel() {
               <!-- The Slide Cards Array -->
               ${slidesData.map((s, idx) => `
                 <div
-                  class="coverflow-slide absolute top-1/2 left-1/2 w-[82vw] sm:w-[320px] md:w-[350px] lg:w-[360px] xl:w-[380px] h-[360px] sm:h-[400px] md:h-[430px] lg:h-[450px] xl:h-[470px] rounded-3xl overflow-hidden group select-none ${
+                  class="coverflow-slide absolute top-1/2 left-1/2 w-[75vw] xs:w-[80vw] sm:w-[320px] md:w-[350px] lg:w-[360px] xl:w-[380px] h-[300px] xs:h-[330px] sm:h-[400px] md:h-[430px] lg:h-[450px] xl:h-[470px] rounded-3xl overflow-hidden group select-none touch-manipulation ${
                     idx === 0 ? 'coverflow-center' : 'coverflow-hidden'
                   }"
                   data-index="${idx}">
@@ -300,56 +304,56 @@ export function initHomeCarousel() {
                       fetchpriority="${idx === 0 ? 'high' : 'low'}"
                       loading="${idx < 3 ? 'eager' : 'lazy'}"
                       decoding="async"
-                      class="w-full h-full ${s.isFitting ? 'object-contain p-6 sm:p-8 filter drop-shadow-xl' : 'object-cover object-center filter drop-shadow-2xl'} transition-transform duration-700 ease-out group-hover:scale-105"
+                      class="w-full h-full ${s.isFitting ? 'object-contain p-5 sm:p-8 filter drop-shadow-xl' : 'object-cover object-center filter drop-shadow-2xl'} transition-transform duration-700 ease-out group-hover:scale-105"
                     />
 
-                    <!-- Vignette Gradient Scrim for crisp typographic legibility -->
+                    <!-- Vignette Gradient Scrim -->
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
 
                     <!-- Floating Top Pill on Card -->
-                    <div class="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 pointer-events-none">
-                      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-technical-data font-bold backdrop-blur-md border ${
+                    <div class="absolute top-3 left-3 sm:top-5 sm:left-5 z-20 pointer-events-none">
+                      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-technical-data font-bold backdrop-blur-md border ${
                         s.isFitting
                           ? 'bg-slate-950/80 text-safety-orange border-safety-orange/40'
                           : 'bg-slate-950/80 text-cyan-400 border-cyan-400/40'
                       }">
-                        <span class="w-1.5 h-1.5 rounded-full ${s.isFitting ? 'bg-safety-orange' : 'bg-cyan-400'}"></span>
+                        <span class="w-1.5 h-1.5 rounded-full flex-shrink-0 ${s.isFitting ? 'bg-safety-orange' : 'bg-cyan-400'}"></span>
                         <span>${s.division}</span>
                       </span>
                     </div>
 
                     <!-- Floating Top Right Badge -->
-                    <div class="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 pointer-events-none">
-                      <span class="inline-flex items-center text-xs font-technical-data font-semibold bg-black/60 text-slate-200 px-2.5 py-1 rounded-full border border-white/15 backdrop-blur-md">
+                    <div class="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 pointer-events-none">
+                      <span class="inline-flex items-center text-[10px] sm:text-xs font-technical-data font-semibold bg-black/60 text-slate-200 px-2 sm:px-2.5 py-1 rounded-full border border-white/15 backdrop-blur-md">
                         ${s.badge}
                       </span>
                     </div>
 
                     <!-- Lower Card Content Strip -->
-                    <div class="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-20 flex flex-col justify-end text-left pointer-events-auto">
-                      <span class="text-xs font-technical-data font-bold tracking-wider text-slate-400 uppercase">
+                    <div class="absolute bottom-0 inset-x-0 p-4 sm:p-6 z-20 flex flex-col justify-end text-left pointer-events-auto">
+                      <span class="text-[10px] sm:text-xs font-technical-data font-bold tracking-wider text-slate-400 uppercase">
                         ${s.family}
                       </span>
 
-                      <h3 class="font-headline-lg text-lg sm:text-xl md:text-2xl font-extrabold text-white mt-1 leading-tight tracking-tight drop-shadow-md">
+                      <h3 class="font-headline-lg text-base sm:text-xl md:text-2xl font-extrabold text-white mt-0.5 sm:mt-1 leading-tight tracking-tight drop-shadow-md">
                         ${s.name}
                       </h3>
 
-                      <p class="text-xs text-slate-300 font-technical-data mt-1 line-clamp-1 drop-shadow-sm">
+                      <p class="text-[10px] sm:text-xs text-slate-300 font-technical-data mt-0.5 sm:mt-1 line-clamp-1 drop-shadow-sm">
                         ${s.spec}
                       </p>
 
-                      <div class="mt-3.5 pt-3 border-t border-white/15 flex items-center justify-between">
+                      <div class="mt-2.5 sm:mt-3.5 pt-2.5 sm:pt-3 border-t border-white/15 flex items-center justify-between gap-2">
                         <a
                           href="${s.link}"
-                          class="inline-flex items-center gap-2 bg-safety-orange hover:bg-orange-600 text-white font-label-caps text-xs px-4 py-2 rounded-xl font-bold shadow-lg shadow-safety-orange/20 transition-all active:scale-95 whitespace-nowrap">
+                          class="inline-flex items-center gap-1.5 sm:gap-2 bg-safety-orange hover:bg-orange-600 active:bg-orange-700 text-white font-label-caps text-[10px] sm:text-xs px-3 sm:px-4 py-2 sm:py-2 rounded-xl font-bold shadow-lg shadow-safety-orange/20 transition-all active:scale-95 whitespace-nowrap touch-manipulation min-h-[36px]">
                           <span>${s.ctaText}</span>
-                          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                          <svg class="w-3 sm:w-3.5 h-3 sm:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
                         </a>
 
-                        <span class="text-xs text-slate-400 font-technical-data hidden sm:inline">
+                        <span class="text-[10px] text-slate-400 font-technical-data hidden sm:inline truncate">
                           ${s.standards}
                         </span>
                       </div>
@@ -361,12 +365,12 @@ export function initHomeCarousel() {
 
             </div>
 
-            <!-- Minimal Pagination Capsule Indicators (Matching reference mock) -->
-            <div class="flex items-center justify-center gap-2 sm:gap-2.5 mt-5 sm:mt-6" id="coverflow-dots">
+            <!-- Minimal Pagination Capsule Indicators -->
+            <div class="flex items-center justify-center gap-2 sm:gap-2.5 mt-4 sm:mt-6" id="coverflow-dots">
               ${slidesData.map((_, idx) => `
                 <button
                   type="button"
-                  class="coverflow-dot h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  class="coverflow-dot h-1.5 rounded-full transition-all duration-300 cursor-pointer touch-manipulation ${
                     idx === 0 ? 'w-8 bg-safety-orange' : 'w-2 bg-white/25 hover:bg-white/50'
                   }"
                   data-index="${idx}"
@@ -427,7 +431,9 @@ export function initHomeCarousel() {
     if (width >= 1280) return 250;
     if (width >= 1024) return 215;
     if (width >= 768) return 195;
-    return width * 0.52;
+    if (width >= 480) return width * 0.48;
+    // On small mobile: narrow peek so flanking cards barely show at edges
+    return width * 0.42;
   }
 
   function updateCoverflow(newIndex) {

@@ -88,7 +88,7 @@ export function initPipesCarousel() {
         ${pipeFamilies.map(fam => `
           <a
             href="${fam.catalogLink}"
-            class="group relative bg-white rounded-2xl border border-slate-200/90 hover:border-safety-orange/60 p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:shadow-safety-orange/15 transition-all duration-500 ease-out hover:-translate-y-2.5 hover:scale-[1.02] cursor-pointer h-full"
+            class="group relative bg-white rounded-2xl border border-slate-200/90 hover:border-safety-orange/60 active:border-safety-orange/80 p-5 sm:p-6 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:shadow-safety-orange/15 active:shadow-safety-orange/10 transition-all duration-500 ease-out hover:-translate-y-2.5 hover:scale-[1.02] active:scale-[0.99] cursor-pointer h-full touch-manipulation"
           >
             <div class="flex flex-col flex-1">
               <!-- Top Category Index & Standards Badge -->
@@ -130,7 +130,7 @@ export function initPipesCarousel() {
             </div>
 
             <!-- Card Action Button: View Series -->
-            <div class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 group-hover:bg-safety-orange text-deep-navy group-hover:text-white font-technical-data text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm group-hover:shadow-md">
+            <div class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 group-hover:bg-safety-orange active:bg-safety-orange text-deep-navy group-hover:text-white active:text-white font-technical-data text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm group-hover:shadow-md min-h-[44px]">
               <span>View Series</span>
               <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -141,10 +141,10 @@ export function initPipesCarousel() {
       </div>
 
       <!-- View All Products CTA Beneath the Grid -->
-      <div class="mt-10 sm:mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="mt-10 sm:mt-12 text-center flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
         <a
           href="/pipes-and-fittings/index.html"
-          class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-deep-navy hover:bg-safety-orange text-white font-technical-data text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 group"
+          class="inline-flex items-center justify-center gap-2.5 px-8 py-4 sm:py-3.5 rounded-full bg-deep-navy hover:bg-safety-orange active:bg-safety-orange text-white font-technical-data text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 group min-h-[50px] sm:min-h-0 touch-manipulation"
         >
           <span>View All Products</span>
           <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">

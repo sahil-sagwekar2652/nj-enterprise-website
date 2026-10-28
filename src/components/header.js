@@ -260,7 +260,7 @@ export function renderHeader() {
           </a>
 
           <!-- Mobile Hamburger Button -->
-          <button id="mobile-menu-btn" type="button" class="lg:hidden p-1.5 text-deep-navy hover:text-safety-orange focus:outline-none" aria-label="Toggle navigation menu">
+          <button id="mobile-menu-btn" type="button" class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl text-deep-navy hover:text-safety-orange hover:bg-slate-surface focus:outline-none transition-colors" aria-label="Toggle navigation menu">
             <span class="material-symbols-outlined text-2xl" id="menu-toggle-icon">menu</span>
           </button>
         </div>
@@ -274,12 +274,12 @@ export function renderHeader() {
           <input type="search" name="q" value="${initialSearchQ}" placeholder="Search by SKU, size, or series..." class="w-full bg-white border border-cad-blue/30 focus:border-safety-orange rounded-xl pl-9 pr-4 py-2 text-sm text-deep-navy outline-none transition-all shadow-sm" />
         </form>
 
-        <nav class="flex flex-col gap-3 text-base font-semibold text-deep-navy">
-          <a href="/index.html" class="${isHome ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+        <nav class="flex flex-col gap-1 text-base font-semibold text-deep-navy">
+          <a href="/index.html" class="${isHome ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-3 flex items-center justify-between border-b border-cad-blue/10">
             <span>Home</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/catalog.html" class="${isCatalog ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/catalog.html" class="${isCatalog ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-3 flex items-center justify-between border-b border-cad-blue/10">
             <span>Catalog</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
@@ -366,15 +366,15 @@ export function renderHeader() {
             </div>
           </details>
 
-          <a href="/company-profile.html" class="${isProfile ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/company-profile.html" class="${isProfile ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-3 flex items-center justify-between border-b border-cad-blue/10">
             <span>Company Profile</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/about.html" class="${isAbout ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/about.html" class="${isAbout ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-3 flex items-center justify-between border-b border-cad-blue/10">
             <span>About Us</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>
-          <a href="/contact.html" class="${isContact ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-1.5 flex items-center justify-between border-b border-cad-blue/10 pb-2">
+          <a href="/contact.html" class="${isContact ? 'text-safety-orange font-bold' : 'hover:text-safety-orange'} py-3 flex items-center justify-between border-b border-cad-blue/10">
             <span>Contact</span>
             <span class="material-symbols-outlined text-sm">chevron_right</span>
           </a>

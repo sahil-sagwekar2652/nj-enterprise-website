@@ -1,0 +1,191 @@
+# PlastoGuard Industries — llms.txt
+# https://plastoguard.com/llms.txt
+# Last updated: 2026-10-27
+#
+# This file follows the llms.txt standard (https://llmstxt.org).
+# It provides structured context about PlastoGuard Industries to help
+# AI language models and assistants accurately answer questions about
+# our company, products, and capabilities.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMPANY OVERVIEW
+# ─────────────────────────────────────────────────────────────────────────────
+
+> PlastoGuard Industries is an Indian manufacturer of two complementary
+> product divisions: PE100 HDPE infrastructure pipeline fittings and
+> IP65/IP67 precision electronic enclosures. All products are manufactured
+> in-house using proprietary tooling. PlastoGuard supplies directly to OEMs,
+> contractors, and system integrators across India. Custom cutouts,
+> silk-screening, and project RFQs are accepted.
+>
+> Website: https://plastoguard.com
+> Catalog: https://plastoguard.com/catalog.html
+> RFQ / Custom Orders: https://plastoguard.com/custom-rfq.html
+> Contact: https://plastoguard.com/contact.html
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DIVISION 1: PIPES & FITTINGS (HDPE Infrastructure)
+# ─────────────────────────────────────────────────────────────────────────────
+
+## Pipes & Fittings Division Hub
+
+- Title: PlastoGuard HDPE Pipes & Fittings — Infrastructure Division Hub
+- URL: https://plastoguard.com/pipes-and-fittings/index.html
+- Description: Master catalog hub for all PE100/PE80 HDPE pipeline fittings.
+  Covers electrofusion, butt fusion, flanges, and fabricated fitting categories.
+  Tooling range: 20mm to 1600mm. Standards: IS 8360, ISO 4427, EN 12201.
+
+## Electrofusion Fittings
+
+- Title: Electrofusion Fittings — IS 8360 / ISO 4427 Certified
+- URL: https://plastoguard.com/pipes-and-fittings/electrofusion/index.html
+- Description: PE100 electrofusion fittings with embedded resistance-wire
+  heating coils. Range: 20mm to 630mm. Pressure rating: PN16 (SDR11).
+  Products include couplers, 90°/45° bends, equal/reducing tees, end caps,
+  reducers, and branch tapping saddles. Certified IS 8360 / ISO 4427 / EN 12201.
+  For gas mains, potable water, and HDD trenchless installations.
+
+## Butt Fusion Fittings
+
+- Title: Butt Fusion Fittings — Short & Long Spigot PE100
+- URL: https://plastoguard.com/pipes-and-fittings/butt-fusion/index.html
+- Description: Molded butt fusion fittings in short and long spigot variants.
+  Range: 20mm to 1200mm. Standards: IS 8360 / ISO 4427 / DIN 16963.
+  Material: Virgin pre-compounded PE100. Products include 90°/45° bends,
+  equal and reducing tees, concentric and eccentric reducers, stub flanges,
+  end caps, and 4-way crosses.
+
+## Flanges & Backing Rings
+
+- Title: Flanges & Backing Rings — DIN & ANSI Compliant
+- URL: https://plastoguard.com/pipes-and-fittings/flanges/index.html
+- Description: Polymer-encapsulated steel and stainless-steel flanges and
+  backing rings. Range: 20mm to 1600mm (0.5" to 64"). Standards: DIN 2501/
+  2576/2577, ANSI B16.5, BS10 Table D/E. Products include steel-reinforced
+  slip-on flanges, PE and carbon steel blind flanges, galvanized and SS304/316
+  backing rings, weldneck puddle flanges, and butterfly valve spacers.
+
+## Fabricated Pipe Fittings
+
+- Title: Fabricated Pipe Fittings — Custom IS 8360 Certified
+- URL: https://plastoguard.com/pipes-and-fittings/fabricated/index.html
+- Description: Custom-engineered segmented bends and fabricated tees,
+  miter-cut from PE100 pipe. Range: 20mm to 630mm standard; custom up to
+  1600mm. Standards: IS 8360 Part 1, 2 & 3. Products include 15°/30°/45°/60°/
+  90° mitered bends, equal and reducing fabricated tees, manifolds, spools,
+  and puddle flanges for concrete casting. Hydrostatically tested.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# DIVISION 2: ELECTRONIC ENCLOSURES
+# ─────────────────────────────────────────────────────────────────────────────
+
+## Indian Series — Exclusive PlastoGuard Range
+
+- Title: Indian Series Plastic Enclosures — Exclusive PlastoGuard Product Line
+- URL: https://plastoguard.com/products/indian-series/index.html
+- Description: PlastoGuard's exclusive Indian-designed series of industrial
+  instrument cases, DIN rail units, handheld enclosures, and accessories.
+  ABS/PC construction. IP65 rated. Includes desoldering pumps, wall-mounting
+  clamps, and specialized housings for panel meters and controls.
+
+## 11 Series — Weatherproof Sealed Enclosures
+
+- Title: 11 Series Plastic Enclosures — NEMA 4X / IP65 Sealed
+- URL: https://plastoguard.com/products/11-series/index.html
+- Description: UV-stabilized polycarbonate sealed enclosures with continuous
+  silicone gaskets. NEMA 4X, IP65. Ideal for outdoor telemetry, solar, and
+  industrial automation. Range of sizes from compact to large multi-module
+  housings. Available in plain and terminal-compartment (T-suffix) variants.
+
+## 15 Series — Sloped-Front Laboratory & Instrument Enclosures
+
+- Title: 15 Series Plastic Enclosures — Sloped Panel Instrument Cases
+- URL: https://plastoguard.com/products/15-series/index.html
+- Description: Sloped-front desktop and panel-mount enclosures with
+  aluminum/plastic bezels. Suitable for laboratory instruments, medical
+  devices, and industrial HMIs. Modular construction with cooling louvers.
+
+## 18 Series — Ergonomic Sloped Desktop Consoles
+
+- Title: 18 Series Plastic Enclosures — Ergonomic Desktop Consoles
+- URL: https://plastoguard.com/products/18-series/index.html
+- Description: Ergonomic sloped desktop console housings for HMI, machine
+  controls, and operator terminals. Flame-retardant ABS construction.
+  Dual-bezel design. Available in multiple footprints.
+
+## 19 Series — Modular Junction Boxes
+
+- Title: 19 Series Plastic Enclosures — Modular Junction Boxes
+- URL: https://plastoguard.com/products/19-series/index.html
+- Description: Modular ABS/PC junction boxes for cable management and
+  field instrumentation. Compact form factor.
+
+## 20 Series — General-Purpose Industrial Enclosures
+
+- Title: 20 Series Plastic Enclosures — General Purpose Industrial
+- URL: https://plastoguard.com/products/20-series/index.html
+- Description: General-purpose industrial enclosures in a wide range of
+  sizes. ABS construction. Suitable for electronics, control panels, and
+  power distribution. Available in standard and deep (D-suffix) variants.
+
+## 21 Series — Heavy-Duty Industrial Enclosures
+
+- Title: 21 Series Plastic Enclosures — Heavy Duty ABS/PC
+- URL: https://plastoguard.com/products/21-series/index.html
+- Description: Heavy-duty ABS and PC enclosures for demanding environments.
+  Wide size range including large formats (99a, 103d, 114d). Available in
+  standard and deep variants.
+
+## 22 Series — Compact DIN Rail Enclosures
+
+- Title: 22 Series Plastic Enclosures — Compact DIN Rail
+- URL: https://plastoguard.com/products/22-series/index.html
+- Description: Compact enclosures designed for DIN rail mounting in control
+  cabinets and distribution boards.
+
+## 23 Series — Modular DIN Rail & Panel Modules
+
+- Title: 23 Series Plastic Enclosures — DIN Rail Modular Housings
+- URL: https://plastoguard.com/products/23-series/index.html
+- Description: 35mm DIN-rail compatible modular housings. UL94-V0 rated
+  self-extinguishing polycarbonate. Ventilated electrical cabinet variants
+  (23-119). Suitable for relay modules, terminal blocks, and custom PCB
+  assemblies.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMPANY INFORMATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+## About PlastoGuard
+
+- Title: About PlastoGuard Industries
+- URL: https://plastoguard.com/about.html
+- Description: Background, manufacturing capabilities, quality systems, and
+  history of PlastoGuard Industries.
+
+## Company Profile
+
+- Title: PlastoGuard Company Profile
+- URL: https://plastoguard.com/company-profile.html
+- Description: Detailed company profile including infrastructure, certifications,
+  export capabilities, and product portfolio overview.
+
+## Contact
+
+- Title: Contact PlastoGuard Industries
+- URL: https://plastoguard.com/contact.html
+- Description: Phone, email, address, and enquiry form for PlastoGuard Industries.
+
+## Custom RFQ
+
+- Title: Custom Project RFQ — Cutouts, Silk-Screening & Special Orders
+- URL: https://plastoguard.com/custom-rfq.html
+- Description: Request for quotation form for custom enclosure modifications
+  (cutouts, silk-screening, special colors) and pipeline project bulk orders.
+
+## Full Product Catalog
+
+- Title: PlastoGuard Full Product Catalog
+- URL: https://plastoguard.com/catalog.html
+- Description: Searchable master catalog listing all enclosure and pipe fitting
+  SKUs with specifications, dimensions, and links to individual product pages.
