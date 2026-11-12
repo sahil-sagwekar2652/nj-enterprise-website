@@ -9,15 +9,24 @@ if (!apiKey || apiKey === 're_xxxxxxxxx') {
 }
 
 const resend = new Resend(apiKey);
-const recipientEmail = process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL || 'shrikantcn@gmail.com';
+const recipientEmail = 
+  process.env.QUOTE_RECIPIENT_EMAIL || 
+  process.env.RECIPIENT_EMAIL || 
+  process.env.RECEPIENT_EMAIL || 
+  process.env.SALES_EMAIL || 
+  process.env.NOTIFICATION_EMAIL || 
+  process.env.TO_EMAIL || 
+  'sales.plastoguardind@gmail.com';
+
+const finalRecipient = recipientEmail === 'shrikantcn@gmail.com' ? 'sales.plastoguardind@gmail.com' : recipientEmail;
 const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
 async function testEmail() {
-  console.log(`🚀 Sending test email via Resend API to ${recipientEmail} from ${fromEmail}...`);
+  console.log(`🚀 Sending test email via Resend API to ${finalRecipient} from ${fromEmail}...`);
   try {
     const data = await resend.emails.send({
       from: fromEmail,
-      to: recipientEmail,
+      to: finalRecipient,
       subject: 'Test RFQ Notification - PlastoGuard',
       html: `
         <h2>Test Email from PlastoGuard Website</h2>
@@ -25,7 +34,7 @@ async function testEmail() {
         <ul>
           <li><strong>SKU:</strong> 11-1</li>
           <li><strong>Selected Option:</strong> Standard Gray (RAL 7035)</li>
-          <li><strong>Client Email:</strong> shrikantcn@gmail.com</li>
+          <li><strong>Client Email:</strong> sales.plastoguardind@gmail.com</li>
         </ul>
       `,
     });

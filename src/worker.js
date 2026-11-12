@@ -14,12 +14,21 @@ export default {
             (typeof globalThis !== 'undefined' ? globalThis.RESEND_API_KEY : undefined) ||
             (typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : undefined);
 
-          const recipientEmail = 
+          let recipientEmail = 
             env?.QUOTE_RECIPIENT_EMAIL || 
+            env?.RECIPIENT_EMAIL || 
+            env?.RECEPIENT_EMAIL || 
             env?.NOTIFICATION_EMAIL || 
-            (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
-            (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
+            env?.SALES_EMAIL || 
+            env?.TO_EMAIL || 
+            (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
+            (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
             'sales.plastoguardind@gmail.com';
+
+          // Safety guard: ensure it never falls back or resolves to the old shrikantcn address
+          if (recipientEmail === 'shrikantcn@gmail.com') {
+            recipientEmail = 'sales.plastoguardind@gmail.com';
+          }
 
           const fromEmail = 
             env?.FROM_EMAIL || 

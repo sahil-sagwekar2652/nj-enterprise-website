@@ -59,7 +59,21 @@ export default defineConfig(({ mode }) => {
                   }
 
                   const resend = new Resend(apiKey);
-                  const recipientEmail = env.QUOTE_RECIPIENT_EMAIL || env.NOTIFICATION_EMAIL || process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL || 'sales.plastoguardind@gmail.com';
+                  let recipientEmail = 
+                    env.QUOTE_RECIPIENT_EMAIL || 
+                    env.RECIPIENT_EMAIL || 
+                    env.RECEPIENT_EMAIL || 
+                    env.SALES_EMAIL || 
+                    env.NOTIFICATION_EMAIL || 
+                    env.TO_EMAIL || 
+                    process.env.QUOTE_RECIPIENT_EMAIL || 
+                    process.env.RECIPIENT_EMAIL || 
+                    process.env.NOTIFICATION_EMAIL || 
+                    'sales.plastoguardind@gmail.com';
+
+                  if (recipientEmail === 'shrikantcn@gmail.com') {
+                    recipientEmail = 'sales.plastoguardind@gmail.com';
+                  }
                   const fromEmail = env.FROM_EMAIL || process.env.FROM_EMAIL || 'onboarding@resend.dev';
                   const result = await resend.emails.send({
                     from: fromEmail,

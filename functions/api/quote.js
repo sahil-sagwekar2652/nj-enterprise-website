@@ -9,12 +9,21 @@ export async function onRequestPost(context) {
       (typeof globalThis !== 'undefined' ? globalThis.RESEND_API_KEY : undefined) ||
       (typeof process !== 'undefined' && process.env ? process.env.RESEND_API_KEY : undefined);
 
-    const recipientEmail = 
+    let recipientEmail = 
       context.env?.QUOTE_RECIPIENT_EMAIL || 
+      context.env?.RECIPIENT_EMAIL || 
+      context.env?.RECEPIENT_EMAIL || 
       context.env?.NOTIFICATION_EMAIL || 
-      (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
-      (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
+      context.env?.SALES_EMAIL || 
+      context.env?.TO_EMAIL || 
+      (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
+      (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
       'sales.plastoguardind@gmail.com';
+
+    // Safety guard: ensure it never falls back or resolves to the old shrikantcn address
+    if (recipientEmail === 'shrikantcn@gmail.com') {
+      recipientEmail = 'sales.plastoguardind@gmail.com';
+    }
 
     const fromEmail = 
       context.env?.FROM_EMAIL || 
