@@ -84,11 +84,13 @@
               <span class="material-symbols-outlined text-2xl">mail</span>
             </div>
             <div>
-              <span class="text-xs font-technical-data text-on-surface-variant uppercase tracking-wider">Email Inquiry</span>
-              <a href="mailto:shrikantcn@gmail.com" class="text-deep-navy font-bold text-base hover:text-safety-orange transition-colors block mt-1 font-technical-data break-all">
-                shrikantcn@gmail.com
+              <span class="text-xs font-technical-data text-on-surface-variant uppercase tracking-wider">Email Inquiries</span>
+              <a href="mailto:sales.plastoguardind@gmail.com" class="text-deep-navy font-bold text-base hover:text-safety-orange transition-colors block mt-1 font-technical-data break-all">
+                sales.plastoguardind@gmail.com
               </a>
-              <span class="text-xs text-on-surface-variant block mt-0.5">Commercial & technical inquiries</span>
+              <span class="text-xs text-on-surface-variant block mt-1">
+                Technical Desk: <a href="mailto:shrikantcn@gmail.com" class="font-semibold text-deep-navy hover:text-safety-orange transition-colors">shrikantcn@gmail.com</a>
+              </span>
             </div>
           </div>
 
@@ -103,7 +105,7 @@
                 26, Sethi Industrial Estate, Suren Road, Near W.H. Express Metro Station, Andheri East, Mumbai - 400093
               </address>
               <div class="mt-2 inline-flex items-center gap-1.5 bg-slate-surface border border-cad-blue/30 px-2.5 py-1 rounded text-xs font-technical-data text-deep-navy">
-                <span class="text-safety-orange font-bold">GSTIN/UIN:</span> 27ACRPN5102D1ZQ
+                <span class="text-safety-orange font-bold">GSTIN/UIN:</span> 27ANMPD5199E1ZR
               </div>
             </div>
           </div>
@@ -243,7 +245,7 @@
           // Graceful mailto fallback
           const subject = encodeURIComponent('Inquiry from ' + formData.name + ' - ' + formData.company);
           const body = encodeURIComponent('Name: ' + formData.name + '\nCompany: ' + formData.company + '\nPhone: ' + formData.phone + '\nType: ' + formData.sku + '\n\nMessage:\n' + formData.notes);
-          const mailto = 'mailto:shrikantcn@gmail.com?subject=' + subject + '&body=' + body;
+          const mailto = 'mailto:sales.plastoguardind@gmail.com?subject=' + subject + '&body=' + body;
           status.className = 'mb-6 p-4 rounded-xl text-sm font-technical-data bg-blue-50 text-blue-900 border border-blue-300 block';
           status.innerHTML = 'Thank you! If the direct submission does not connect, <a href="' + mailto + '" class="font-bold underline text-safety-orange">click here to send directly via Email</a> or message us on WhatsApp.';
         } finally {

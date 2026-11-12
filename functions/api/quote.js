@@ -14,7 +14,7 @@ export async function onRequestPost(context) {
       context.env?.NOTIFICATION_EMAIL || 
       (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
       (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
-      'shrikantcn@gmail.com';
+      'sales.plastoguardind@gmail.com';
 
     const fromEmail = 
       context.env?.FROM_EMAIL || 

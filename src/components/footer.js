@@ -23,7 +23,7 @@ export function renderFooter() {
             </p>
             <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-safety-orange/50 px-3.5 py-2 rounded-lg text-xs font-technical-data text-surface-bright w-fit shadow-sm">
               <span class="text-safety-orange font-bold uppercase tracking-wider">GSTIN/UIN:</span>
-              <span class="tracking-wider font-bold text-white">27ACRPN5102D1ZQ</span>
+              <span class="tracking-wider font-bold text-white">27ANMPD5199E1ZR</span>
             </div>
           </div>
 
@@ -71,10 +71,13 @@ export function renderFooter() {
             </div>
 
             <div class="flex flex-col gap-1">
-              <span class="text-[11px] font-technical-data uppercase tracking-wider text-slate-400">Email</span>
+              <span class="text-[11px] font-technical-data uppercase tracking-wider text-slate-400">Email Inquiries</span>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-safety-orange text-base flex-shrink-0">mail</span>
-                <a href="mailto:shrikantcn@gmail.com" class="text-white hover:text-safety-orange transition-colors text-xs font-technical-data break-all">shrikantcn@gmail.com</a>
+                <a href="mailto:sales.plastoguardind@gmail.com" class="text-white hover:text-safety-orange transition-colors text-xs font-technical-data break-all">sales.plastoguardind@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-2 pl-6">
+                <a href="mailto:shrikantcn@gmail.com" class="text-slate-400 hover:text-safety-orange transition-colors text-[11px] font-technical-data break-all">shrikantcn@gmail.com</a>
               </div>
             </div>
 
@@ -108,7 +111,7 @@ export function renderFooter() {
         <!-- Bottom Copyright Row -->
         <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-primary-fixed-dim font-technical-data">
           <p>© 2026 PlastoGuard. All Rights Reserved.</p>
-          <p class="text-slate-400 text-center sm:text-right">GSTIN/UIN: 27ACRPN5102D1ZQ | Mumbai, Maharashtra, India</p>
+          <p class="text-slate-400 text-center sm:text-right">GSTIN/UIN: 27ANMPD5199E1ZR | Mumbai, Maharashtra, India</p>
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ export default {
   content: [
     "./*.html",
     "./products/**/*.html",
+    "./pipes-and-fittings/**/*.html",
     "./src/**/*.{js,ts,jsx,tsx,html}",
   ],
   darkMode: "class",

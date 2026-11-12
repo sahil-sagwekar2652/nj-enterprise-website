@@ -19,7 +19,7 @@ export default {
             env?.NOTIFICATION_EMAIL || 
             (typeof globalThis !== 'undefined' ? (globalThis.QUOTE_RECIPIENT_EMAIL || globalThis.NOTIFICATION_EMAIL) : undefined) ||
             (typeof process !== 'undefined' && process.env ? (process.env.QUOTE_RECIPIENT_EMAIL || process.env.NOTIFICATION_EMAIL) : undefined) ||
-            'shrikantcn@gmail.com';
+            'sales.plastoguardind@gmail.com';
 
           const fromEmail = 
             env?.FROM_EMAIL || 
@@ -30,7 +30,7 @@ export default {
           if (!apiKey) {
             return new Response(JSON.stringify({ 
               success: false, 
-              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please email us directly at shrikantcn@gmail.com or reach out on WhatsApp.' 
+              error: 'RESEND_API_KEY is not configured in Cloudflare environment. Please email us directly at sales.plastoguardind@gmail.com or reach out on WhatsApp.' 
             }), {
               status: 500,
               headers: { 'Content-Type': 'application/json' },
