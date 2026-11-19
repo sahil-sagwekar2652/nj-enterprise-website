@@ -34,6 +34,10 @@ export function renderFooter() {
               <span class="w-1.5 h-1.5 rounded-full bg-safety-orange"></span>
               <span>Pipes & Fittings Hub</span>
             </a>
+            <a class="text-safety-orange font-semibold text-xs hover:underline transition-colors pl-2.5 flex items-center gap-1" href="/pipes-and-fittings/catalogue/index.html">
+              <span class="material-symbols-outlined text-[13px]">picture_as_pdf</span>
+              <span>Pipes & Fittings Catalogue</span>
+            </a>
             <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/electrofusion/index.html">Electro Fusion</a>
             <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/butt-fusion/index.html">Butt Fusion</a>
             <a class="text-primary-fixed-dim text-xs hover:text-safety-orange transition-colors pl-2.5" href="/pipes-and-fittings/flanges/index.html">Flanges & Rings</a>

@@ -89,9 +89,12 @@ export function renderHeader() {
 
                 <!-- Master Hub Link Bar -->
                 <div class="col-span-2 pt-2 border-t border-cad-blue/15 flex justify-between items-center px-2">
-                  <span class="text-[11px] font-technical-data text-on-surface-variant">Full Infrastructure Piping Range</span>
+                  <a href="/pipes-and-fittings/catalogue/index.html" class="text-xs font-bold text-deep-navy hover:text-safety-orange flex items-center gap-1.5 bg-orange-50/70 border border-safety-orange/30 px-2.5 py-1 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-[15px] text-safety-orange">menu_book</span>
+                    <span>View &amp; Print Master Catalogue</span>
+                  </a>
                   <a href="/pipes-and-fittings/index.html" class="text-xs font-bold text-safety-orange hover:underline flex items-center gap-1">
-                    <span>Explore Pipes & Fittings Master Hub</span>
+                    <span>Explore Pipes &amp; Fittings Hub</span>
                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
                   </a>
                 </div>

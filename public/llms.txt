@@ -31,9 +31,11 @@
 
 - Title: PlastoGuard HDPE Pipes & Fittings — Infrastructure Division Hub
 - URL: https://plastoguard.com/pipes-and-fittings/index.html
-- Description: Master catalog hub for all PE100/PE80 HDPE pipeline fittings.
+- Master Catalogue: https://plastoguard.com/pipes-and-fittings/catalogue/index.html
+- PDF Download: https://plastoguard.com/catalogue/plastoguard-hdpe-pipes-fittings-catalogue.pdf
+- Description: Master catalog hub for all PE100/PE80 HDPE pipeline fittings and extruded pipes.
   Covers electrofusion, butt fusion, flanges, and fabricated fitting categories.
-  Tooling range: 20mm to 1600mm. Standards: IS 8360, ISO 4427, EN 12201.
+  Tooling range: 20mm to 1600mm. Standards: IS 4984:2016, IS 8360, ISO 4427, EN 12201.
 
 ## Electrofusion Fittings
 
