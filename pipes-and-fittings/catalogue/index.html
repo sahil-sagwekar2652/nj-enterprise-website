@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlastoGuard | HDPE Pipes, Fittings & Flanges Master Technical Catalogue</title>
-  <meta name="description" content="Official technical catalogue for PlastoGuard HDPE Pipes, Electrofusion Fittings, Butt Fusion Fittings, Fabricated Segmented Fittings and Steel-Reinforced Flanges compliant with IS 4984, ISO 4427, and IS 8360." />
+  <title>PlastoGuard | HDPE Fittings & Flanges Master Technical Catalogue</title>
+  <meta name="description" content="Technical dimension catalogue for PlastoGuard HDPE Electrofusion Fittings, Butt Fusion Fittings, Fabricated Segmented Fittings and Flanges compliant with IS 4984, ISO 4427, and IS 8360." />
   <link rel="canonical" href="https://plastoguard.com/pipes-and-fittings/catalogue/index.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
   <style>
@@ -39,11 +39,11 @@
       background-color: #cbd5e1;
       color: var(--color-text-main);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.45;
+      line-height: 1.35;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Screen Control Bar */
+    /* Floating Screen Control Bar */
     .catalog-toolbar {
       position: sticky;
       top: 0;
@@ -52,7 +52,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 2px solid var(--color-orange);
       color: #ffffff;
-      padding: 12px 24px;
+      padding: 10px 24px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -68,7 +68,7 @@
     }
 
     .catalog-toolbar .brand-logo {
-      height: 38px;
+      height: 36px;
       width: auto;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
     }
@@ -76,14 +76,14 @@
     .catalog-toolbar .brand-title {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 800;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       letter-spacing: 0.05em;
       color: #ffffff;
     }
 
     .catalog-toolbar .brand-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--color-orange);
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -94,8 +94,7 @@
       align-items: center;
       gap: 8px;
       overflow-x: auto;
-      max-width: 100%;
-      padding: 4px 0;
+      padding: 2px 0;
     }
 
     .catalog-toolbar .nav-pill {
@@ -132,7 +131,7 @@
       padding: 8px 16px;
       border-radius: 8px;
       font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
@@ -161,13 +160,13 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    /* Multi-Page Container */
+    /* Multi-Page Canvas */
     .catalog-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 30px 16px 80px 16px;
-      gap: 40px;
+      padding: 24px 16px 60px 16px;
+      gap: 36px;
     }
 
     /* Precision A4 Page Canvas */
@@ -184,30 +183,145 @@
       flex-direction: column;
       justify-content: space-between;
       box-sizing: border-box;
-      padding: 11mm 13mm 10mm 13mm;
+      padding: 8mm 11mm 8mm 11mm;
       page-break-after: always;
       break-after: page;
     }
 
-    /* Page Running Header */
+    /* Page 1 Master Heading Section */
+    .page-master-header {
+      border-bottom: 2px solid var(--color-navy);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    .master-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .master-header-top .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .master-header-top .logo-mark {
+      height: 38px;
+      width: auto;
+    }
+
+    .master-header-top .brand-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .master-header-top .brand-name {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--color-navy);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .master-header-top .division-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--color-orange);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .master-header-top .header-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.64rem;
+      color: var(--color-text-muted);
+      line-height: 1.35;
+    }
+
+    .master-header-top .header-meta strong {
+      color: var(--color-navy);
+    }
+
+    .master-banner {
+      background: linear-gradient(135deg, #0b192c 0%, #1e3a8a 100%);
+      color: #ffffff;
+      border-radius: 7px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .master-banner .banner-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 0.98rem;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .master-banner .banner-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      color: #cbd5e1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .master-banner .standards-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .badge-std {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.54rem;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-std.accent {
+      background: var(--color-orange);
+      border-color: var(--color-orange);
+    }
+
+    /* Regular Page Running Header (Pages 2 & 3) */
     .page-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px solid var(--color-navy);
-      padding-bottom: 6px;
-      margin-bottom: 9px;
+      padding-bottom: 5px;
+      margin-bottom: 6px;
       flex-shrink: 0;
     }
 
     .page-header .brand-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .page-header .logo-mark {
-      height: 32px;
+      height: 28px;
       width: auto;
     }
 
@@ -219,44 +333,224 @@
     .page-header .brand-name {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       color: var(--color-navy);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       line-height: 1;
     }
 
     .page-header .division-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.58rem;
       font-weight: 700;
       color: var(--color-orange);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-top: 2px;
     }
 
     .page-header .header-meta {
       text-align: right;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.60rem;
       color: var(--color-text-muted);
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
     .page-header .header-meta strong {
       color: var(--color-navy);
     }
 
-    /* Page Running Footer */
+    /* Section Ribbon Header */
+    .section-ribbon {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-slate);
+      border-left: 4px solid var(--color-orange);
+      border-top: 1px solid var(--color-slate-border);
+      border-right: 1px solid var(--color-slate-border);
+      border-bottom: 1px solid var(--color-slate-border);
+      padding: 4px 10px;
+      margin-bottom: 6px;
+      border-radius: 0 4px 4px 0;
+      flex-shrink: 0;
+    }
+
+    .section-ribbon .ribbon-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 0.82rem;
+      color: var(--color-navy);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-ribbon .ribbon-specs {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      color: var(--color-text-muted);
+      font-weight: 600;
+    }
+
+    .section-ribbon .ribbon-specs strong {
+      color: var(--color-orange-dark);
+    }
+
+    /* Product Content Flow Area */
+    .products-flow {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+      position: relative;
+    }
+
+    /* Alternating Product Row — Fluid, Organic, No Hard Outer Box */
+    .product-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      padding: 3px 0 5px 0;
+      border-bottom: 1px dashed rgba(11, 25, 44, 0.12);
+      flex: 1 1 0;
+      min-height: 0;
+    }
+
+    .product-row:last-child {
+      border-bottom: none;
+    }
+
+    .product-row.row-left {
+      flex-direction: row;
+    }
+
+    .product-row.row-right {
+      flex-direction: row-reverse;
+    }
+
+    /* Large Product Photo Container */
+    .product-photo-box {
+      flex: 0 0 210px;
+      width: 210px;
+      height: 100%;
+      max-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #ffffff 65%, #f8fafc 100%);
+      border-radius: 8px;
+      padding: 4px;
+      position: relative;
+    }
+
+    .product-photo-box img {
+      max-width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+    }
+
+    /* Technical Dimensions Block */
+    .product-data-box {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+      gap: 8px;
+    }
+
+    .product-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 0.86rem;
+      color: var(--color-navy);
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .product-mat-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.54rem;
+      font-weight: 800;
+      background: var(--color-navy);
+      color: #ffffff;
+      padding: 1.5px 5px;
+      border-radius: 3px;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    /* High-Density Dimension Schedule Table */
+    .dim-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      background: #ffffff;
+      border: 1px solid var(--color-slate-border);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dim-table th {
+      background: #f1f5f9;
+      color: var(--color-navy);
+      font-weight: 700;
+      padding: 2.5px 6px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-slate-border);
+      border-right: 1px solid #e2e8f0;
+      width: 22%;
+      white-space: nowrap;
+    }
+
+    .dim-table td {
+      padding: 2.5px 6px;
+      color: var(--color-text-main);
+      border-bottom: 1px solid var(--color-slate-border);
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .dim-table td:last-child {
+      border-right: none;
+    }
+
+    .dim-table tr:last-child th,
+    .dim-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .dim-highlight {
+      font-weight: 800;
+      color: var(--color-navy);
+    }
+
+    .dim-accent {
+      font-weight: 800;
+      color: var(--color-orange-dark);
+    }
+
+    /* Page Running Footer (All Pages) */
     .page-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-top: 1.5px solid var(--color-slate-border);
-      padding-top: 6px;
-      margin-top: 8px;
+      padding-top: 5px;
+      margin-top: 5px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.63rem;
+      font-size: 0.58rem;
       color: var(--color-text-muted);
       flex-shrink: 0;
     }
@@ -270,7 +564,7 @@
     .page-footer .footer-badge {
       background: var(--color-navy);
       color: #ffffff;
-      padding: 2px 7px;
+      padding: 2px 6px;
       border-radius: 4px;
       font-weight: 700;
       letter-spacing: 0.04em;
@@ -279,244 +573,114 @@
     .page-footer .footer-page-num {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 800;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       color: var(--color-orange);
       background: var(--color-orange-light);
-      padding: 2.5px 9px;
-      border-radius: 5px;
+      padding: 2px 8px;
+      border-radius: 4px;
       letter-spacing: 0.05em;
     }
 
-    /* Typography & Core Layout Elements */
-    .section-eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.66rem;
-      font-weight: 700;
-      color: var(--color-orange);
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      display: inline-flex;
+    /* Last Page Corporate Contact & Procurement Footer */
+    .last-page-footer-block {
+      background: linear-gradient(135deg, #0b192c 0%, #112238 100%);
+      color: #ffffff;
+      border-radius: 7px;
+      padding: 8px 12px;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .last-page-footer-block .footer-header-row {
+      display: flex;
       align-items: center;
-      gap: 5px;
-      margin-bottom: 3px;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 5px;
+      margin-bottom: 6px;
     }
 
-    .section-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      background: var(--color-orange);
-      border-radius: 50%;
-    }
-
-    .page-main-title {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 900;
-      font-size: 1.35rem;
-      color: var(--color-navy);
-      line-height: 1.15;
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
-    }
-
-    .page-subtitle {
-      font-size: 0.74rem;
-      color: var(--color-text-muted);
-      line-height: 1.35;
-      margin-bottom: 9px;
-    }
-
-    /* Product Card Grids */
-    .product-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 9px;
-    }
-
-    .product-grid-5 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
+    .last-page-footer-block .footer-brand {
+      display: flex;
+      align-items: center;
       gap: 8px;
     }
 
-    .product-grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 11px;
-    }
-
-    .product-card {
+    .last-page-footer-block .footer-logo {
+      height: 24px;
+      width: auto;
       background: #ffffff;
-      border: 1px solid var(--color-slate-border);
-      border-radius: 9px;
-      padding: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      padding: 2px;
+      border-radius: 3px;
     }
 
-    .product-card .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 5px;
-    }
-
-    .product-card .sr-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.56rem;
-      font-weight: 800;
-      color: var(--color-orange);
-      background: var(--color-orange-light);
-      padding: 1.5px 5px;
-      border-radius: 4px;
-    }
-
-    .product-card .mat-pill {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.56rem;
-      font-weight: 700;
-      color: var(--color-navy);
-      background: var(--color-slate);
-      border: 1px solid var(--color-slate-border);
-      padding: 1.5px 5px;
-      border-radius: 4px;
-    }
-
-    .product-card .img-box {
-      width: 100%;
-      height: 80px;
-      background: var(--color-slate);
-      border: 1px solid #f1f5f9;
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px;
-      margin-bottom: 7px;
-    }
-
-    .product-card .img-box img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      mix-blend-mode: multiply;
-    }
-
-    .product-card .card-title {
+    .last-page-footer-block .footer-title {
       font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 800;
-      font-size: 0.8rem;
-      color: var(--color-navy);
-      line-height: 1.2;
-      margin-bottom: 3px;
-      min-height: 26px;
-      display: flex;
-      align-items: center;
+      font-weight: 900;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      line-height: 1;
     }
 
-    .product-card .card-desc {
-      font-size: 0.65rem;
-      color: var(--color-text-muted);
-      line-height: 1.32;
-      margin-bottom: 6px;
-      flex-grow: 1;
-    }
-
-    .product-card .specs-table {
-      border-top: 1px dashed var(--color-slate-border);
-      padding-top: 5px;
+    .last-page-footer-block .footer-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.60rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5px;
+      font-size: 0.52rem;
+      color: var(--color-orange);
+      letter-spacing: 0.06em;
     }
 
-    .product-card .specs-row {
+    .last-page-footer-block .footer-gstin {
+      background: var(--color-orange);
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      font-weight: 800;
+      padding: 2.5px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-grid-cols {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 1.3fr;
+      gap: 10px;
+      font-size: 0.58rem;
+      line-height: 1.35;
+    }
+
+    .footer-col-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.50rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .footer-grid-cols a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    .footer-grid-cols a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom-notice {
+      margin-top: 6px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .product-card .specs-label {
-      color: var(--color-text-muted);
-    }
-
-    .product-card .specs-val {
-      font-weight: 700;
-      color: var(--color-navy);
-    }
-
-    .product-card .specs-val.accent {
-      color: var(--color-orange);
-    }
-
-    /* Tables */
-    .data-table-container {
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid var(--color-slate-border);
-      border-radius: 7px;
-      margin-top: 4px;
-    }
-
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.58rem;
+      font-size: 0.52rem;
+      color: #94a3b8;
       font-family: 'JetBrains Mono', monospace;
-      text-align: left;
     }
 
-    .data-table th {
-      background: var(--color-navy);
-      color: #ffffff;
-      padding: 4px 6px;
-      font-weight: 700;
-      font-size: 0.59rem;
-      letter-spacing: 0.03em;
-      border-right: 1px solid rgba(255,255,255,0.1);
-      white-space: nowrap;
-    }
-
-    .data-table th:last-child {
-      border-right: none;
-    }
-
-    .data-table td {
-      padding: 3px 6px;
-      border-bottom: 1px solid var(--color-slate-border);
-      border-right: 1px solid #f1f5f9;
-      color: var(--color-text-main);
-    }
-
-    .data-table td:last-child {
-      border-right: none;
-    }
-
-    .data-table tr:nth-child(even) td {
-      background: #fafafa;
-    }
-
-    .data-table tr:hover td {
-      background: var(--color-orange-light);
-    }
-
-    .data-table .highlight {
-      font-weight: 700;
-      color: var(--color-navy);
-    }
-
-    .data-table .badge-orange {
-      color: var(--color-orange);
-      font-weight: 700;
-    }
-
-    /* Print Styles */
+    /* Print Precision Styles */
     @media print {
       @page {
         size: A4 portrait;
@@ -550,7 +714,7 @@
         height: 297mm !important;
         min-height: 297mm !important;
         max-height: 297mm !important;
-        padding: 10mm 12mm 9mm 12mm !important;
+        padding: 7mm 10mm 7mm 10mm !important;
         page-break-after: always !important;
         page-break-inside: avoid !important;
         break-after: page !important;
@@ -560,23 +724,20 @@
 </head>
 <body>
 
-  <!-- Floating Screen Toolbar -->
+  <!-- Screen Control Bar -->
   <header class="catalog-toolbar no-print">
     <div class="brand-group">
       <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="brand-logo" />
       <div>
         <div class="brand-title">PLASTOGUARD PIPING SYSTEMS</div>
-        <div class="brand-sub">Master Technical Catalogue • 2026 Edition</div>
+        <div class="brand-sub">Fittings &amp; Flanges Technical Dimension Catalogue</div>
       </div>
     </div>
 
     <nav class="nav-pills">
-      <a href="#page-1" class="nav-pill active">Cover</a>
-      <a href="#page-2" class="nav-pill">1. HDPE Pipes</a>
-      <a href="#page-3" class="nav-pill">2. Electrofusion</a>
-      <a href="#page-4" class="nav-pill">3. Butt Fusion</a>
-      <a href="#page-5" class="nav-pill">4. Fabricated &amp; Flanges</a>
-      <a href="#page-6" class="nav-pill">5. QA &amp; Contact</a>
+      <a href="#page-1" class="nav-pill active">1. Electrofusion</a>
+      <a href="#page-2" class="nav-pill">2. Butt Fusion</a>
+      <a href="#page-3" class="nav-pill">3. Fabricated &amp; Flanges</a>
     </nav>
 
     <div class="action-buttons">
@@ -599,9 +760,211 @@
   <main class="catalog-container">
 
     <!-- ==========================================
-         PAGE 1: COVER & ENGINEERING PORTFOLIO OVERVIEW
+         PAGE 1: ELECTROFUSION FITTINGS (WITH MASTER HEADING)
          ========================================== -->
     <article id="page-1" class="catalog-page">
+      
+      <!-- Master Heading Section (kept from first page) -->
+      <header class="page-master-header">
+        <div class="master-header-top">
+          <div class="brand-left">
+            <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
+            <div class="brand-text-col">
+              <span class="brand-name">PLASTOGUARD</span>
+              <span class="division-tag">Infrastructure Piping Division</span>
+            </div>
+          </div>
+          <div class="header-meta">
+            <div>GSTIN: <strong>27ANMPD5199E1ZR</strong></div>
+            <div>Official Sales: <strong>sales.plastoguardind@gmail.com</strong></div>
+          </div>
+        </div>
+
+        <div class="master-banner">
+          <div>
+            <div class="banner-title">HDPE Pipes, Fittings &amp; Flanges Master Catalogue</div>
+            <div class="banner-sub">Technical Dimensions &amp; Specifications Schedule</div>
+          </div>
+          <div class="standards-pill-group">
+            <span class="badge-std accent">PE100 / PE80</span>
+            <span class="badge-std">IS 4984:2016</span>
+            <span class="badge-std">ISO 4427</span>
+            <span class="badge-std">IS 8360</span>
+            <span class="badge-std">EN 12201</span>
+            <span class="badge-std">DIN 2501</span>
+            <span class="badge-std">ANSI B16.5</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Section Ribbon -->
+      <div class="section-ribbon">
+        <span class="ribbon-title">1. Electrofusion Pipeline Fittings</span>
+        <span class="ribbon-specs">Material: <strong>PE100 Virgin Resin</strong> • Rating: <strong>SDR 11 (PN16) / SDR 17 (PN10)</strong> • Pin: <strong>4.0 mm</strong></span>
+      </div>
+
+      <!-- Alternating Products Flow (4 Products, Large Photos, Fluid Rows) -->
+      <div class="products-flow">
+
+        <!-- Row 1: Coupler (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/electrofusion/coupler.png" alt="Electrofusion Coupler" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Electrofusion Coupler (Socket Joint)</h2>
+              <span class="product-mat-tag">PE100 / PN16 &amp; PN10</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">20 mm to 630 mm (DN20 – DN630)</td>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16 Water / PN10 Gas) | SDR 17 (PN10 Water)</td>
+              </tr>
+              <tr>
+                <th>Compliance:</th>
+                <td>ISO 4427-3 | EN 12201-3 | IS 4984</td>
+                <th>Fusion Standard:</th>
+                <td>4.0 mm Solid Brass Terminal Pins • ISO 13950 24-char Barcode</td>
+              </tr>
+              <tr>
+                <th>Key Dimensions:</th>
+                <td colspan="3">
+                  <strong>d 20–63mm:</strong> L: 75–108mm, Wall t: 3.0–5.8mm &nbsp;|&nbsp;
+                  <strong>d 75–160mm:</strong> L: 120–180mm, Wall t: 6.8–14.6mm<br/>
+                  <strong>d 180–315mm:</strong> L: 195–260mm, Wall t: 16.4–28.6mm &nbsp;|&nbsp;
+                  <strong>d 355–630mm:</strong> L: 290–380mm, Wall t: 32.2–57.2mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 2: 90° & 45° Elbow (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/electrofusion/bend-90.png" alt="Electrofusion 90 Degree Elbow" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Electrofusion 90° &amp; 45° Elbows</h2>
+              <span class="product-mat-tag">PE100 / PN16 &amp; PN10</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">90° Elbow: 20 mm to 500 mm &nbsp;|&nbsp; 45° Elbow: 63 mm to 315 mm</td>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16) &amp; SDR 17 (PN10)</td>
+              </tr>
+              <tr>
+                <th>Compliance:</th>
+                <td>ISO 4427-3 | EN 12201-3 | IS 4984</td>
+                <th>Heating Coil:</th>
+                <td>Dual-zone embedded exposed heating wire coil with pop-up weld indicators</td>
+              </tr>
+              <tr>
+                <th>Key Dimensions:</th>
+                <td colspan="3">
+                  <strong>90° (d 20–63mm):</strong> Center-to-end Z: 55–102mm &nbsp;|&nbsp;
+                  <strong>90° (d 75–160mm):</strong> Center-to-end Z: 115–190mm<br/>
+                  <strong>90° (d 180–315mm):</strong> Center-to-end Z: 215–330mm &nbsp;|&nbsp;
+                  <strong>45° (d 63–315mm):</strong> Center-to-end Z: 75–240mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 3: Equal & Reducing Tee (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/electrofusion/tee-equal.png" alt="Electrofusion Equal Tee" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Electrofusion Equal &amp; Reducing Tees</h2>
+              <span class="product-mat-tag">PE100 / PN16 &amp; PN10</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">Equal Tee: 20 mm to 500 mm &nbsp;|&nbsp; Reducing Tee: 20/20 mm to 500/315 mm</td>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16 Water / PN10 Gas) | SDR 17 (PN10)</td>
+              </tr>
+              <tr>
+                <th>Compliance:</th>
+                <td>ISO 4427-3 | EN 12201-3 | IS 4984</td>
+                <th>Design:</th>
+                <td>Full bore molded socket branches with integrated reinforcement ribs</td>
+              </tr>
+              <tr>
+                <th>Key Dimensions:</th>
+                <td colspan="3">
+                  <strong>Equal (d 20–63mm):</strong> Run L: 105–170mm, Branch Height H: 65–110mm<br/>
+                  <strong>Equal (d 75–160mm):</strong> Run L: 205–320mm, Branch Height H: 130–210mm &nbsp;|&nbsp;
+                  <strong>Equal (d 180–315mm):</strong> Run L: 360–550mm, H: 240–380mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 4: Tapping Saddle & Reducer (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/electrofusion/tapping-saddle.png" alt="Electrofusion Branch Tapping Saddle" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Branch Tapping Saddles &amp; Reducers</h2>
+              <span class="product-mat-tag">PE100 / SDR 11 (PN16)</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Saddles Range:</th>
+                <td class="dim-highlight">Main Pipe: 63 mm to 225 mm &nbsp;|&nbsp; Branch Outlets: 1/2" to 2" BSP / 32–63mm PE</td>
+                <th>Reducer Range:</th>
+                <td class="dim-highlight">32/20 mm to 315/250 mm Concentric</td>
+              </tr>
+              <tr>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16 Water / PN10 Gas)</td>
+                <th>Features:</th>
+                <td>Internal 360° cutter for live under-pressure tapping • Top cap O-ring seal</td>
+              </tr>
+              <tr>
+                <th>Key Dimensions:</th>
+                <td colspan="3">
+                  <strong>Saddle Base Radius:</strong> R31.5 to R112.5mm with 360° under-clamp strap<br/>
+                  <strong>Reducers:</strong> d1/d2 32–110mm: L: 80–145mm &nbsp;|&nbsp; d1/d2 125–315mm: L: 160–250mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Running Page Footer -->
+      <footer class="page-footer">
+        <div class="footer-left">
+          <span class="footer-badge">PLASTOGUARD PIPING</span>
+          <span>Section 1: Electrofusion Fitting Schedules • ISO 4427 / EN 12201 Compliant</span>
+        </div>
+        <div class="footer-page-num">PAGE 01 / 03</div>
+      </footer>
+    </article>
+
+
+    <!-- ==========================================
+         PAGE 2: BUTT FUSION FITTINGS (SHORT & LONG SPIGOT)
+         ========================================== -->
+    <article id="page-2" class="catalog-page">
+      
       <!-- Running Header -->
       <header class="page-header">
         <div class="brand-left">
@@ -612,1256 +975,396 @@
           </div>
         </div>
         <div class="header-meta">
-          <div>GSTIN: <strong>27ANMPD5199E1ZR</strong></div>
-          <div>Inquiries: <strong>sales.plastoguardind@gmail.com</strong></div>
+          <div>Technical Standards: <strong>ISO 4427-3 | IS 4984:2016 | DIN 8074</strong></div>
+          <div>Direct RFQ: <strong>sales.plastoguardind@gmail.com</strong></div>
         </div>
       </header>
 
-      <!-- Main Cover Body -->
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <!-- Hero Title Box -->
-        <div style="background: linear-gradient(135deg, #0b192c 0%, #1e3a8a 100%); color: #ffffff; border-radius: 12px; padding: 20px 22px; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(11, 25, 44, 0.2);">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 7px;">
-            <span style="background: var(--color-orange); color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 0.64rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em;">Official 2026 Edition</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: #cbd5e1; letter-spacing: 0.06em;">HEAVY-DUTY THERMOPLASTIC PIPELINES</span>
-          </div>
-          <h1 style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 900; font-size: 2.05rem; line-height: 1.1; margin-bottom: 7px; letter-spacing: -0.01em;">
-            HDPE PIPES, FITTINGS &amp;<br/><span style="color: var(--color-orange);">FLANGES SYSTEMS</span>
-          </h1>
-          <p style="font-size: 0.82rem; color: #e2e8f0; line-height: 1.45; max-width: 90%; margin-bottom: 12px;">
-            High-integrity certified PE100 &amp; PE80 piping systems engineered for potable water transmission, natural gas reticulation, industrial abrasive chemical lines, and deep trench infrastructure.
-          </p>
-
-          <!-- Key Metrics Pills -->
-          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
-            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 6px 10px;">
-              <span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 800; color: #ffffff;">20–1600<span style="font-size: 0.65rem; color: var(--color-orange);">mm</span></span>
-              <span style="font-size: 0.6rem; color: #cbd5e1; text-transform: uppercase;">Diameter Span</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 6px 10px;">
-              <span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 800; color: #ffffff;">PN 2.5–25</span>
-              <span style="font-size: 0.6rem; color: #cbd5e1; text-transform: uppercase;">Pressure Classes</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 6px 10px;">
-              <span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 800; color: #ffffff;">SDR 41–6</span>
-              <span style="font-size: 0.6rem; color: #cbd5e1; text-transform: uppercase;">Standard SDR Ratios</span>
-            </div>
-            <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; padding: 6px 10px;">
-              <span style="display: block; font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; font-weight: 800; color: #ffffff;">50+ Years</span>
-              <span style="font-size: 0.6rem; color: #cbd5e1; text-transform: uppercase;">Design Lifetime</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- High-Impact Imagery Banner (Pipes + Fittings Dual Grid) -->
-        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 11px; margin: 12px 0;">
-          <div style="border: 1px solid var(--color-slate-border); border-radius: 11px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
-            <div style="height: 140px; width: 100%; background: #000000; overflow: hidden; position: relative;">
-              <img src="/images/pipes/hdpe-pipes-yard-stack.png" alt="HDPE High Density Pipes Yard Stacks" style="width: 100%; height: 100%; object-fit: cover;" />
-              <span style="position: absolute; bottom: 6px; left: 8px; background: rgba(11,25,44,0.85); color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">Yard Stacks: IS 4984 / ISO 4427 Stock</span>
-            </div>
-            <div style="padding: 7px 11px; font-size: 0.67rem; color: var(--color-text-muted); line-height: 1.35;">
-              <strong style="color: var(--color-navy);">Certified HDPE Extruded Pipes</strong>: Manufactured from 100% pre-compounded PE100 Virgin resin with carbon black UV stabilization for high sunlight resistance.
-            </div>
-          </div>
-
-          <div style="border: 1px solid var(--color-slate-border); border-radius: 11px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column;">
-            <div style="height: 140px; width: 100%; background: #ffffff; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; padding: 6px;">
-              <img src="/images/fittings/electrofusion/overview-family.png" alt="HDPE Fittings Complete Family" style="max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply;" />
-              <span style="position: absolute; bottom: 6px; left: 8px; background: rgba(255,87,34,0.9); color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; font-weight: 700; padding: 2px 6px; border-radius: 4px;">Molded &amp; Fabricated Fittings</span>
-            </div>
-            <div style="padding: 7px 11px; font-size: 0.67rem; color: var(--color-text-muted); line-height: 1.35;">
-              <strong style="color: var(--color-navy);">Comprehensive Jointing Families</strong>: Electrofusion, short &amp; long spigot butt fusion, backing flanges, and segmented mitered fabricated fittings.
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 Core Engineering Pillars -->
-        <div style="margin-bottom: 10px;">
-          <div class="section-eyebrow">PlastoGuard Engineering Benchmarks</div>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px;">
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">1. Superior Abrasion Resistance</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Tests prove HDPE has a 3:1 performance ratio over X-52 grade steel for slurries and iron ore conveyance.</p>
-            </div>
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">2. Low Friction (C = 150)</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Mirror-smooth bore with William-Hazen C=150 allows smaller diameter selection and huge lifetime pumping power savings.</p>
-            </div>
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">3. Extreme Flexibility (20-40D)</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Can be curved around obstacles and ground contours, drastically reducing elbows and trench preparation costs.</p>
-            </div>
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">4. 100% Monolithic Welds</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Molecular heat fusion creates homogenous joints stronger than the parent pipe, eliminating joint leaks forever.</p>
-            </div>
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">5. Chemical &amp; Biological Inertness</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Unaffected by acidic soils, corrosive effluents, electrolytic currents, micro-organisms, or scaling encrustations.</p>
-            </div>
-            <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 7px; padding: 6px 8px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.72rem; color: var(--color-navy); display: block; margin-bottom: 2px;">6. Lightweight Density (0.95 g/cm³)</strong>
-              <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.3;">Weighs 1/8th of concrete and 1/6th of steel; enables rapid field deployment, easier handling, and lower freight charges.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Directory Roadmap Box -->
-        <div style="border: 1px solid #cbd5e1; background: #ffffff; border-radius: 8px; padding: 7px 11px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.74rem; color: var(--color-navy); text-transform: uppercase;">
-            Catalogue Directory:
-          </div>
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.63rem; color: var(--color-text-muted); display: flex; gap: 14px;">
-            <span><strong style="color: var(--color-orange);">P.02:</strong> HDPE Pipes</span>
-            <span><strong style="color: var(--color-orange);">P.03:</strong> Electrofusion</span>
-            <span><strong style="color: var(--color-orange);">P.04:</strong> Butt Fusion</span>
-            <span><strong style="color: var(--color-orange);">P.05:</strong> Fabricated &amp; Flanges</span>
-            <span><strong style="color: var(--color-orange);">P.06:</strong> QA &amp; Specs</span>
-          </div>
-        </div>
-
+      <!-- Section Ribbon -->
+      <div class="section-ribbon">
+        <span class="ribbon-title">2. Butt Fusion Fittings (Short &amp; Long Spigot)</span>
+        <span class="ribbon-specs">Material: <strong>PE100 / PE80</strong> • Pressure: <strong>PN6 / PN10 / PN16</strong> • SDR: <strong>SDR 11 / SDR 13.5 / SDR 17 / SDR 21</strong></span>
       </div>
 
-      <!-- Running Footer -->
-      <footer class="page-footer">
-        <div class="footer-left">
-          <span class="footer-badge">IS 4984 / ISO 4427 / IS 8360</span>
-          <span>PlastoGuard Pipeline Systems • Mumbai, Maharashtra, India</span>
-        </div>
-        <div class="footer-page-num">PAGE 01 / 06</div>
-      </footer>
-    </article>
+      <!-- Alternating Products Flow (4 Products, Large Photos, Fluid Rows) -->
+      <div class="products-flow">
 
-
-    <!-- ==========================================
-         PAGE 2: HDPE PIPES PORTFOLIO & DIMENSIONS
-         ========================================== -->
-    <article id="page-2" class="catalog-page">
-      <header class="page-header">
-        <div class="brand-left">
-          <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
-          <div class="brand-text-col">
-            <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Section 01: Thermoplastic Pipes Division</span>
+        <!-- Row 1: Molded 90° Bend (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/butt-fusion/short-bend-90.png" alt="Butt Fusion Molded 90 Degree Bend" />
           </div>
-        </div>
-        <div class="header-meta">
-          <div>Manufacturing Standard: <strong>IS 4984:2016 / ISO 4427</strong></div>
-          <div>Polymer Grade: <strong>100% Virgin PE100 / PE80</strong></div>
-        </div>
-      </header>
-
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <!-- Section Header -->
-        <div>
-          <div class="section-eyebrow">Comprehensive Piping Range: 20 mm to 1600 mm</div>
-          <h2 class="page-main-title">High-Density Polyethylene (HDPE) Pipes Portfolio</h2>
-          <p class="page-subtitle" style="margin-bottom: 7px;">
-            Manufactured from virgin PE100 and PE80 compound with specialized co-extruded color identification stripes for dedicated application sectors.
-          </p>
-        </div>
-
-        <!-- 5 Proper Headings for Each Pipe Type -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 5px;">
-          
-          <!-- 1. Potable Water -->
-          <div style="border: 1px solid var(--color-slate-border); border-left: 3.5px solid #2563eb; border-radius: 6px; padding: 6px 8px; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.74rem; color: var(--color-navy);">1. HDPE Potable Water Transmission Pipes</strong>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.56rem; background: #eff6ff; color: #2563eb; font-weight: 700; padding: 1px 4px; border-radius: 3px;">BLUE STRIPE</span>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Molded 90° &amp; 45° Bends (Short &amp; Long Spigot)</h2>
+              <span class="product-mat-tag">PE100 / PN16 &amp; PN10</span>
             </div>
-            <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.28;">
-              Solid black with co-extruded longitudinal Blue stripes. Conforms to IS 4984:2016 and ISO 4427-2 for urban drinking water supply mains, lift irrigation pumping lines, and rural drinking schemes. Odorless, non-toxic, and biological inertness certified.
-            </p>
-          </div>
-
-          <!-- 2. Natural Gas -->
-          <div style="border: 1px solid var(--color-slate-border); border-left: 3.5px solid #eab308; border-radius: 6px; padding: 6px 8px; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.74rem; color: var(--color-navy);">2. HDPE City Gas Distribution (CGD) Pipes</strong>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.56rem; background: #fefce8; color: #ca8a04; font-weight: 700; padding: 1px 4px; border-radius: 3px;">YELLOW STRIPE</span>
-            </div>
-            <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.28;">
-              Engineered with high Rapid Crack Propagation (RCP) resistance and ESCR &gt; 10,000 hrs. Designed for pressurized methane, natural gas, and LPG networks under ISO 4437 and EN 1555 standards. Operating pressure up to PN 16 (SDR 11).
-            </p>
-          </div>
-
-          <!-- 3. Industrial Effluent & Mining -->
-          <div style="border: 1px solid var(--color-slate-border); border-left: 3.5px solid #0f172a; border-radius: 6px; padding: 6px 8px; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.74rem; color: var(--color-navy);">3. Industrial Effluent, Slurry &amp; Mining Pipes</strong>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.56rem; background: #f1f5f9; color: #0f172a; font-weight: 700; padding: 1px 4px; border-radius: 3px;">SOLID BLACK</span>
-            </div>
-            <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.28;">
-              Heavy-wall PE100 / PE4710 resin with outstanding abrasion resistance. Conveys coal/iron ore slurries, cement clinker, fly ash, paper pulp, and highly aggressive chemical process effluents without wall wear or chemical breakdown.
-            </p>
-          </div>
-
-          <!-- 4. Irrigation Coils -->
-          <div style="border: 1px solid var(--color-slate-border); border-left: 3.5px solid #16a34a; border-radius: 6px; padding: 6px 8px; background: #ffffff;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.74rem; color: var(--color-navy);">4. Agricultural Irrigation &amp; Submersible Coils</strong>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.56rem; background: #f0fdf4; color: #16a34a; font-weight: 700; padding: 1px 4px; border-radius: 3px;">CONTINUOUS COILS</span>
-            </div>
-            <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.28;">
-              Supplied in seamless 50m, 100m, 200m, and 500m coils in outer diameters from 20mm to 110mm. Eliminates intermittent joints, preventing leak paths in micro-drip networks, agricultural sprinkler fields, and borehole submersible drop pipes.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- 5. Sewerage & Marine Full-Width Row -->
-        <div style="border: 1px solid var(--color-slate-border); border-left: 3.5px solid #92400e; border-radius: 6px; padding: 6px 8px; background: #ffffff; margin-bottom: 6px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-            <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.74rem; color: var(--color-navy);">5. Sewerage, Drainage &amp; Underwater Submarine Outfall Pipelines</strong>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.56rem; background: #fef3c7; color: #92400e; font-weight: 700; padding: 1px 4px; border-radius: 3px;">BROWN STRIPE / LARGE BORE UP TO 1600 MM</span>
-          </div>
-          <p style="font-size: 0.62rem; color: var(--color-text-muted); line-height: 1.28;">
-            Smooth hydraulic boundary prevents grease and sewage silt deposition. Non-reactive to hydrogen sulfide gas (H₂S) eliminating crown corrosion common in concrete sewers. Large-bore diameters up to 1600mm for submarine outfalls, desalination intakes, and dredging.
-          </p>
-        </div>
-
-        <!-- Visual Featurettes (Images of Stacks & Coils) -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 6px;">
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 4px 8px;">
-            <img src="/images/pipes/hdpe-pipes-stacked-bundle.png" alt="Straight Length HDPE Pipes" style="height: 40px; width: 68px; object-fit: cover; border-radius: 4px;" />
-            <div style="font-size: 0.62rem; color: var(--color-text-muted);">
-              <strong style="color: var(--color-navy); display: block;">Straight Pipe Lengths:</strong> Standard 6-meter and 12-meter straight sticks for sizes 63mm to 1600mm. Custom lengths on request.
-            </div>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 4px 8px;">
-            <img src="/images/pipes/hdpe-pipe-coils.png" alt="HDPE Pipe Coils" style="height: 40px; width: 48px; object-fit: cover; border-radius: 4px;" />
-            <div style="font-size: 0.62rem; color: var(--color-text-muted);">
-              <strong style="color: var(--color-navy); display: block;">Continuous Coiled Pipe:</strong> Compact transport coils for sizes 20mm to 110mm, reducing trench joints by up to 90%.
-            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">20 mm to 800 mm (Short Spigot: 20–630mm | Long Spigot: 63–800mm)</td>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16) &amp; SDR 17 (PN10)</td>
+              </tr>
+              <tr>
+                <th>Radii:</th>
+                <td>R = 1.0D &amp; R = 1.5D Monolithic Injection Molded</td>
+                <th>Jointing Type:</th>
+                <td>Hot-plate butt welding (Short) &amp; Electrofusion / Butt (Long)</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>d 20–110mm:</strong> Spigot L₁: 45–90mm, Wall t: 3.0–10.0mm &nbsp;|&nbsp;
+                  <strong>d 125–250mm:</strong> Spigot L₁: 95–140mm, Wall t: 11.4–22.7mm<br/>
+                  <strong>d 280–500mm:</strong> Spigot L₁: 145–210mm, Wall t: 25.4–45.4mm &nbsp;|&nbsp;
+                  <strong>d 560–800mm:</strong> Spigot L₁: 220–290mm, Wall t: 50.8–72.6mm
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
 
-        <!-- Master Dimension Table IS 4984:2016 & ISO 4427 -->
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-            <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.72rem; color: var(--color-navy);">
-              Technical Dimensions Matrix (IS 4984:2016 / ISO 4427 PE100)
-            </span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--color-text-muted);">
-              Wall Thickness e (mm) &amp; Weights (kg/m)
-            </span>
+        <!-- Row 2: Molded Equal & Reducing Tee (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/butt-fusion/long-tee-equal.png" alt="Butt Fusion Molded Equal Tee" />
           </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Molded Equal &amp; Reducing Tees</h2>
+              <span class="product-mat-tag">PE100 / SDR 11, 13.5, 17</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Equal Tee Range:</th>
+                <td class="dim-highlight">20 mm to 800 mm (Full Bore Molded)</td>
+                <th>Reducing Tee Range:</th>
+                <td class="dim-highlight">32/20 mm to 630/400 mm</td>
+              </tr>
+              <tr>
+                <th>Pressure Class:</th>
+                <td class="dim-accent">SDR 11 (PN16), SDR 13.5 (PN12.5), SDR 17 (PN10)</td>
+                <th>Standards:</th>
+                <td>ISO 4427-3 | EN 12201-3 | IS 4984:2016</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>d 20–110mm:</strong> Total Run L: 120–270mm, Branch Height H: 60–135mm<br/>
+                  <strong>d 125–250mm:</strong> Total Run L: 310–550mm, Branch Height H: 155–275mm &nbsp;|&nbsp;
+                  <strong>d 280–500mm:</strong> Total Run L: 600–980mm, H: 300–490mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
 
-          <div class="data-table-container">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Nom. Size</th>
-                  <th>OD (mm)</th>
-                  <th>SDR 26 (PN6)</th>
-                  <th>SDR 21 (PN8)</th>
-                  <th>SDR 17 (PN10)</th>
-                  <th>SDR 13.6 (PN12.5)</th>
-                  <th>SDR 11 (PN16)</th>
-                  <th>SDR 9 (PN20)</th>
-                  <th>Supply Form</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="highlight">20 mm (1/2")</td>
-                  <td>20.0 - 20.3</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td class="badge-orange">2.0 mm (0.12 kg)</td>
-                  <td>2.3 mm (0.14 kg)</td>
-                  <td>Coil 100/200m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">25 mm (3/4")</td>
-                  <td>25.0 - 25.3</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>2.0 mm (0.16 kg)</td>
-                  <td class="badge-orange">2.3 mm (0.18 kg)</td>
-                  <td>3.0 mm (0.22 kg)</td>
-                  <td>Coil 100/200m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">32 mm (1")</td>
-                  <td>32.0 - 32.3</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>2.0 mm (0.20 kg)</td>
-                  <td>2.4 mm (0.24 kg)</td>
-                  <td class="badge-orange">3.0 mm (0.29 kg)</td>
-                  <td>3.6 mm (0.34 kg)</td>
-                  <td>Coil 100/200m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">63 mm (2")</td>
-                  <td>63.0 - 63.4</td>
-                  <td>2.5 mm (0.50 kg)</td>
-                  <td>3.0 mm (0.59 kg)</td>
-                  <td>3.8 mm (0.73 kg)</td>
-                  <td>4.7 mm (0.89 kg)</td>
-                  <td class="badge-orange">5.8 mm (1.09 kg)</td>
-                  <td>7.1 mm (1.30 kg)</td>
-                  <td>Coil or 6/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">90 mm (3")</td>
-                  <td>90.0 - 90.6</td>
-                  <td>3.5 mm (1.00 kg)</td>
-                  <td>4.3 mm (1.21 kg)</td>
-                  <td>5.4 mm (1.49 kg)</td>
-                  <td>6.7 mm (1.81 kg)</td>
-                  <td class="badge-orange">8.2 mm (2.19 kg)</td>
-                  <td>10.1 mm (2.64 kg)</td>
-                  <td>Coil or 6/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">110 mm (4")</td>
-                  <td>110.0 - 110.7</td>
-                  <td>4.3 mm (1.49 kg)</td>
-                  <td>5.3 mm (1.81 kg)</td>
-                  <td>6.6 mm (2.23 kg)</td>
-                  <td>8.1 mm (2.68 kg)</td>
-                  <td class="badge-orange">10.0 mm (3.25 kg)</td>
-                  <td>12.3 mm (3.91 kg)</td>
-                  <td>Coil or 6/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">160 mm (6")</td>
-                  <td>160.0 - 161.0</td>
-                  <td>6.2 mm (3.11 kg)</td>
-                  <td>7.7 mm (3.82 kg)</td>
-                  <td>9.5 mm (4.65 kg)</td>
-                  <td>11.8 mm (5.68 kg)</td>
-                  <td class="badge-orange">14.6 mm (6.90 kg)</td>
-                  <td>17.9 mm (8.25 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">200 mm (8")</td>
-                  <td>200.0 - 201.2</td>
-                  <td>7.7 mm (4.82 kg)</td>
-                  <td>9.6 mm (5.94 kg)</td>
-                  <td>11.9 mm (7.25 kg)</td>
-                  <td>14.7 mm (8.83 kg)</td>
-                  <td class="badge-orange">18.2 mm (10.70 kg)</td>
-                  <td>22.4 mm (12.90 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">250 mm (10")</td>
-                  <td>250.0 - 251.5</td>
-                  <td>9.6 mm (7.50 kg)</td>
-                  <td>11.9 mm (9.20 kg)</td>
-                  <td>14.8 mm (11.30 kg)</td>
-                  <td>18.4 mm (13.80 kg)</td>
-                  <td class="badge-orange">22.7 mm (16.70 kg)</td>
-                  <td>27.9 mm (20.10 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">315 mm (12")</td>
-                  <td>315.0 - 316.9</td>
-                  <td>12.1 mm (11.90 kg)</td>
-                  <td>15.0 mm (14.60 kg)</td>
-                  <td>18.7 mm (17.90 kg)</td>
-                  <td>23.2 mm (21.90 kg)</td>
-                  <td class="badge-orange">28.6 mm (26.50 kg)</td>
-                  <td>35.2 mm (31.80 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">400 mm (16")</td>
-                  <td>400.0 - 402.4</td>
-                  <td>15.3 mm (19.10 kg)</td>
-                  <td>19.1 mm (23.60 kg)</td>
-                  <td>23.7 mm (28.90 kg)</td>
-                  <td>29.4 mm (35.20 kg)</td>
-                  <td class="badge-orange">36.3 mm (42.70 kg)</td>
-                  <td>44.7 mm (51.30 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">500 mm (20")</td>
-                  <td>500.0 - 503.0</td>
-                  <td>19.1 mm (29.80 kg)</td>
-                  <td>23.9 mm (36.80 kg)</td>
-                  <td>29.7 mm (45.10 kg)</td>
-                  <td>36.8 mm (55.00 kg)</td>
-                  <td class="badge-orange">45.4 mm (66.70 kg)</td>
-                  <td>55.8 mm (80.10 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-                <tr>
-                  <td class="highlight">630 mm (24")</td>
-                  <td>630.0 - 633.8</td>
-                  <td>24.1 mm (47.30 kg)</td>
-                  <td>30.0 mm (58.50 kg)</td>
-                  <td>37.4 mm (71.60 kg)</td>
-                  <td>46.3 mm (87.40 kg)</td>
-                  <td class="badge-orange">57.2 mm (106.0 kg)</td>
-                  <td>70.3 mm (127.0 kg)</td>
-                  <td>Length 6m/12m</td>
-                </tr>
-              </tbody>
+        <!-- Row 3: Concentric & Excentric Reducers (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/butt-fusion/short-concentric-reducer.png" alt="Concentric Reducer Short Spigot" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Concentric &amp; Excentric Reducers</h2>
+              <span class="product-mat-tag">PE100 / PN16 &amp; PN10</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Concentric Range:</th>
+                <td class="dim-highlight">20 mm to 800 mm (Single &amp; Multi-step Reductions)</td>
+                <th>Excentric Range:</th>
+                <td class="dim-highlight">20 mm to 400 mm (Flat bottom for drainage lines)</td>
+              </tr>
+              <tr>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16) &amp; SDR 17 (PN10)</td>
+                <th>Machining:</th>
+                <td>Tapered internal transitions for smooth laminar slurry and water flow</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>d₁/d₂ 32/20 to 110/63mm:</strong> Total Length L: 80–160mm &nbsp;|&nbsp;
+                  <strong>d₁/d₂ 125/90 to 250/160mm:</strong> Total Length L: 175–260mm<br/>
+                  <strong>d₁/d₂ 280/200 to 500/355mm:</strong> Total Length L: 280–420mm &nbsp;|&nbsp;
+                  <strong>d₁/d₂ 560/400 to 800/560mm:</strong> Total Length L: 450–620mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 4: Stub Flanges & End Caps (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/butt-fusion/short-stub-flange.png" alt="Stub Flange Flange Adapter" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Stub Ends (Flange Adapters) &amp; End Caps</h2>
+              <span class="product-mat-tag">PE100 / PN6, PN10, PN16</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Stub Flanges Range:</th>
+                <td class="dim-highlight">20 mm to 1200 mm (Short &amp; Long Spigot versions)</td>
+                <th>End Caps Range:</th>
+                <td class="dim-highlight">20 mm to 1200 mm (Molded &amp; Dished Heads)</td>
+              </tr>
+              <tr>
+                <th>Pressure Rating:</th>
+                <td class="dim-accent">SDR 11 (PN16), SDR 17 (PN10), SDR 21 (PN6)</td>
+                <th>Sealing Profile:</th>
+                <td>Chamfered shoulder with serrated sealing face for EPDM / PTFE gaskets</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>Collar (d 20–160mm):</strong> Outer Flange D: 45–212mm, Lip Thickness h: 7–25mm<br/>
+                  <strong>Collar (d 180–400mm):</strong> Outer Flange D: 240–482mm, Lip Thickness h: 30–46mm &nbsp;|&nbsp;
+                  <strong>Collar (d 450–1200mm):</strong> D: 585–1330mm, h: 60–120mm
+                </td>
+              </tr>
             </table>
           </div>
         </div>
 
       </div>
 
+      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
-          <span class="footer-badge">IS 4984:2016 Certified</span>
-          <span>Sizes 710mm to 1600mm Available on Engineer Request</span>
+          <span class="footer-badge">PLASTOGUARD PIPING</span>
+          <span>Section 2: Butt Fusion Fitting Dimensions • Molded PE100/PE80 Component Schedules</span>
         </div>
-        <div class="footer-page-num">PAGE 02 / 06</div>
+        <div class="footer-page-num">PAGE 02 / 03</div>
       </footer>
     </article>
 
 
     <!-- ==========================================
-         PAGE 3: ELECTROFUSION (EF) FITTINGS SYSTEM
+         PAGE 3: FABRICATED FITTINGS, FLANGES & CORPORATE FOOTER
          ========================================== -->
     <article id="page-3" class="catalog-page">
+      
+      <!-- Running Header -->
       <header class="page-header">
         <div class="brand-left">
           <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
           <div class="brand-text-col">
             <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Section 02: Electrofusion Fittings Division</span>
+            <span class="division-tag">Infrastructure Piping Division</span>
           </div>
         </div>
         <div class="header-meta">
-          <div>Standards: <strong>ISO 4427-3 / EN 12201-3</strong></div>
-          <div>Terminal Pins: <strong>4.0 mm / 4.8 mm Universal</strong></div>
+          <div>Standards: <strong>IS 8360 (Parts 2 &amp; 3) | DIN 2501 | ANSI B16.5</strong></div>
+          <div>Direct Procurement: <strong>sales.plastoguardind@gmail.com</strong></div>
         </div>
       </header>
 
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <div>
-          <div class="section-eyebrow">Embedded Wire Resistance Fusion System</div>
-          <h2 class="page-main-title">Electrofusion (EF) HDPE Fittings (20mm–630mm)</h2>
-          <p class="page-subtitle">
-            Manufactured from virgin PE100 black polymer. Integrated with precision copper heating wire coils, terminal connection pins, barcode tags for automatic welding parameters, and visual pop-up fusion inspection indicators.
-          </p>
+      <!-- Section Ribbon -->
+      <div class="section-ribbon">
+        <span class="ribbon-title">3. Fabricated Segmented Fittings &amp; Flanges</span>
+        <span class="ribbon-specs">Sizes: <strong>20 mm to 1600 mm</strong> • Standards: <strong>IS 8360-2/3, DIN 2501 PN10/PN16, ANSI B16.5 #150</strong></span>
+      </div>
+
+      <!-- Alternating Products Flow (4 Products, Large Photos, Fluid Rows) -->
+      <div class="products-flow">
+
+        <!-- Row 1: Fabricated Segmented Bends (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/fabricated/fabricated-bends.png" alt="Fabricated Segmented Bends" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Fabricated Segmented Bends (IS 8360 Part 2)</h2>
+              <span class="product-mat-tag">PE100 / PN6, PN10, PN16</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">20 mm to 630 mm (Machine-welded segmented mitres)</td>
+                <th>Standard Angles:</th>
+                <td class="dim-highlight">15°, 22.5°, 30°, 45°, 60°, 90° (Custom angles on request)</td>
+              </tr>
+              <tr>
+                <th>Bending Radius:</th>
+                <td>R = 1.5D standard (R = 1.0D available on request)</td>
+                <th>Segment Design:</th>
+                <td>2-piece (≤30°), 3-piece (45°–60°), 4-piece (90°) construction</td>
+              </tr>
+              <tr>
+                <th>Pressure Rating:</th>
+                <td colspan="3">
+                  <strong>PN6, PN10, PN16:</strong> Pressure derating factor applied per IS 8360 Part 2 &nbsp;|&nbsp;
+                  <strong>Welds:</strong> Hydraulic clamped automatic machine fusion
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
 
-        <!-- 8 Products Grid: 4x2 Clean Layout (No Cramping!) -->
-        <div class="product-grid-4" style="margin-bottom: 8px;">
-
-          <!-- 1. EF Coupler -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 01</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/coupler.png" alt="Electrofusion Coupler" />
-              </div>
-              <h3 class="card-title">Electrofusion Coupler</h3>
-              <p class="card-desc">Straight sleeve socket coupler with dual fusion zones and independent pop-up indicators.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 630mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
+        <!-- Row 2: Fabricated Equal & Reducing Tees (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/fabricated/fabricated-tees.png" alt="Fabricated Equal and Reducing Tees" />
           </div>
-
-          <!-- 2. EF Equal Tee -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 02</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/tee-equal.png" alt="Electrofusion Equal Tee" />
-              </div>
-              <h3 class="card-title">Electrofusion Equal Tee</h3>
-              <p class="card-desc">90° 3-way branching tee with embedded coils on all 3 sockets for balanced distribution.</p>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Fabricated Equal &amp; Reducing Tees / Wyes</h2>
+              <span class="product-mat-tag">PE100 / PN6, PN10, PN16</span>
             </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 500mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">20 mm to 630 mm (Branch sizes 20 mm to 500 mm)</td>
+                <th>Configurations:</th>
+                <td class="dim-highlight">Equal Branch Tees, Reducing Tees, Lateral Wyes (45° / 60°)</td>
+              </tr>
+              <tr>
+                <th>Compliance:</th>
+                <td>IS 8360 Part 3 | ISO 4427-3 | EN 12201-3</td>
+                <th>Applications:</th>
+                <td>Pump station manifolds, air-valve manifolds, large trunk line branch offs</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>Main Header Run Dia (DN):</strong> 20 mm to 630 mm &nbsp;|&nbsp;
+                  <strong>Branch Offtake Dia (dn):</strong> 20 mm to 500 mm<br/>
+                  <strong>Factory QA:</strong> 100% Hydrostatically batch tested before dispatch
+                </td>
+              </tr>
+            </table>
           </div>
-
-          <!-- 3. EF Bend 90° -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 03</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/bend-90.png" alt="Electrofusion Bend 90" />
-              </div>
-              <h3 class="card-title">Electrofusion Bend 90°</h3>
-              <p class="card-desc">Right-angle elbow with smooth internal radius minimizing friction head loss.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 500mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
-          </div>
-
-          <!-- 4. EF Bend 45° -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 04</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/bend-45.png" alt="Electrofusion Bend 45" />
-              </div>
-              <h3 class="card-title">Electrofusion Bend 45°</h3>
-              <p class="card-desc">Compact 45° directional deflection elbow for elevation shifts and gradual alignments.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">63mm - 315mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
-          </div>
-
-          <!-- 5. EF Reducer -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 05</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/reducer.png" alt="Electrofusion Reducer" />
-              </div>
-              <h3 class="card-title">Electrofusion Reducer</h3>
-              <p class="card-desc">In-line concentric reducer socket for smooth transition between differing pipe bores.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">32mm - 315mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
-          </div>
-
-          <!-- 6. EF Reducing Tee -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 06</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/reducing-tee.png" alt="Electrofusion Reducing Tee" />
-              </div>
-              <h3 class="card-title">Electrofusion Reducing Tee</h3>
-              <p class="card-desc">Branching tee with a smaller off-take diameter for direct service connections.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 500mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
-          </div>
-
-          <!-- 7. EF End Cap -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 07</span>
-                <span class="mat-pill">PE100</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/end-cap.png" alt="Electrofusion End Cap" />
-              </div>
-              <h3 class="card-title">Electrofusion End Cap</h3>
-              <p class="card-desc">Hemispherical dome socket cap for dead-end sealing and hydrostatic line testing.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 160mm</span></div>
-              <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 (PN16) / SDR17</span></div>
-            </div>
-          </div>
-
-          <!-- 8. EF Tapping Saddle -->
-          <div class="product-card">
-            <div>
-              <div class="card-top">
-                <span class="sr-pill">SR. 08</span>
-                <span class="mat-pill">PE100 / BRASS</span>
-              </div>
-              <div class="img-box">
-                <img src="/images/fittings/electrofusion/tapping-saddle.png" alt="Electrofusion Branch Tapping Saddle" />
-              </div>
-              <h3 class="card-title">Branch Tapping Saddle</h3>
-              <p class="card-desc">Wrap-around electrofusion base with integrated female BSP brass/SS threaded outlet.</p>
-            </div>
-            <div class="specs-table">
-              <div class="specs-row"><span class="specs-label">Main Pipe:</span><span class="specs-val">63mm - 225mm</span></div>
-              <div class="specs-row"><span class="specs-label">Outlet Thread:</span><span class="specs-val accent">1/2" to 2" BSP</span></div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Technical Specification & Equipment Callout Box -->
-        <div style="background: var(--color-blue-light); border: 1px solid #bfdbfe; border-radius: 8px; padding: 9px 13px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px;">
+        <!-- Row 3: Steel-Reinforced & Metallic Backing Rings (Photo LEFT, Dimensions RIGHT) -->
+        <div class="product-row row-left">
+          <div class="product-photo-box">
+            <img src="/images/fittings/flanges/steel-reinforced.png" alt="Steel Reinforced Backing Ring" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Steel-Reinforced &amp; Metallic Backing Rings</h2>
+              <span class="product-mat-tag">DN15 to DN1600</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Size Range:</th>
+                <td class="dim-highlight">20 mm to 1600 mm (1/2" to 64" Nominal Bore)</td>
+                <th>Drilling Standards:</th>
+                <td class="dim-accent">DIN 2501 (PN10/PN16), ANSI B16.5 (#150), BS 10 Tables D/E</td>
+              </tr>
+              <tr>
+                <th>Materials:</th>
+                <td>PP-encapsulated steel core &amp; Hot-dip galvanized carbon steel (SS304/SS316)</td>
+                <th>Bore Profile:</th>
+                <td>Machined inner radius to seat flush over HDPE Stub Flange radius</td>
+              </tr>
+              <tr>
+                <th>Dimensions Schedule:</th>
+                <td colspan="3">
+                  <strong>DN 20–100mm:</strong> Bolt Holes: 4, PCD: 65–180mm, Flange Thickness: 12–18mm<br/>
+                  <strong>DN 125–250mm:</strong> Bolt Holes: 8–12, PCD: 210–355mm, Thickness: 20–30mm &nbsp;|&nbsp;
+                  <strong>DN 300–600mm:</strong> Holes: 12–20, PCD: 400–770mm
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Row 4: Blind Flanges & Puddle Flanges (Dimensions LEFT, Photo RIGHT) -->
+        <div class="product-row row-right">
+          <div class="product-photo-box">
+            <img src="/images/fittings/flanges/blind-flange.png" alt="Blind Flange and Puddle Flange" />
+          </div>
+          <div class="product-data-box">
+            <div class="product-title-row">
+              <h2 class="product-title">Blind Flanges, Puddle Flanges &amp; Valve Spacers</h2>
+              <span class="product-mat-tag">20 mm to 1000 mm</span>
+            </div>
+            <table class="dim-table">
+              <tr>
+                <th>Blind Flanges:</th>
+                <td class="dim-highlight">20 mm to 1000 mm (Solid PE100 plate &amp; epoxy coated carbon steel)</td>
+                <th>Puddle Flanges:</th>
+                <td class="dim-highlight">20 mm to 800 mm (Butt-weld puddle waterstop collar)</td>
+              </tr>
+              <tr>
+                <th>Valve Spacers:</th>
+                <td>20 mm to 1000 mm (Full disc swing clearance ring)</td>
+                <th>Pressure:</th>
+                <td class="dim-accent">PN10 &amp; PN16</td>
+              </tr>
+              <tr>
+                <th>Application:</th>
+                <td colspan="3">
+                  <strong>Puddle Collar:</strong> Cast directly into concrete reservoir walls for leakproof seal &nbsp;|&nbsp;
+                  <strong>Blind:</strong> Pipeline end blanking
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Corporate Procurement & Contact Footer (Kept from last page) -->
+      <div class="last-page-footer-block">
+        <div class="footer-header-row">
+          <div class="footer-brand">
+            <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="footer-logo" />
+            <div>
+              <span class="footer-title">PLASTOGUARD INFRASTRUCTURE SYSTEMS</span>
+              <span class="footer-sub">ESTABLISHED PIPELINE SYSTEMS MANUFACTURER • EXPORT QUALITY</span>
+            </div>
+          </div>
+          <div class="footer-gstin">
+            GSTIN: 27ANMPD5199E1ZR
+          </div>
+        </div>
+
+        <div class="footer-grid-cols">
+          <!-- Col 1: Direct Inquiries -->
           <div>
-            <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.76rem; color: var(--color-navy); display: block; margin-bottom: 2px;">
-              Electrofusion Operational Protocols
-            </strong>
-            <p style="font-size: 0.64rem; color: var(--color-text-muted); line-height: 1.35;">
-              Welding Voltage: 39.5V - 40V AC. Standard barcode per ISO 13950 is affixed to every fitting for automated data input. Pipe surface must be peeled using rotary mechanical scrapers to remove the outer oxidation layer (0.2 mm minimum) and cleaned with 99% isopropanol prior to fusion.
-            </p>
+            <span class="footer-col-label">Direct Quotation &amp; Project Inquiries</span>
+            <div><span style="color: var(--color-orange); font-weight: 700;">Email:</span> <a href="mailto:sales.plastoguardind@gmail.com">sales.plastoguardind@gmail.com</a></div>
+            <div style="color: #cbd5e1; font-size: 0.54rem;">Web: <a href="https://plastoguard.com">https://plastoguard.com</a></div>
           </div>
-          <div style="border-left: 1px solid #dbeafe; padding-left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.63rem; color: var(--color-navy); display: flex; flex-direction: column; justify-content: center; gap: 3px;">
-            <div>• <strong>Compatible Machine:</strong> PlastoGuard PF-315 Unit</div>
-            <div>• <strong>Pin Diameters:</strong> 4.0 mm &amp; 4.8 mm included</div>
-            <div>• <strong>Traceability:</strong> Full batch barcode tracking</div>
+
+          <!-- Col 2: Telephones -->
+          <div>
+            <span class="footer-col-label">Sales &amp; Technical Support</span>
+            <div><span style="color: var(--color-orange); font-weight: 700;">Tel:</span> <a href="tel:+917718847463">+91 7718847463</a></div>
+            <div><span style="color: var(--color-orange); font-weight: 700;">Direct:</span> <a href="tel:+918976557664">+91 8976557664</a></div>
+          </div>
+
+          <!-- Col 3: Works & Corporate Office -->
+          <div>
+            <span class="footer-col-label">Head Office &amp; Manufacturing Works</span>
+            <div style="color: #e2e8f0;">
+              26, Sethi Industrial Estate, Suren Road, Near Western Express Highway Metro Station, Andheri East, Mumbai - 400093, Maharashtra, India.
+            </div>
           </div>
         </div>
 
+        <div class="footer-bottom-notice">
+          <span>PlastoGuard® is a brand of NJ Enterprises • All dimensions subject to standard manufacturing tolerances (±0.5%)</span>
+          <span>Zero CNC machining services offered • 100% Molded &amp; Hydraulic Segmented Fusion</span>
+        </div>
       </div>
 
-      <footer class="page-footer">
-        <div class="footer-left">
-          <span class="footer-badge">ISO 4427-3 Certified</span>
-          <span>100% Pre-Compounded Virgin Black PE100 Resin</span>
-        </div>
-        <div class="footer-page-num">PAGE 03 / 06</div>
-      </footer>
-    </article>
-
-
-    <!-- ==========================================
-         PAGE 4: BUTT FUSION FITTINGS (SHORT & LONG SPIGOT)
-         ========================================== -->
-    <article id="page-4" class="catalog-page">
-      <header class="page-header">
-        <div class="brand-left">
-          <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
-          <div class="brand-text-col">
-            <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Section 03: Butt Fusion Molded Fittings</span>
-          </div>
-        </div>
-        <div class="header-meta">
-          <div>Size Span: <strong>20 mm to 1200 mm</strong></div>
-          <div>Pressure Classes: <strong>PN 6, PN 10, PN 16 (SDR 11, 17, 21)</strong></div>
-        </div>
-      </header>
-
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <div>
-          <div class="section-eyebrow">Precision Injection-Molded Spigot Hardware</div>
-          <h2 class="page-main-title">Butt Fusion Fittings — Short &amp; Long Spigot</h2>
-          <p class="page-subtitle" style="margin-bottom: 7px;">
-            Injection-molded in heavy-tonnage presses from PE80 &amp; PE100 virgin compounds. Available in Short Spigot (for compact butt welding machines) and Long Spigot (dual-compatible with electrofusion couplers).
-          </p>
-        </div>
-
-        <!-- Section 3.1: Short Spigot (4 Key Products) -->
-        <div>
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--color-slate-border); padding-bottom: 3px; margin-bottom: 6px;">
-            <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.76rem; color: var(--color-navy); text-transform: uppercase;">
-              3.1 Short Spigot Series (20mm to 1200mm)
-            </span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--color-orange); font-weight: 700;">
-              COMPACT EXCAVATION &amp; VAULT INSTALLATIONS
-            </span>
-          </div>
-
-          <div class="product-grid-4" style="margin-bottom: 8px;">
-            
-            <!-- Short Stub Flange -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">SHORT</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/short-stub-flange.png" alt="Stub Flange Short Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Stub Flange Adapter</h3>
-                <p class="card-desc">Serrated collar face for metallic and steel-reinforced backing rings.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1200mm</span></div>
-                <div class="specs-row"><span class="specs-label">Pressure:</span><span class="specs-val accent">PN6 / PN10 / 16</span></div>
-              </div>
-            </div>
-
-            <!-- Short Concentric Reducer -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">SHORT</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/short-concentric-reducer.png" alt="Concentric Reducer Short Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Concentric Reducer</h3>
-                <p class="card-desc">Axis-aligned reduction (&gt;4 step reduction on custom engineer request).</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 800mm</span></div>
-                <div class="specs-row"><span class="specs-label">SDR:</span><span class="specs-val accent">SDR11, SDR17</span></div>
-              </div>
-            </div>
-
-            <!-- Short 90 Bend -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">SHORT</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/short-bend-90.png" alt="Molded Bend 90 Short" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Molded 90° &amp; 45° Bends</h3>
-                <p class="card-desc">Injection molded seamless elbows with hydraulic sweep profiles.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 630mm</span></div>
-                <div class="specs-row"><span class="specs-label">Pressure:</span><span class="specs-val accent">PN10 / 16 (SDR11)</span></div>
-              </div>
-            </div>
-
-            <!-- Short End Cap -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">SHORT</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/short-end-cap.png" alt="End Cap Short Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Short Spigot End Cap</h3>
-                <p class="card-desc">Hemispherical molded cap for terminal pipeline stops and testing.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1200mm</span></div>
-                <div class="specs-row"><span class="specs-label">SDR:</span><span class="specs-val accent">SDR11, SDR17</span></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Section 3.2: Long Spigot (4 Key Products) -->
-        <div>
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--color-slate-border); padding-bottom: 3px; margin-bottom: 6px;">
-            <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.76rem; color: var(--color-navy); text-transform: uppercase;">
-              3.2 Long Spigot Series (20mm to 800mm)
-            </span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: #2563eb; font-weight: 700;">
-              DUAL COMPATIBLE: BUTT WELD OR ELECTROFUSION COUPLER
-            </span>
-          </div>
-
-          <div class="product-grid-4" style="margin-bottom: 7px;">
-
-            <!-- Long Flange Adapter -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">LONG</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/long-flange-adapter.png" alt="Flange Adapter Long Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Flange Adapter Long</h3>
-                <p class="card-desc">Extended cylindrical spigot accepts standard electrofusion coupler sleeves.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 500mm</span></div>
-                <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">PN10 / 16 (SDR11/17)</span></div>
-              </div>
-            </div>
-
-            <!-- Long Concentric Reducer -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">LONG</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/long-concentric-reducer.png" alt="Concentric Reducer Long Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Concentric Reducer Long</h3>
-                <p class="card-desc">Gradual cone reduction with extended pipe clamping areas on both ends.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 630mm</span></div>
-                <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">PN10 &amp; PN16</span></div>
-              </div>
-            </div>
-
-            <!-- Long Equal & Reducing Tee -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">LONG</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/long-tee-equal.png" alt="Molded Equal Tee Long Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Molded Equal &amp; Red. Tee</h3>
-                <p class="card-desc">Generous branch spigot lengths for dual welding method flexibility.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">Upto 800mm</span></div>
-                <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11, 13.5, 17</span></div>
-              </div>
-            </div>
-
-            <!-- Long 4-Way Cross Tee -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">LONG</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 68px;">
-                  <img src="/images/fittings/butt-fusion/long-cross-4way.png" alt="Molded Cross 4-Way Long Spigot" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.74rem;">Molded 4-Way Cross</h3>
-                <p class="card-desc">Symmetric 4-way manifold connection for cross-junction distribution lines.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">Upto 315mm</span></div>
-                <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">SDR11 / SDR13.5</span></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Welding Standards Footnote Banner -->
-        <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 6px 12px; display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-size: 0.64rem; color: var(--color-navy); font-weight: 700;">
-            • Conforms to ISO 4427-3, DIN 16963 &amp; DVS 2207-1 Welding Protocols
-          </div>
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.60rem; color: var(--color-orange); font-weight: 700;">
-            100% VIRGIN PE80 / PE100 RESIN
-          </div>
-        </div>
-
-      </div>
-
-      <footer class="page-footer">
-        <div class="footer-left">
-          <span class="footer-badge">DIN 16963 / ISO 4427</span>
-          <span>End Caps, Bends, Tees, Reducers &amp; Adapters</span>
-        </div>
-        <div class="footer-page-num">PAGE 04 / 06</div>
-      </footer>
-    </article>
-
-
-    <!-- ==========================================
-         PAGE 5: FABRICATED FITTINGS & FLANGES
-         ========================================== -->
-    <article id="page-5" class="catalog-page">
-      <header class="page-header">
-        <div class="brand-left">
-          <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
-          <div class="brand-text-col">
-            <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Section 04: Fabricated Fittings &amp; Flanges</span>
-          </div>
-        </div>
-        <div class="header-meta">
-          <div>Standards: <strong>IS 8360 (Part 2 &amp; 3) / DIN 2501</strong></div>
-          <div>Bore Span: <strong>20 mm to 1600 mm</strong></div>
-        </div>
-      </header>
-
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <div>
-          <div class="section-eyebrow">Segmented Mitered Fabrication &amp; Metal Connections</div>
-          <h2 class="page-main-title">Fabricated Segmented Fittings &amp; Flanges</h2>
-          <p class="page-subtitle" style="margin-bottom: 7px;">
-            Manufactured on automatic hydraulic fitting fabrication machines in compliance with Bureau of Indian Standards IS 8360. Accompanied by steel-reinforced and metallic slip-on backing flanges.
-          </p>
-        </div>
-
-        <!-- Upper Half: Fabricated Segmented Fittings Division (IS 8360) -->
-        <div style="margin-bottom: 7px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--color-slate-border); padding-bottom: 3px; margin-bottom: 6px;">
-            <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.76rem; color: var(--color-navy); text-transform: uppercase;">
-              4.1 Fabricated Segmented Fittings (IS 8360 Part 2 &amp; 3)
-            </span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--color-orange); font-weight: 700;">
-              22.5°, 45°, 60°, 90° MITERED DESIGNS (R = 1.0D &amp; 1.5D)
-            </span>
-          </div>
-
-          <div class="product-grid-3">
-
-            <!-- Fabricated Bends -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">IS 8360</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 74px;">
-                  <img src="/images/fittings/fabricated/fabricated-bends.png" alt="Fabricated Bends" />
-                </div>
-                <h3 class="card-title" style="min-height: 24px; font-size: 0.76rem;">Fabricated Segmented Bends</h3>
-                <p class="card-desc" style="margin-bottom: 4px;">Available in 2, 3, and 4-piece designs with sweep radii R = 1.0D and R = 1.5D.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 630mm</span></div>
-                <div class="specs-row"><span class="specs-label">Pressure:</span><span class="specs-val accent">PN6, PN10, PN16</span></div>
-              </div>
-            </div>
-
-            <!-- Fabricated Tees -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">IS 8360</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 74px;">
-                  <img src="/images/fittings/fabricated/fabricated-tees.png" alt="Fabricated Equal and Reducing Tees" />
-                </div>
-                <h3 class="card-title" style="min-height: 24px; font-size: 0.76rem;">Fabricated Equal &amp; Reducing Tees</h3>
-                <p class="card-desc" style="margin-bottom: 4px;">Segmented junction tees with machine-welded reinforcement for main line branching.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Size Span:</span><span class="specs-val">20mm - 630mm</span></div>
-                <div class="specs-row"><span class="specs-label">Pressure:</span><span class="specs-val accent">PN10 &amp; PN16</span></div>
-              </div>
-            </div>
-
-            <!-- Air Valve / Branch Arrays -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill">FABRICATED</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 74px;">
-                  <img src="/images/pipes/hdpe-fabricated-branch-array.png" alt="Air Valve Branch Arrays" style="object-fit: cover;" />
-                </div>
-                <h3 class="card-title" style="min-height: 24px; font-size: 0.76rem;">Air Valve &amp; Manifold Headers</h3>
-                <p class="card-desc" style="margin-bottom: 4px;">Engineered branch tees for air release valves, scour off-takes, and pump manifolds.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Application:</span><span class="specs-val">Pump Stations / Mains</span></div>
-                <div class="specs-row"><span class="specs-label">Customization:</span><span class="specs-val accent">Per Project Drawing</span></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Lower Half: Flanges & Backing Rings Division (5 Products Grid) -->
-        <div>
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1.5px solid var(--color-slate-border); padding-bottom: 3px; margin-bottom: 6px;">
-            <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 800; font-size: 0.76rem; color: var(--color-navy); text-transform: uppercase;">
-              4.2 Flanges &amp; Metallic Backing Rings (DIN 2501 / ANSI B16.5)
-            </span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: #2563eb; font-weight: 700;">
-              COMPATIBLE WITH HDPE, PP, PVC &amp; METALLIC VALVES
-            </span>
-          </div>
-
-          <div class="product-grid-5">
-
-            <!-- Steel Reinforced Flange -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">CORE</span>
-                  <span class="mat-pill">PP/STEEL</span>
-                </div>
-                <div class="img-box" style="height: 64px;">
-                  <img src="/images/fittings/flanges/steel-reinforced.png" alt="Steel Reinforced Flange" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.72rem;">Steel-Reinforced Flange</h3>
-                <p class="card-desc" style="margin-bottom: 2px;">PP/PE core with steel ring stops bolt hole ovalization.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1000mm</span></div>
-                <div class="specs-row"><span class="specs-label">Drilling:</span><span class="specs-val accent">DIN / ANSI</span></div>
-              </div>
-            </div>
-
-            <!-- Metallic Backing Ring -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">METAL</span>
-                  <span class="mat-pill">GI/SS316</span>
-                </div>
-                <div class="img-box" style="height: 64px;">
-                  <img src="/images/fittings/flanges/metallic-backing-ring.png" alt="Metallic Backing Ring" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.72rem;">Metallic Backing Rings</h3>
-                <p class="card-desc" style="margin-bottom: 2px;">Galvanized steel and SS304/SS316 backing rings.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1600mm</span></div>
-                <div class="specs-row"><span class="specs-label">Standard:</span><span class="specs-val accent">BS10 / DIN / EN</span></div>
-              </div>
-            </div>
-
-            <!-- Blind Flange -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">BLIND</span>
-                  <span class="mat-pill">PE/STEEL</span>
-                </div>
-                <div class="img-box" style="height: 64px;">
-                  <img src="/images/fittings/flanges/blind-flange.png" alt="Blind Flange" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.72rem;">Blind Blanking Flange</h3>
-                <p class="card-desc" style="margin-bottom: 2px;">Solid end blanking for pipe dead-ends and testing.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1000mm</span></div>
-                <div class="specs-row"><span class="specs-label">Rating:</span><span class="specs-val accent">PN10 / PN16</span></div>
-              </div>
-            </div>
-
-            <!-- Weldneck & Puddle Flange -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">PUDDLE</span>
-                  <span class="mat-pill">PE100</span>
-                </div>
-                <div class="img-box" style="height: 64px;">
-                  <img src="/images/fittings/flanges/weldneck-puddle.png" alt="Weldneck and Puddle Flange" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.72rem;">Weldneck &amp; Puddle Flange</h3>
-                <p class="card-desc" style="margin-bottom: 2px;">Watertight wall stops for reservoir sumps and vaults.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 800mm</span></div>
-                <div class="specs-row"><span class="specs-label">Type:</span><span class="specs-val accent">Butt-Weld Seal</span></div>
-              </div>
-            </div>
-
-            <!-- Butterfly Spacer -->
-            <div class="product-card">
-              <div>
-                <div class="card-top">
-                  <span class="sr-pill" style="background: #eff6ff; color: #2563eb;">SPACER</span>
-                  <span class="mat-pill">PE/PP</span>
-                </div>
-                <div class="img-box" style="height: 64px;">
-                  <img src="/images/fittings/flanges/butterfly-valve-spacer.png" alt="Butterfly Valve Spacer" />
-                </div>
-                <h3 class="card-title" style="min-height: 22px; font-size: 0.72rem;">Butterfly Valve Spacer</h3>
-                <p class="card-desc" style="margin-bottom: 2px;">Provides axial clearance for 100% butterfly disc rotation.</p>
-              </div>
-              <div class="specs-table">
-                <div class="specs-row"><span class="specs-label">Range:</span><span class="specs-val">20 - 1000mm</span></div>
-                <div class="specs-row"><span class="specs-label">Gasket:</span><span class="specs-val accent">Flat / Grooved</span></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Flange Standards Compatibility Summary -->
-        <div style="background: var(--color-blue-light); border: 1px solid #bfdbfe; border-radius: 6px; padding: 6px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.61rem; color: var(--color-navy); display: flex; justify-content: space-between; align-items: center;">
-          <span><strong>Drilling Patterns:</strong> DIN 2501 (PN10/16) • ANSI B16.5 (#150) • BS 10 (Table D, E, F) • EN 1092-1</span>
-          <span style="color: var(--color-orange); font-weight: 700;">Custom Bores &amp; Pitch on Order</span>
-        </div>
-
-      </div>
-
-      <footer class="page-footer">
-        <div class="footer-left">
-          <span class="footer-badge">IS 8360 / DIN 2501</span>
-          <span>Bends, Tees, Flanges, Spacers &amp; Puddle Collars</span>
-        </div>
-        <div class="footer-page-num">PAGE 05 / 06</div>
-      </footer>
-    </article>
-
-
-    <!-- ==========================================
-         PAGE 6: QUALITY ASSURANCE & CONTACT (BACK COVER)
-         ========================================== -->
-    <article id="page-6" class="catalog-page">
-      <header class="page-header">
-        <div class="brand-left">
-          <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
-          <div class="brand-text-col">
-            <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Section 05: Quality Assurance &amp; Procurement</span>
-          </div>
-        </div>
-        <div class="header-meta">
-          <div>Global Export Standards: <strong>ISO 9001 / BIS Certified</strong></div>
-          <div>D-U-N-S Registered: <strong>91-811-2264</strong></div>
-        </div>
-      </header>
-
-      <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-        
-        <!-- QA Header -->
-        <div>
-          <div class="section-eyebrow">Zero Defect Testing Protocols</div>
-          <h2 class="page-main-title">Quality Assurance &amp; Field Jointing Engineering</h2>
-          <p class="page-subtitle" style="margin-bottom: 7px;">
-            Every PlastoGuard pipe lot and fitting undergoes rigorous mechanical, thermal, and hydrostatic testing to guarantee 50+ year operational integrity under harsh soil and chemical conditions.
-          </p>
-        </div>
-
-        <!-- 4 Key Quality Verification Steps -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-bottom: 7px;">
-          <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 6px 7px;">
-            <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 2px;">
-              <span class="material-symbols-outlined" style="font-size: 13px; color: var(--color-orange);">science</span>
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.70rem; color: var(--color-navy);">MFI &amp; Density</strong>
-            </div>
-            <p style="font-size: 0.60rem; color: var(--color-text-muted); line-height: 1.28;">Verified per ISO 1133 &amp; ISO 1183 on every virgin polymer lot before processing.</p>
-          </div>
-
-          <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 6px 7px;">
-            <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 2px;">
-              <span class="material-symbols-outlined" style="font-size: 13px; color: var(--color-orange);">speed</span>
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.70rem; color: var(--color-navy);">Hydrostatic 80°C</strong>
-            </div>
-            <p style="font-size: 0.60rem; color: var(--color-text-muted); line-height: 1.28;">165-hour and 1000-hour sustained internal hydrostatic pressure test at 80°C.</p>
-          </div>
-
-          <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 6px 7px;">
-            <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 2px;">
-              <span class="material-symbols-outlined" style="font-size: 13px; color: var(--color-orange);">wb_sunny</span>
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.70rem; color: var(--color-navy);">Carbon Black (2.5%)</strong>
-            </div>
-            <p style="font-size: 0.60rem; color: var(--color-text-muted); line-height: 1.28;">Tested for 2.0%–2.5% content and micro-dispersion grade for complete UV shielding.</p>
-          </div>
-
-          <div style="background: var(--color-slate); border: 1px solid var(--color-slate-border); border-radius: 6px; padding: 6px 7px;">
-            <div style="display: flex; align-items: center; gap: 4px; margin-bottom: 2px;">
-              <span class="material-symbols-outlined" style="font-size: 13px; color: var(--color-orange);">join_inner</span>
-              <strong style="font-family: 'Hanken Grotesk', sans-serif; font-size: 0.70rem; color: var(--color-navy);">Weld Decohesion</strong>
-            </div>
-            <p style="font-size: 0.60rem; color: var(--color-text-muted); line-height: 1.28;">Peel and tensile decohesion tests ensure weld zone failure never occurs before pipe yield.</p>
-          </div>
-        </div>
-
-        <!-- Site Installation & Pump Station Images -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 9px;">
-          <div style="border: 1px solid var(--color-slate-border); border-radius: 8px; overflow: hidden; background: #ffffff;">
-            <div style="height: 110px; width: 100%; overflow: hidden;">
-              <img src="/images/pipes/hdpe-pump-station-header.png" alt="Industrial Pump Station Header" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div style="padding: 5px 9px; font-size: 0.63rem; color: var(--color-text-muted);">
-              <strong style="color: var(--color-navy);">Water Treatment Pump Header:</strong> HDPE stub flanges connected to heavy butterfly valves and manifold bends.
-            </div>
-          </div>
-
-          <div style="border: 1px solid var(--color-slate-border); border-radius: 8px; overflow: hidden; background: #ffffff;">
-            <div style="height: 110px; width: 100%; overflow: hidden;">
-              <img src="/images/pipes/hdpe-pipe-trench-assembly.png" alt="Trench Pipeline Assembly" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div style="padding: 5px 9px; font-size: 0.63rem; color: var(--color-text-muted);">
-              <strong style="color: var(--color-navy);">Large-Bore Field Butt Fusion:</strong> Continuous segmented pipeline jointing in open trenches using hydraulic butt-welding frames.
-            </div>
-          </div>
-        </div>
-
-        <!-- Official PlastoGuard Contact & Procurement Backing Box -->
-        <div style="background: linear-gradient(135deg, #0b192c 0%, #112238 100%); color: #ffffff; border-radius: 11px; padding: 15px 18px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
-          
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 9px; margin-bottom: 10px;">
-            <div style="display: flex; align-items: center; gap: 9px;">
-              <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" style="height: 32px; width: auto; background: #ffffff; padding: 3px; border-radius: 5px;" />
-              <div>
-                <span style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.05em; display: block; line-height: 1;">PLASTOGUARD</span>
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.60rem; color: var(--color-orange); letter-spacing: 0.06em;">BRAND OF NJ ENTERPRISES • ESTABLISHED INFRASTRUCTURE MANUFACTURER</span>
-              </div>
-            </div>
-            <div style="background: var(--color-orange); color: #ffffff; font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; font-weight: 800; padding: 3.5px 9px; border-radius: 5px; letter-spacing: 0.05em;">
-              GSTIN: 27ANMPD5199E1ZR
-            </div>
-          </div>
-
-          <!-- Contact Details Grid -->
-          <div style="display: grid; grid-template-columns: 1.2fr 0.9fr 1.1fr; gap: 12px; font-size: 0.68rem; line-height: 1.45;">
-            
-            <!-- Col 1: Direct Inquiries -->
-            <div>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 3px;">Direct Quotation &amp; RFQ Inquiries</span>
-              <div style="margin-bottom: 3px;">
-                <span style="color: var(--color-orange); font-weight: 700;">Email:</span> 
-                <a href="mailto:sales.plastoguardind@gmail.com" style="color: #ffffff; text-decoration: none; font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.66rem;">sales.plastoguardind@gmail.com</a>
-              </div>
-              <div>
-                <span style="color: #94a3b8;">Alt:</span> 
-                <a href="mailto:shrikantcn@gmail.com" style="color: #cbd5e1; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.63rem;">shrikantcn@gmail.com</a>
-              </div>
-            </div>
-
-            <!-- Col 2: Telephones -->
-            <div>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 3px;">Sales &amp; Technical Support</span>
-              <div style="margin-bottom: 2px;">
-                <span style="color: var(--color-orange); font-weight: 700;">Tel:</span> 
-                <a href="tel:+917718847463" style="color: #ffffff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700;">+91 7718847463</a>
-              </div>
-              <div>
-                <span style="color: var(--color-orange); font-weight: 700;">Direct:</span> 
-                <a href="tel:+918976557664" style="color: #ffffff; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700;">+91 8976557664</a>
-              </div>
-            </div>
-
-            <!-- Col 3: Works & Corporate Office -->
-            <div>
-              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; display: block; margin-bottom: 3px;">Head Office &amp; Works</span>
-              <div style="color: #e2e8f0; font-size: 0.63rem;">
-                <strong>Works &amp; Office:</strong> 26, Sethi Industrial Estate, Suren Road, Near Western Express Highway Metro Station, Andheri East, Mumbai - 400093, India.<br/>
-                <strong>Plant:</strong> Khopoli Industrial Area, Maharashtra.
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Bottom Notice -->
-          <div style="margin-top: 10px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.60rem; color: #94a3b8; font-family: 'JetBrains Mono', monospace;">
-            <span>Web: <a href="https://plastoguard.com" style="color: var(--color-orange); text-decoration: none;">https://plastoguard.com</a> • Exporting to 25+ Countries</span>
-            <span>Custom Wall Thickness &amp; Spigot Lengths Engineered On Request</span>
-          </div>
-
-        </div>
-
-      </div>
-
+      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
           <span class="footer-badge">© 2026 PlastoGuard</span>
-          <span>All Technical Specifications Subject to Standard Manufacturing Tolerances (±0.5%)</span>
+          <span>Section 3: Fabricated Fittings, Flanges &amp; Procurement Directory</span>
         </div>
-        <div class="footer-page-num">PAGE 06 / 06</div>
+        <div class="footer-page-num">PAGE 03 / 03</div>
       </footer>
     </article>
 
@@ -1870,7 +1373,7 @@
   <script>
     // Navigation active state tracker
     window.addEventListener('scroll', () => {
-      const pages = ['page-1', 'page-2', 'page-3', 'page-4', 'page-5', 'page-6'];
+      const pages = ['page-1', 'page-2', 'page-3'];
       const scrollPos = window.scrollY + 120;
       pages.forEach(id => {
         const el = document.getElementById(id);
