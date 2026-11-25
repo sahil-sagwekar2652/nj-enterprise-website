@@ -3,123 +3,166 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlastoGuard | HDPE Pipes & Fittings Technical Catalogue</title>
-  <meta name="description" content="Technical dimension catalogue for PlastoGuard HDPE Electrofusion Fittings, Butt Fusion Fittings, Fabricated Segmented Fittings and Flanges compliant with IS 4984, ISO 4427, and IS 8360." />
+  <title>PlastoGuard | HDPE Fittings &amp; Flanges Technical Catalogue</title>
+  <meta name="description" content="Official PlastoGuard technical dimension catalogue for PE100/PE80 HDPE Electrofusion Fittings, Butt Fusion Fittings, Fabricated Segmented Fittings and Flanges compliant with IS 4984, ISO 4427, IS 8360, DIN 2501, and ANSI B16.5." />
   <link rel="canonical" href="https://plastoguard.com/pipes-and-fittings/catalogue/index.html" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  
-  <!-- Fonts -->
+
+  <!-- Fonts matching DESIGN.md -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --color-navy: #0b192c;
-      --color-orange: #e65100;
-      --color-orange-dark: #bf360c;
-      --color-blue: #002b80;
-      --color-blue-dark: #001f5c;
-      --color-slate-line: #dcd1be;
-      --color-slate-light: #f8fafc;
-      --color-text-main: #1e293b;
-      --color-text-muted: #556987;
+      --navy-deep: #020617;
+      --navy-ink: #0b1c30;
+      --navy-panel: #0f172a;
+      --cad-slate: #334155;
+      --cad-muted: #475569;
+      --cad-border: rgba(51, 65, 85, 0.16);
+      --cad-border-strong: rgba(51, 65, 85, 0.30);
+      --orange: #F97316;
+      --orange-ink: #c2410c;      /* >= 5.1:1 WCAG AA on white & #fff7ed */
+      --orange-hover: #ea580c;
+      --orange-tint: #fff7ed;
+      --orange-pill-bg: #ffedd5;
+      --surface-ice: #f8f9ff;
+      --surface-row-alt: #f4f7ff;
+      --surface-white: #ffffff;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    ::selection {
+      background: var(--orange);
+      color: #ffffff;
+    }
+
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--cad-slate) var(--navy-deep);
     }
 
     body {
-      background-color: #cbd5e1;
-      color: var(--color-text-main);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0f172a;
+      background-image: radial-gradient(rgba(148, 163, 184, 0.16) 1px, transparent 1px);
+      background-size: 28px 28px;
+      color: var(--navy-ink);
+      font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.35;
+      font-variant-numeric: tabular-nums;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Screen Control Bar */
+    /* ==========================================
+       SCREEN CONTROL TOOLBAR (NON-PRINT)
+       ========================================== */
     .catalog-toolbar {
       position: sticky;
       top: 0;
       z-index: 9999;
-      background: rgba(11, 25, 44, 0.96);
+      background: rgba(2, 6, 23, 0.94);
       backdrop-filter: blur(12px);
-      border-bottom: 2px solid var(--color-orange);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
       color: #ffffff;
       padding: 10px 24px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      gap: 14px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.45);
     }
 
-    .catalog-toolbar .brand-group {
+    .catalog-toolbar::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 140px;
+      height: 2px;
+      background: var(--orange);
+    }
+
+    .brand-group {
       display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .catalog-toolbar .brand-logo {
+    .brand-logo {
       height: 36px;
       width: auto;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+      background: #ffffff;
+      padding: 3px 5px;
+      border-radius: 6px;
     }
 
-    .catalog-toolbar .brand-title {
+    .brand-title {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
       color: #ffffff;
+      line-height: 1.1;
     }
 
-    .catalog-toolbar .brand-sub {
+    .brand-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--color-orange);
+      font-size: 0.70rem;
+      color: var(--orange);
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
     }
 
-    .catalog-toolbar .nav-pills {
+    .nav-pills {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       overflow-x: auto;
       padding: 2px 0;
     }
 
-    .catalog-toolbar .nav-pill {
+    .nav-pill {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 600;
-      color: #94a3b8;
+      color: #cbd5e1;
       text-decoration: none;
       padding: 6px 12px;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.2s ease;
+      border-radius: 8px;
+      background: rgba(51, 65, 85, 0.35);
+      border: 1px solid rgba(203, 213, 225, 0.15);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       white-space: nowrap;
     }
 
-    .catalog-toolbar .nav-pill:hover,
-    .catalog-toolbar .nav-pill.active {
+    .nav-pill:hover {
       color: #ffffff;
-      background: var(--color-orange);
-      border-color: var(--color-orange);
+      border-color: var(--orange);
+      background: rgba(249, 115, 22, 0.16);
     }
 
-    .catalog-toolbar .action-buttons {
+    .nav-pill.active {
+      color: var(--navy-deep);
+      background: var(--orange);
+      border-color: var(--orange);
+      font-weight: 800;
+    }
+
+    .action-buttons {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .btn-action {
@@ -127,263 +170,316 @@
       align-items: center;
       gap: 6px;
       padding: 8px 16px;
-      border-radius: 8px;
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 0.82rem;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.2s ease;
-      border: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
     }
 
     .btn-print {
-      background: var(--color-orange);
-      color: #ffffff;
-      box-shadow: 0 2px 8px rgba(230, 81, 0, 0.35);
+      background: var(--orange);
+      color: var(--navy-deep);
+      font-weight: 800;
+      box-shadow: 0 4px 12px rgba(2, 6, 23, 0.35);
     }
 
     .btn-print:hover {
-      background: var(--color-orange-dark);
+      background: var(--orange-hover);
       transform: translateY(-1px);
     }
 
     .btn-back {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(51, 65, 85, 0.45);
       color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-color: rgba(203, 213, 225, 0.25);
     }
 
     .btn-back:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(51, 65, 85, 0.75);
+      border-color: #ffffff;
     }
 
-    /* Multi-Page Canvas */
+    /* ==========================================
+       A4 SHEET CANVAS & ARCHITECTURAL TRIM
+       ========================================== */
     .catalog-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 60px 16px;
-      gap: 36px;
+      padding: 28px 16px 64px 16px;
+      gap: 32px;
     }
 
-    /* Precision A4 Page Canvas */
     .catalog-page {
       width: 210mm;
       min-height: 297mm;
       height: 297mm;
       max-height: 297mm;
-      background: #ffffff;
-      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2), 0 0 1px 1px rgba(0, 0, 0, 0.08);
+      background: var(--surface-white);
+      box-shadow: 0 25px 50px -12px rgba(2, 6, 23, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.1);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-sizing: border-box;
-      padding: 8mm 12mm 7mm 12mm;
+      padding: 8mm 11mm 7mm 11mm;
       page-break-after: always;
       break-after: page;
     }
 
-    /* Page 1 Master Heading Section */
+    /* Signature Industrial Top Trim Bar on every page */
+    .catalog-page::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 52mm, var(--navy-deep) 52mm, var(--navy-deep) 100%);
+    }
+
+    /* Blueprint Dot Texture Pattern Utility */
+    .cad-grid-bg {
+      background-image: radial-gradient(rgba(203, 213, 225, 0.16) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* ==========================================
+       PAGE 1 MASTER HEADING SECTION
+       ========================================== */
     .page-master-header {
-      border-bottom: 2px solid var(--color-navy);
-      padding-bottom: 5px;
-      margin-bottom: 6px;
       flex-shrink: 0;
+      margin-bottom: 5px;
     }
 
     .master-header-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 5px;
+      padding-bottom: 6px;
     }
 
-    .master-header-top .brand-left {
+    .brand-left {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .master-header-top .logo-mark {
-      height: 38px;
+    .page-master-header .logo-mark {
+      height: 36px;
       width: auto;
     }
 
-    .master-header-top .brand-text-col {
+    .brand-text-col {
       display: flex;
       flex-direction: column;
     }
 
-    .master-header-top .brand-name {
+    .page-master-header .brand-name {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 1.25rem;
-      color: var(--color-navy);
-      letter-spacing: 0.06em;
+      font-size: 1.28rem;
+      color: var(--navy-deep);
+      letter-spacing: 0.04em;
       line-height: 1;
     }
 
-    .master-header-top .division-tag {
+    .page-master-header .division-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.69rem;
       font-weight: 700;
-      color: var(--color-orange);
+      color: var(--orange-ink);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin-top: 2px;
     }
 
-    .master-header-top .header-meta {
+    .header-meta {
       text-align: right;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.64rem;
-      color: var(--color-text-muted);
+      font-size: 0.69rem;
+      color: var(--cad-muted);
       line-height: 1.35;
     }
 
-    .master-header-top .header-meta strong {
-      color: var(--color-navy);
+    .header-meta strong {
+      color: var(--navy-deep);
+      font-weight: 700;
     }
 
     .master-banner {
-      background: linear-gradient(135deg, #0b192c 0%, #1e3a8a 100%);
+      background-color: var(--navy-deep);
       color: #ffffff;
-      border-radius: 6px;
-      padding: 6px 12px;
+      border-radius: 8px;
+      padding: 8px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
+      border: 1px solid rgba(51, 65, 85, 0.5);
+      position: relative;
+      overflow: hidden;
     }
 
     .master-banner .banner-title {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 0.92rem;
-      letter-spacing: 0.03em;
+      font-size: 1.38rem;
+      letter-spacing: -0.01em;
       color: #ffffff;
       text-transform: uppercase;
-      line-height: 1.15;
+      line-height: 1.1;
+    }
+
+    .master-banner .banner-title span {
+      color: var(--orange);
     }
 
     .master-banner .banner-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.56rem;
+      font-size: 0.69rem;
       color: #cbd5e1;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
     }
 
-    .master-banner .standards-pill-group {
+    .standards-pill-group {
       display: flex;
       flex-wrap: wrap;
+      justify-content: flex-end;
       align-items: center;
       gap: 4px;
+      max-width: 48%;
     }
 
     .badge-std {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: #ffffff;
+      background: rgba(51, 65, 85, 0.55);
+      border: 1px solid rgba(203, 213, 225, 0.25);
+      color: #f8fafc;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.54rem;
+      font-size: 0.69rem;
       font-weight: 700;
-      padding: 2px 5px;
+      padding: 2px 6px;
       border-radius: 4px;
       white-space: nowrap;
     }
 
     .badge-std.accent {
-      background: var(--color-orange);
-      border-color: var(--color-orange);
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--navy-deep);
+      font-weight: 800;
     }
 
-    /* Regular Page Running Header (Pages 2, 3, 4) */
+    /* ==========================================
+       PAGES 2-4 COMPACT RUNNING HEADER
+       ========================================== */
     .page-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid var(--color-navy);
-      padding-bottom: 4px;
+      border-bottom: 1px solid var(--cad-border-strong);
+      padding-bottom: 5px;
       margin-bottom: 5px;
       flex-shrink: 0;
     }
 
-    .page-header .brand-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
     .page-header .logo-mark {
-      height: 28px;
+      height: 26px;
       width: auto;
-    }
-
-    .page-header .brand-text-col {
-      display: flex;
-      flex-direction: column;
     }
 
     .page-header .brand-name {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 0.95rem;
-      color: var(--color-navy);
-      letter-spacing: 0.05em;
+      font-size: 0.92rem;
+      color: var(--navy-deep);
+      letter-spacing: 0.04em;
       line-height: 1;
     }
 
     .page-header .division-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.56rem;
+      font-size: 0.69rem;
       font-weight: 700;
-      color: var(--color-orange);
+      color: var(--orange-ink);
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      margin-top: 1px;
     }
 
-    .page-header .header-meta {
-      text-align: right;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem;
-      color: var(--color-text-muted);
-      line-height: 1.3;
+    /* ==========================================
+       SLEEK CATEGORY HEADING STRIP
+       ========================================== */
+    .section-header-strip {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 4px 0 5px 0;
+      border-bottom: 2px solid var(--navy-deep);
+      position: relative;
+      flex-shrink: 0;
+      margin-bottom: 2px;
     }
 
-    .page-header .header-meta strong {
-      color: var(--color-navy);
+    .section-header-strip::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 44mm;
+      height: 2px;
+      background: var(--orange);
     }
 
-    /* Section Category Header (Clean, minimal, matching polymold style) */
+    .section-title-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
     .catalog-section-title {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 1.15rem;
-      color: #3b4d28; /* dark olive/earthy as in original */
-      letter-spacing: 0.02em;
-      line-height: 1.1;
-      margin-top: 2px;
-      margin-bottom: 1px;
+      font-size: 1.08rem;
+      color: var(--navy-deep);
+      letter-spacing: -0.015em;
+      line-height: 1;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .catalog-section-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.62rem;
-      font-weight: 800;
-      color: #5c6f45;
-      letter-spacing: 0.06em;
+      font-size: 0.69rem;
+      font-weight: 700;
+      color: var(--cad-slate);
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      padding-bottom: 5px;
-      border-bottom: 2px solid #5c6f45;
-      margin-bottom: 4px;
+      text-align: right;
+      white-space: nowrap;
     }
 
-    /* Product Item Rows Container */
+    /* ==========================================
+       PRODUCT ROWS — SLEEK ARCHITECTURAL BANDS
+       ========================================== */
     .products-list {
       flex-grow: 1;
       display: flex;
@@ -392,218 +488,306 @@
       position: relative;
     }
 
-    /* Product Row — Clean, Horizontal, Open, Large Image on Left */
     .item-row {
       display: flex;
       align-items: center;
-      padding: 3px 0 3px 0;
-      border-bottom: 1.5px solid var(--color-slate-line);
+      padding: 3px 8px;
+      border-bottom: 1px solid var(--cad-border);
       flex: 1 1 0;
       min-height: 0;
+      border-radius: 6px;
+    }
+
+    /* Subtle Industrial Precision Bench striping for scannability without boxes */
+    .item-row:nth-child(even) {
+      background-color: var(--surface-row-alt);
     }
 
     .item-row:last-child {
       border-bottom: none;
     }
 
-    /* Large Expanded Product Image Box — No Shadow Box, Maximized Size */
+    /* Expanded, Borderless Transparent Image Stage */
     .item-image-col {
-      flex: 0 0 190px;
-      width: 190px;
+      flex: 0 0 195px;
+      width: 195px;
       height: 100%;
-      max-height: 98px;
+      max-height: 106px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-right: 16px;
+      padding-right: 12px;
     }
 
     .item-image-col img {
       max-width: 100%;
-      max-height: 94px;
+      max-height: 103px;
       width: auto;
       height: auto;
       object-fit: contain;
     }
 
-    /* Product Details Info Column (Matching attached photo) */
+    /* Page 3 has 7 items with no corporate footer -> maximize image height even more */
+    #page-3 .item-image-col {
+      max-height: 118px;
+    }
+    #page-3 .item-image-col img {
+      max-height: 114px;
+    }
+
+    /* Product Details Typography & Dimension Pill Hierarchy */
     .item-info-col {
       flex: 1;
       min-width: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 2px;
+      gap: 4px;
       padding-left: 8px;
     }
 
-    /* Orange Product Title */
+    .item-header-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .item-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .item-index {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
+      font-weight: 800;
+      color: var(--orange-ink);
+      background: var(--orange-tint);
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      padding: 1px 5px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
     .item-name {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 800;
-      font-size: 1.08rem;
-      color: var(--color-orange);
+      font-size: 1.02rem;
+      color: var(--navy-ink);
       line-height: 1.15;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
     }
 
-    /* Optional subtitle (e.g. For butt fusion, with BSP thread) */
+    .item-material-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.69rem;
+      color: #ffffff;
+      background: var(--navy-deep);
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .item-material-chip::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
     .item-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.60rem;
-      font-weight: 700;
-      color: var(--color-text-muted);
+      font-size: 0.69rem;
+      font-weight: 600;
+      color: var(--cad-muted);
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
+      padding-left: 32px;
     }
 
-    /* Blue Range & Pressure Spec Line */
     .item-specs-line {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
+      padding-left: 32px;
       margin-top: 1px;
     }
 
-    .item-range {
-      font-family: 'Hanken Grotesk', sans-serif;
+    .item-range-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange-tint);
+      border: 1px solid rgba(249, 115, 22, 0.42);
+      padding: 5px 11px;
+      border-radius: 5px;
+    }
+
+    .item-range-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
       font-weight: 800;
-      font-size: 0.86rem;
-      color: var(--color-blue);
+      color: var(--orange-ink);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .item-range-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--navy-deep);
       letter-spacing: 0.01em;
     }
 
-    .item-pressure {
+    .item-pressure-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--surface-white);
+      border: 1px solid var(--cad-border-strong);
+      padding: 5px 10px;
+      border-radius: 5px;
       font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
       font-weight: 700;
-      font-size: 0.68rem;
-      color: var(--color-blue);
+      color: var(--cad-slate);
     }
 
-    .item-material {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 800;
-      font-size: 0.78rem;
-      color: var(--color-orange);
-      letter-spacing: 0.02em;
-      margin-left: auto;
-    }
-
-    /* Running Page Footer (Pages 1, 2, 3, 4) */
+    /* ==========================================
+       PAGE RUNNING FOOTER (PAGES 1-4)
+       ========================================== */
     .page-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1.5px solid var(--color-slate-line);
+      border-top: 1px solid var(--cad-border-strong);
       padding-top: 4px;
       margin-top: 4px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.56rem;
-      color: var(--color-text-muted);
+      font-size: 0.69rem;
+      color: var(--cad-muted);
       flex-shrink: 0;
     }
 
-    .page-footer .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .page-footer .footer-badge {
-      background: var(--color-navy);
-      color: #ffffff;
-      padding: 1.5px 6px;
-      border-radius: 3px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .page-footer .footer-page-num {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-weight: 800;
-      font-size: 0.74rem;
-      color: var(--color-orange);
-      background: #fff3e0;
-      padding: 1.5px 8px;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
-    }
-
-    /* Page 4 Corporate Contact & Procurement Footer */
-    .last-page-footer-block {
-      background: linear-gradient(135deg, #0b192c 0%, #112238 100%);
-      color: #ffffff;
-      border-radius: 6px;
-      padding: 7px 12px;
-      margin-top: 6px;
-      flex-shrink: 0;
-    }
-
-    .last-page-footer-block .footer-header-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding-bottom: 4px;
-      margin-bottom: 5px;
-    }
-
-    .last-page-footer-block .footer-brand {
+    .footer-left {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
-    .last-page-footer-block .footer-logo {
+    .footer-badge {
+      background: var(--navy-deep);
+      color: #ffffff;
+      padding: 1.5px 7px;
+      border-radius: 3px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-page-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 0.72rem;
+      color: var(--navy-deep);
+      background: var(--orange);
+      padding: 1.5px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================
+       PAGE 4 CORPORATE CONTACT & PROCUREMENT FOOTER
+       ========================================== */
+    .last-page-footer-block {
+      background-color: var(--navy-deep);
+      color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid rgba(51, 65, 85, 0.55);
+      padding: 9px 13px 8px 13px;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    .footer-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(203, 213, 225, 0.16);
+      padding-bottom: 4px;
+      margin-bottom: 5px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-logo {
       height: 24px;
       width: auto;
       background: #ffffff;
-      padding: 2px;
-      border-radius: 3px;
+      padding: 2px 4px;
+      border-radius: 4px;
     }
 
-    .last-page-footer-block .footer-title {
+    .footer-title {
       font-family: 'Hanken Grotesk', sans-serif;
       font-weight: 900;
-      font-size: 0.88rem;
-      letter-spacing: 0.05em;
+      font-size: 0.90rem;
+      letter-spacing: 0.04em;
       line-height: 1;
-    }
-
-    .last-page-footer-block .footer-sub {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.52rem;
-      color: var(--color-orange);
-      letter-spacing: 0.06em;
-    }
-
-    .last-page-footer-block .footer-gstin {
-      background: var(--color-orange);
       color: #ffffff;
+    }
+
+    .footer-sub {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.58rem;
+      font-size: 0.69rem;
+      color: var(--orange);
+      letter-spacing: 0.04em;
+      margin-top: 2px;
+      display: block;
+    }
+
+    .footer-gstin {
+      background: var(--orange);
+      color: var(--navy-deep);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
       font-weight: 800;
-      padding: 2px 7px;
+      padding: 2px 8px;
       border-radius: 4px;
       letter-spacing: 0.04em;
     }
 
     .footer-grid-cols {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr 1.3fr;
+      grid-template-columns: 1.15fr 0.9fr 1.35fr;
       gap: 10px;
-      font-size: 0.58rem;
-      line-height: 1.35;
+      font-size: 0.69rem;
+      line-height: 1.32;
     }
 
     .footer-col-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.50rem;
+      font-size: 0.69rem;
       color: #94a3b8;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .footer-grid-cols a {
@@ -614,22 +798,56 @@
     }
 
     .footer-grid-cols a:hover {
+      color: var(--orange);
       text-decoration: underline;
     }
 
+    .footer-accent-key {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
     .footer-bottom-notice {
-      margin-top: 5px;
-      padding-top: 3px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 4px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(203, 213, 225, 0.14);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.52rem;
-      color: #94a3b8;
+      font-size: 0.65rem;
+      color: #cbd5e1;
       font-family: 'JetBrains Mono', monospace;
     }
 
-    /* Print Precision Styles */
+    /* ==========================================
+       PRINT & RESPONSIVE MEDIA QUERIES
+       ========================================== */
+    @media screen and (max-width: 820px) {
+      .catalog-page {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        padding: 16px;
+      }
+      .item-image-col {
+        flex: 0 0 110px;
+        width: 110px;
+      }
+      .item-header-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+      .item-sub,
+      .item-specs-line {
+        padding-left: 0;
+      }
+      .footer-grid-cols {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media print {
       @page {
         size: A4 portrait;
@@ -638,6 +856,7 @@
 
       html, body {
         background: #ffffff !important;
+        background-image: none !important;
         margin: 0 !important;
         padding: 0 !important;
         width: 210mm !important;
@@ -658,12 +877,11 @@
       .catalog-page {
         margin: 0 !important;
         box-shadow: none !important;
-        border: none !important;
         width: 210mm !important;
         height: 297mm !important;
         min-height: 297mm !important;
         max-height: 297mm !important;
-        padding: 7mm 11mm 6mm 11mm !important;
+        padding: 7.5mm 11mm 6.5mm 11mm !important;
         page-break-after: always !important;
         page-break-inside: avoid !important;
         break-after: page !important;
@@ -673,17 +891,17 @@
 </head>
 <body>
 
-  <!-- Screen Control Bar -->
+  <!-- Floating Screen Control Bar -->
   <header class="catalog-toolbar no-print">
     <div class="brand-group">
       <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="brand-logo" />
       <div>
         <div class="brand-title">PLASTOGUARD PIPING SYSTEMS</div>
-        <div class="brand-sub">HDPE Pipes, Fittings &amp; Flanges Master Catalogue</div>
+        <div class="brand-sub">HDPE Fittings &amp; Flanges Technical Catalogue</div>
       </div>
     </div>
 
-    <nav class="nav-pills">
+    <nav class="nav-pills" aria-label="Catalogue sections">
       <a href="#page-1" class="nav-pill active">1. Electrofusion</a>
       <a href="#page-2" class="nav-pill">2. Butt Short Spigot</a>
       <a href="#page-3" class="nav-pill">3. Butt Long Spigot</a>
@@ -691,17 +909,17 @@
     </nav>
 
     <div class="action-buttons">
-      <button onclick="window.print()" class="btn-action btn-print">
-        <span class="material-symbols-outlined" style="font-size: 18px;">print</span>
+      <button type="button" onclick="window.print()" class="btn-action btn-print">
+        <span class="material-symbols-outlined" style="font-size: 16px;">print</span>
         <span>Print / Save PDF</span>
       </button>
-      <a href="/catalogue/plastoguard-hdpe-pipes-fittings-catalogue.pdf" download class="btn-action btn-back" style="background: rgba(255,255,255,0.18);">
-        <span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+      <a href="/catalogue/plastoguard-hdpe-pipes-fittings-catalogue.pdf" download class="btn-action btn-back">
+        <span class="material-symbols-outlined" style="font-size: 16px;">download</span>
         <span>Download PDF</span>
       </a>
       <a href="/pipes-and-fittings/index.html" class="btn-action btn-back">
-        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
-        <span>Back to Hub</span>
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span>
+        <span>Hub</span>
       </a>
     </div>
   </header>
@@ -713,27 +931,27 @@
          PAGE 1: ELECTROFUSION FITTINGS (WITH MASTER HEADING)
          ========================================== -->
     <article id="page-1" class="catalog-page">
-      
-      <!-- Master Heading Section (kept from first page) -->
+
+      <!-- Master Corporate Heading Section -->
       <header class="page-master-header">
         <div class="master-header-top">
           <div class="brand-left">
             <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
             <div class="brand-text-col">
               <span class="brand-name">PLASTOGUARD</span>
-              <span class="division-tag">Infrastructure Piping Division</span>
+              <span class="division-tag">Infrastructure Piping Systems</span>
             </div>
           </div>
           <div class="header-meta">
             <div>GSTIN: <strong>27ANMPD5199E1ZR</strong></div>
-            <div>Inquiries: <strong>sales.plastoguardind@gmail.com</strong></div>
+            <div>Direct Sales: <strong>sales.plastoguardind@gmail.com</strong></div>
           </div>
         </div>
 
-        <div class="master-banner">
+        <div class="master-banner cad-grid-bg">
           <div>
-            <div class="banner-title">HDPE Pipes, Fittings &amp; Flanges Master Catalogue</div>
-            <div class="banner-sub">Technical Dimensions &amp; Specifications Schedule</div>
+            <h1 class="banner-title">HDPE Fittings &amp; Flanges <span>Master Catalogue</span></h1>
+            <div class="banner-sub">Certified Dimensional Schedule • 20mm – 1600mm</div>
           </div>
           <div class="standards-pill-group">
             <span class="badge-std accent">PE100 / PE80</span>
@@ -747,161 +965,194 @@
         </div>
       </header>
 
-      <!-- Section Title -->
-      <div>
-        <h1 class="catalog-section-title">ELECTRO FUSION FITTINGS</h1>
-        <div class="catalog-section-sub">BLACK PE100 FOR WATER &amp; GAS INFRASTRUCTURE</div>
+      <!-- Section Title Strip -->
+      <div class="section-header-strip">
+        <div class="section-title-group">
+          <span class="section-dot" aria-hidden="true"></span>
+          <h2 class="catalog-section-title">Electro Fusion Fittings</h2>
+        </div>
+        <div class="catalog-section-sub">Black PE100 • Potable Water &amp; Gas Infrastructure</div>
       </div>
 
-      <!-- 8 Products List (Matching User Photo Style) -->
+      <!-- 8 Electrofusion Products -->
       <div class="products-list">
 
-        <!-- 1. Coupler -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/coupler.png" alt="Electrofusion Coupler" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Coupler</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">01</span>
+                <h3 class="item-name">Electrofusion Coupler</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 20mm to 630mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Tee -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/tee-equal.png" alt="Electrofusion Tee" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Tee</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">02</span>
+                <h3 class="item-name">Electrofusion Tee</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 20mm to 500mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 500mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Bend 90° -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/bend-90.png" alt="Electrofusion Bend 90°" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Bend 90°</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">03</span>
+                <h3 class="item-name">Electrofusion Bend 90°</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 20mm to 500mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 500mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Bend 45° -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/bend-45.png" alt="Electrofusion Bend 45°" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Bend 45°</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">04</span>
+                <h3 class="item-name">Electrofusion Bend 45°</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 63mm to 315mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">63mm to 315mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 5. Reducer -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/reducer.png" alt="Electrofusion Reducer" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Reducer</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">05</span>
+                <h3 class="item-name">Electrofusion Reducer</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 32 to 315mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">32mm to 315mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 6. Reducing Tee -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/reducing-tee.png" alt="Electrofusion Reducing Tee" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Reducing Tee</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">06</span>
+                <h3 class="item-name">Electrofusion Reducing Tee</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 20mm to 500mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 500mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. End Cap -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/end-cap.png" alt="Electrofusion End Cap" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion End Cap</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">07</span>
+                <h3 class="item-name">Electrofusion End Cap</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 20mm to 160mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16) / SDR 17 (PN10)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 160mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16) / SDR 17 (PN10)</span>
             </div>
           </div>
         </div>
 
-        <!-- 8. Branch Tapping Saddle -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/electrofusion/tapping-saddle.png" alt="Electrofusion Branch Tapping Saddle" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">Electrofusion Branch Tapping Saddle</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">08</span>
+                <h3 class="item-name">Electrofusion Branch Tapping Saddle</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-sub">With Female BSP Threading Outlet</div>
             <div class="item-specs-line">
-              <span class="item-range">Range : 63 to 225mm</span>
-              <span class="item-pressure">Pressure : SDR 11 (PN16)</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">63mm to 225mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16)</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
-          <span class="footer-badge">PLASTOGUARD PIPING</span>
-          <span>Section 1: Electrofusion Fittings • ISO 4427-3 / EN 12201-3 / IS 4984</span>
+          <span class="footer-badge">PLASTOGUARD</span>
+          <span>Section 01 • Electrofusion Fittings • ISO 4427-3 / EN 12201-3 / IS 4984</span>
         </div>
-        <div class="footer-page-num">PAGE 01 / 04</div>
+        <div class="footer-page-num">01 / 04</div>
       </footer>
     </article>
 
 
     <!-- ==========================================
-         PAGE 2: BUTT FUSION FITTINGS - SHORT SPIGOT
+         PAGE 2: BUTT FUSION FITTINGS — SHORT SPIGOT
          ========================================== -->
     <article id="page-2" class="catalog-page">
-      
-      <!-- Running Header -->
+
       <header class="page-header">
         <div class="brand-left">
           <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
           <div class="brand-text-col">
             <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Infrastructure Piping Division</span>
+            <span class="division-tag">Infrastructure Piping Systems</span>
           </div>
         </div>
         <div class="header-meta">
@@ -910,168 +1161,195 @@
         </div>
       </header>
 
-      <!-- Section Title -->
-      <div>
-        <h2 class="catalog-section-title">BUTT FUSION FITTINGS</h2>
-        <div class="catalog-section-sub">SHORT SPIGOT (PE80 &amp; PE100)</div>
+      <div class="section-header-strip">
+        <div class="section-title-group">
+          <span class="section-dot" aria-hidden="true"></span>
+          <h2 class="catalog-section-title">Butt Fusion Fittings — Short Spigot</h2>
+        </div>
+        <div class="catalog-section-sub">PE80 &amp; PE100 • Injection Molded • 20mm – 1200mm</div>
       </div>
 
-      <!-- 8 Short Spigot Products (Matching Page 12 of Polymold) -->
       <div class="products-list">
 
-        <!-- 1. Stub Flanges -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-stub-flange.png" alt="Stub Flanges Flange Adapter" />
+            <img src="/images/fittings/cropped/butt-fusion/short-stub-flange.png" alt="Stub Flanges / Flange Adapter" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">STUB FLANGES / FLANGE ADAPTER</div>
-            <div class="item-sub">FOR BUTT FUSION - SDR 11, SDR 17, &amp; SDR 21</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">01</span>
+                <h3 class="item-name">Stub Flanges / Flange Adapter</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">For Butt Fusion • SDR 11, SDR 17 &amp; SDR 21</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 1200mm</span>
-              <span class="item-pressure">Pressure : PN 6 , PN10 &amp; PN16</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1200mm</span></span>
+              <span class="item-pressure-pill">PN 6, PN 10 &amp; PN 16</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Concentric Reducer -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-concentric-reducer.png" alt="Concentric Reducer Short Spigot" />
+            <img src="/images/fittings/cropped/butt-fusion/short-concentric-reducer.png" alt="Concentric Reducer" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">CONCENTRIC REDUCER</div>
-            <div class="item-sub">ALSO AVAILABLE IN MORE THAN 4 STEP REDUCTION ON SPECIAL REQUEST</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">02</span>
+                <h3 class="item-name">Concentric Reducer</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">&gt;4-Step Reduction Available On Request</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 800mm</span>
-              <span class="item-pressure">Pressure : SDR11, SDR17</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 800mm</span></span>
+              <span class="item-pressure-pill">SDR 11 &amp; SDR 17</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Excentric Reducer -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-excentric-reducer.png" alt="Excentric Reducer Short Spigot" />
+            <img src="/images/fittings/cropped/butt-fusion/short-excentric-reducer.png" alt="Excentric Reducer" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">EXCENTRIC REDUCER</div>
-            <div class="item-sub">FLAT-BOTTOM DRAINAGE AND SLURRY LINE PROFILE</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">03</span>
+                <h3 class="item-name">Excentric Reducer</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">Flat-Bottom Drainage &amp; Slurry Profile</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 400mm</span>
-              <span class="item-pressure">Pressure : SDR11, SDR17</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 400mm</span></span>
+              <span class="item-pressure-pill">SDR 11 &amp; SDR 17</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. End Caps -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-end-cap.png" alt="End Caps Short Spigot" />
+            <img src="/images/fittings/cropped/butt-fusion/short-end-cap.png" alt="End Caps" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">END CAPS</div>
-            <div class="item-sub">ALSO AVAILABLE FOR EXTRUSION WELDING IN THIN SIZES. CAN BE CUSTOMISED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">04</span>
+                <h3 class="item-name">End Caps</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">Extrusion Welding &amp; Custom Thin Sizes Available</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 1200mm</span>
-              <span class="item-pressure">Pressure : SDR11, SDR17</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1200mm</span></span>
+              <span class="item-pressure-pill">SDR 11 &amp; SDR 17</span>
             </div>
           </div>
         </div>
 
-        <!-- 5. Molded Bends 90° -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-bend-90.png" alt="Molded Bends 90 Deg" />
+            <img src="/images/fittings/cropped/butt-fusion/short-bend-90.png" alt="Molded Bends 90°" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED BENDS—90 °</div>
-            <div class="item-sub">MONOLITHIC INJECTION MOLDED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">05</span>
+                <h3 class="item-name">Molded Bends — 90°</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : SDR11</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16)</span>
             </div>
           </div>
         </div>
 
-        <!-- 6. Molded Tee -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-tee-equal.png" alt="Molded Tee" />
+            <img src="/images/fittings/cropped/butt-fusion/short-tee-equal.png" alt="Molded Tee Equal" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED TEE</div>
-            <div class="item-sub">FULL BORE EQUAL INJECTION MOLDED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">06</span>
+                <h3 class="item-name">Molded Tee (Equal)</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : SDR11</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16)</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Molded Bends 45° -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-bend-45.png" alt="Molded Bends 45 Deg" />
+            <img src="/images/fittings/cropped/butt-fusion/short-bend-45.png" alt="Molded Bends 45°" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED BENDS—45 °</div>
-            <div class="item-sub">MONOLITHIC INJECTION MOLDED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">07</span>
+                <h3 class="item-name">Molded Bends — 45°</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : SDR11</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16)</span>
             </div>
           </div>
         </div>
 
-        <!-- 8. Molded Unequal Tee -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/short-reducing-tee.png" alt="Molded Unequal Tee Reducing Tee" />
+            <img src="/images/fittings/cropped/butt-fusion/short-reducing-tee.png" alt="Molded Unequal Tee / Reducing Tee" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED UNEQUAL TEE / REDUCING TEE</div>
-            <div class="item-sub">REDUCING BRANCH INJECTION MOLDED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">08</span>
+                <h3 class="item-name">Molded Unequal / Reducing Tee</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : Upto 630mm</span>
-              <span class="item-pressure">Pressure : SDR11 / SDR13.5</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">Up to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 / SDR 13.5</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
-          <span class="footer-badge">PLASTOGUARD PIPING</span>
-          <span>Section 2: Butt Fusion Short Spigot Fittings • ISO 4427 / IS 4984 / DIN 8074</span>
+          <span class="footer-badge">PLASTOGUARD</span>
+          <span>Section 02 • Short Spigot Butt Fusion Fittings • ISO 4427 / IS 4984 / DIN 8074</span>
         </div>
-        <div class="footer-page-num">PAGE 02 / 04</div>
+        <div class="footer-page-num">02 / 04</div>
       </footer>
     </article>
 
 
     <!-- ==========================================
-         PAGE 3: BUTT FUSION FITTINGS - LONG SPIGOT
+         PAGE 3: BUTT FUSION FITTINGS — LONG SPIGOT
          ========================================== -->
     <article id="page-3" class="catalog-page">
-      
-      <!-- Running Header -->
+
       <header class="page-header">
         <div class="brand-left">
           <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
           <div class="brand-text-col">
             <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Infrastructure Piping Division</span>
+            <span class="division-tag">Infrastructure Piping Systems</span>
           </div>
         </div>
         <div class="header-meta">
@@ -1080,152 +1358,175 @@
         </div>
       </header>
 
-      <!-- Section Title -->
-      <div>
-        <h2 class="catalog-section-title">BUTT FUSION FITTINGS</h2>
-        <div class="catalog-section-sub">LONG SPIGOT (SUITABLE FOR BUTT FUSION &amp; ELECTROFUSION COUPLERS)</div>
+      <div class="section-header-strip">
+        <div class="section-title-group">
+          <span class="section-dot" aria-hidden="true"></span>
+          <h2 class="catalog-section-title">Butt Fusion — Long Spigot</h2>
+        </div>
+        <div class="catalog-section-sub">PE100 • Electrofusion &amp; Butt Weld • 20mm–800mm</div>
       </div>
 
-      <!-- 7 Long Spigot Products (Matching Page 13 of Polymold) -->
       <div class="products-list">
 
-        <!-- 1. Flange Adapter -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/butt-fusion/long-flange-adapter.png" alt="Flange Adapter Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">FLANGE ADAPTER</div>
-            <div class="item-sub">FOR ELECTROFUSION WITH COUPLER OR BUTT FUSION</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">01</span>
+                <h3 class="item-name">Flange Adapter (Long Spigot)</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
+            <div class="item-sub">For Electrofusion Coupler or Direct Butt Fusion</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 500mm</span>
-              <span class="item-pressure">Pressure : PN10 &amp; PN16 ( SDR 11 &amp; 17 )</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 500mm</span></span>
+              <span class="item-pressure-pill">PN 10 &amp; PN 16 (SDR 11 &amp; SDR 17)</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Concentric Reducer - Long -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/butt-fusion/long-concentric-reducer.png" alt="Concentric Reducer Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">CONCENTRIC REDUCER - LONG</div>
-            <div class="item-sub">FOR ELECTROFUSION WITH PIPE OR COUPLER. AVAILABLE IN SELECT SIZES ONLY</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">02</span>
+                <h3 class="item-name">Concentric Reducer — Long Spigot</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
+            <div class="item-sub">For Electrofusion With Pipe or Coupler</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : PN16 &amp; PN10</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">PN 10 &amp; PN 16</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. End Caps -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/butt-fusion/long-end-cap.png" alt="End Caps Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">END CAPS</div>
-            <div class="item-sub">EXTENDED SPIGOT PROFILE</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">03</span>
+                <h3 class="item-name">End Caps (Long Spigot)</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
+            <div class="item-sub">Extended Spigot Profile</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 500mm</span>
-              <span class="item-pressure">Pressure : SDR 11 &amp; SDR 17</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 500mm</span></span>
+              <span class="item-pressure-pill">SDR 11 &amp; SDR 17</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Molded Bends -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/butt-fusion/long-bend.png" alt="Molded Bends Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED BENDS</div>
-            <div class="item-sub">LONG SPIGOT INJECTION MOLDED</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">04</span>
+                <h3 class="item-name">Molded Bends (Long Spigot)</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 63mm to 800mm</span>
-              <span class="item-pressure">Pressure : SDR11</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">63mm to 800mm</span></span>
+              <span class="item-pressure-pill">SDR 11 (PN16)</span>
             </div>
           </div>
         </div>
 
-        <!-- 5. Molded Equal Tee -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/butt-fusion/long-tee-equal.png" alt="Molded Equal Tee Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED EQUAL TEE</div>
-            <div class="item-sub">EXTENDED SPIGOTS ON ALL BRANCHES</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">05</span>
+                <h3 class="item-name">Molded Equal Tee (Long Spigot)</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : upto 800mm</span>
-              <span class="item-pressure">Pressure : DR11, SDR13.5, SDR17</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">Up to 800mm</span></span>
+              <span class="item-pressure-pill">SDR 11 / SDR 13.5 / SDR 17</span>
             </div>
           </div>
         </div>
 
-        <!-- 6. Molded Unequal Tee / Reducing Tee -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/long-reducing-tee.png" alt="Molded Unequal Tee Reducing Tee Long Spigot" />
+            <img src="/images/fittings/cropped/butt-fusion/long-reducing-tee.png" alt="Molded Unequal Tee / Reducing Tee Long Spigot" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED UNEQUAL TEE / REDUCING TEE</div>
-            <div class="item-sub">EXTENDED REDUCING BRANCH</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">06</span>
+                <h3 class="item-name">Molded Unequal / Reducing Tee</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : upto 630mm</span>
-              <span class="item-pressure">Pressure : SDR11 / SDR13.5</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">Up to 630mm</span></span>
+              <span class="item-pressure-pill">SDR 11 / SDR 13.5</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Molded Cross / Unequal Tee (4-Way) -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/butt-fusion/long-cross-4way.png" alt="Molded Cross Unequal Tee Long Spigot" />
+            <img src="/images/fittings/cropped/butt-fusion/long-cross-4way.png" alt="Molded Cross / Unequal Tee 4-Way" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">MOLDED CROSS / UNEQUAL TEE (4-WAY)</div>
-            <div class="item-sub">4-WAY MANIFOLD JUNCTION CROSS</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">07</span>
+                <h3 class="item-name">Molded Cross / 4-Way Tee</h3>
+              </div>
+              <span class="item-material-chip">PE100</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : upto 315mm</span>
-              <span class="item-pressure">Pressure : SDR11 / SDR13.5</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">Up to 315mm</span></span>
+              <span class="item-pressure-pill">SDR 11 / SDR 13.5</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
-          <span class="footer-badge">PLASTOGUARD PIPING</span>
-          <span>Section 3: Butt Fusion Long Spigot Fittings • ISO 4427 / IS 4984</span>
+          <span class="footer-badge">PLASTOGUARD</span>
+          <span>Section 03 • Long Spigot Butt Fusion Fittings • ISO 4427 / IS 4984</span>
         </div>
-        <div class="footer-page-num">PAGE 03 / 04</div>
+        <div class="footer-page-num">03 / 04</div>
       </footer>
     </article>
 
 
     <!-- ==========================================
-         PAGE 4: FLANGES, FABRICATED & CORPORATE FOOTER
+         PAGE 4: FLANGES, FABRICATED FITTINGS & PROCUREMENT FOOTER
          ========================================== -->
     <article id="page-4" class="catalog-page">
-      
-      <!-- Running Header -->
+
       <header class="page-header">
         <div class="brand-left">
           <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="logo-mark" />
           <div class="brand-text-col">
             <span class="brand-name">PLASTOGUARD</span>
-            <span class="division-tag">Infrastructure Piping Division</span>
+            <span class="division-tag">Infrastructure Piping Systems</span>
           </div>
         </div>
         <div class="header-meta">
@@ -1234,180 +1535,203 @@
         </div>
       </header>
 
-      <!-- Section Title -->
-      <div>
-        <h2 class="catalog-section-title">FLANGES, BACKING RINGS &amp; FABRICATED FITTINGS</h2>
-        <div class="catalog-section-sub">COMPATIBLE WITH HDPE, PPH, U-PVC, C-PVC, ABS &amp; IPS PIPING SYSTEMS</div>
+      <div class="section-header-strip">
+        <div class="section-title-group">
+          <span class="section-dot" aria-hidden="true"></span>
+          <h2 class="catalog-section-title">Flanges &amp; Fabricated Fittings</h2>
+        </div>
+        <div class="catalog-section-sub">HDPE, PPH, PVC &amp; IPS Compatible • 20mm–1600mm</div>
       </div>
 
-      <!-- 7 Products (5 Flanges + 2 Fabricated) -->
       <div class="products-list">
 
-        <!-- 1. Flanges Steel Reinforced -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/flanges/steel-reinforced.png" alt="Flanges Steel Reinforced" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">FLANGES STEEL REINFORCED</div>
-            <div class="item-sub">SLIP ON TYPE. PIPE BORE SIZES AND THREADED SIZES AVAILABLE ON REQUEST</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">01</span>
+                <h3 class="item-name">Flanges — Steel Reinforced</h3>
+              </div>
+              <span class="item-material-chip">PP / PE + Steel Core</span>
+            </div>
+            <div class="item-sub">Slip-On Type • Custom Bore &amp; Threaded Sizes Available</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 1000mm</span>
-              <span class="item-pressure">Core : Encapsulated Steel</span>
-              <span class="item-material">MATERIAL : PP / PE</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1000mm</span></span>
+              <span class="item-pressure-pill">DIN 2501 / ANSI #150</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Blind Flanges -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/flanges/blind-flange.png" alt="Blind Flanges in PE and Steel" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">BLIND FLANGES</div>
-            <div class="item-sub">SOLID PIPE END BLANKING FLANGES</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">02</span>
+                <h3 class="item-name">Blind Flanges</h3>
+              </div>
+              <span class="item-material-chip">PE &amp; Carbon Steel</span>
+            </div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 1000mm</span>
-              <span class="item-pressure">Drilling : DIN 2501 / ANSI #150</span>
-              <span class="item-material">AVAILABLE IN PE AND STEEL</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1000mm</span></span>
+              <span class="item-pressure-pill">DIN 2501 / ANSI #150 • PN10 / PN16</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Metallic Backing Flanges -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/flanges/metallic-backing-ring.png" alt="Carbon Steel and Stainless Steel Flanges" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">CARBON STEEL AND STAINLESS STEEL FLANGES</div>
-            <div class="item-sub">SLIP ON TYPE. PIPE BORE SIZES AND THREADED SIZES AVAILABLE ON REQUEST</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">03</span>
+                <h3 class="item-name">Carbon Steel &amp; Stainless Steel Flanges</h3>
+              </div>
+              <span class="item-material-chip">CS / SS304 / SS316</span>
+            </div>
+            <div class="item-sub">Slip-On Backing Rings • Galvanized / Epoxy Coated</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 1600mm</span>
-              <span class="item-pressure">Finish : Galvanized / Coated</span>
-              <span class="item-material">MATERIAL : CS / SS304 / SS316</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1600mm</span></span>
+              <span class="item-pressure-pill">DIN / ANSI #150 / BS10 Tables D–F</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Weldneck & Puddle Flange -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/flanges/weldneck-puddle.png" alt="Weldneck and Puddle Flange" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">WELDNECK &amp; PUDDLE FLANGE</div>
-            <div class="item-sub">BUTT WELD TYPE - SPECIAL APPLICATIONS AND FOR WALL STOPS / TANK CONNECTIONS</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">04</span>
+                <h3 class="item-name">Weldneck &amp; Puddle Flange</h3>
+              </div>
+              <span class="item-material-chip">PE100 / Steel</span>
+            </div>
+            <div class="item-sub">Butt-Weld Type • Wall Stops &amp; Tank Waterstop Collar</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 800mm</span>
-              <span class="item-pressure">Feature : Hydrostatic Puddle Collar</span>
-              <span class="item-material">MATERIAL : PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 800mm</span></span>
+              <span class="item-pressure-pill">Hydrostatic Wall Collar</span>
             </div>
           </div>
         </div>
 
-        <!-- 5. Spacers for Butterfly Valves -->
         <div class="item-row">
           <div class="item-image-col">
             <img src="/images/fittings/cropped/flanges/butterfly-valve-spacer.png" alt="Spacers for Butterfly Valves" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">SPACERS FOR BUTTERFLY VALVES</div>
-            <div class="item-sub">FOR USE WITH BUTTERFLY VALVES. CAN ALSO BE FLANGED TYPE WITH OR WITHOUT GROOVES</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">05</span>
+                <h3 class="item-name">Spacers for Butterfly Valves</h3>
+              </div>
+              <span class="item-material-chip">HDPE / PP</span>
+            </div>
+            <div class="item-sub">Flanged or Ring Type • With / Without Gasket Grooves</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20 TO 1000mm ( 1/2" TO 40" )</span>
-              <span class="item-material">MATERIAL : HDPE / PP</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 1000mm (1/2&quot; – 40&quot;)</span></span>
+              <span class="item-pressure-pill">Disc Clearance Ring</span>
             </div>
           </div>
         </div>
 
-        <!-- 6. Fabricated Bends -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/fabricated/fabricated-bends.png" alt="Fabricated Bends" />
+            <img src="/images/fittings/cropped/fabricated/fabricated-bends.png" alt="Fabricated Bends IS 8360 Part 2" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">FABRICATED BENDS (IS 8360 PART 2)</div>
-            <div class="item-sub">FOR BUTT FUSION IN 22.5°, 45°, 60° &amp; 90° IN TWO, THREE &amp; FOUR PIECE DESIGN (R = 1.0D &amp; R = 1.5D)</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">06</span>
+                <h3 class="item-name">Fabricated Bends (IS 8360 Part 2)</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">22.5°, 45°, 60° &amp; 90° • 2/3/4-Piece Segmented • R=1.0D &amp; R=1.5D</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : PN 6 , PN10 &amp; PN16</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">PN 6, PN 10 &amp; PN 16</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Fabricated Equal & Reducing Tee -->
         <div class="item-row">
           <div class="item-image-col">
-            <img src="/images/fittings/cropped/fabricated/fabricated-tees.png" alt="Fabricated Equal and Reducing Tee" />
+            <img src="/images/fittings/cropped/fabricated/fabricated-tees.png" alt="Fabricated Equal and Reducing Tee IS 8360 Part 3" />
           </div>
           <div class="item-info-col">
-            <div class="item-name">FABRICATED EQUAL &amp; REDUCING TEE (IS 8360 PART 3)</div>
-            <div class="item-sub">FOR BUTT FUSION &amp; ELECTROFUSION • MANUFACTURED ON AUTOMATIC MACHINE</div>
+            <div class="item-header-line">
+              <div class="item-title-wrap">
+                <span class="item-index">07</span>
+                <h3 class="item-name">Fabricated Equal &amp; Reducing Tee (IS 8360 Part 3)</h3>
+              </div>
+              <span class="item-material-chip">PE80 &amp; PE100</span>
+            </div>
+            <div class="item-sub">Butt Fusion &amp; Electrofusion • Machine Fabricated</div>
             <div class="item-specs-line">
-              <span class="item-range">RANGE : 20mm TO 630mm</span>
-              <span class="item-pressure">Pressure : PN10 &amp; PN16</span>
-              <span class="item-material">MATERIAL : PE80 &amp; PE100</span>
+              <span class="item-range-pill"><span class="item-range-label">Range</span><span class="item-range-val">20mm to 630mm</span></span>
+              <span class="item-pressure-pill">PN 10 &amp; PN 16</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Corporate Procurement & Contact Footer (Kept on last page) -->
-      <div class="last-page-footer-block">
+      <!-- Official Corporate Procurement & Contact Footer Block -->
+      <section class="last-page-footer-block cad-grid-bg" aria-label="Corporate Procurement Directory">
         <div class="footer-header-row">
           <div class="footer-brand">
             <img src="/plastoguard-logo.png" alt="PlastoGuard Logo" class="footer-logo" />
             <div>
               <span class="footer-title">PLASTOGUARD INFRASTRUCTURE SYSTEMS</span>
-              <span class="footer-sub">ESTABLISHED PIPELINE SYSTEMS MANUFACTURER • EXPORT QUALITY</span>
+              <span class="footer-sub">NJ ENTERPRISES • CERTIFIED HDPE PIPELINE MANUFACTURER</span>
             </div>
           </div>
-          <div class="footer-gstin">
-            GSTIN: 27ANMPD5199E1ZR
-          </div>
+          <div class="footer-gstin">GSTIN: 27ANMPD5199E1ZR</div>
         </div>
 
         <div class="footer-grid-cols">
-          <!-- Col 1: Direct Inquiries -->
           <div>
-            <span class="footer-col-label">Direct Quotation &amp; Project Inquiries</span>
-            <div><span style="color: var(--color-orange); font-weight: 700;">Email:</span> <a href="mailto:sales.plastoguardind@gmail.com">sales.plastoguardind@gmail.com</a></div>
-            <div style="color: #cbd5e1; font-size: 0.54rem;">Web: <a href="https://plastoguard.com">https://plastoguard.com</a></div>
+            <span class="footer-col-label">Direct Quotation &amp; RFQs</span>
+            <div><span class="footer-accent-key">Email:</span> <a href="mailto:sales.plastoguardind@gmail.com">sales.plastoguardind@gmail.com</a></div>
+            <div><span class="footer-accent-key">Web:</span> <a href="https://plastoguard.com">https://plastoguard.com</a></div>
           </div>
 
-          <!-- Col 2: Telephones -->
           <div>
-            <span class="footer-col-label">Sales &amp; Technical Support</span>
-            <div><span style="color: var(--color-orange); font-weight: 700;">Tel:</span> <a href="tel:+917718847463">+91 7718847463</a></div>
-            <div><span style="color: var(--color-orange); font-weight: 700;">Direct:</span> <a href="tel:+918976557664">+91 8976557664</a></div>
+            <span class="footer-col-label">Sales &amp; Technical Desk</span>
+            <div><span class="footer-accent-key">Tel:</span> <a href="tel:+917718847463">+91 7718847463</a></div>
+            <div><span class="footer-accent-key">Direct:</span> <a href="tel:+918976557664">+91 8976557664</a></div>
           </div>
 
-          <!-- Col 3: Works & Corporate Office -->
           <div>
-            <span class="footer-col-label">Head Office &amp; Manufacturing Works</span>
+            <span class="footer-col-label">Head Office &amp; Works</span>
             <div style="color: #e2e8f0;">
-              26, Sethi Industrial Estate, Suren Road, Near Western Express Highway Metro Station, Andheri East, Mumbai - 400093, Maharashtra, India.
+              26, Sethi Industrial Estate, Suren Road, Near WEH Metro Station, Andheri East, Mumbai - 400093, Maharashtra, India.
             </div>
           </div>
         </div>
 
         <div class="footer-bottom-notice">
-          <span>PlastoGuard® is a brand of NJ Enterprises • All dimensions subject to standard manufacturing tolerances (±0.5%)</span>
-          <span>Zero CNC machining services offered • 100% Injection Molded &amp; Automatic Machine Fabricated</span>
+          <span>PlastoGuard® • Standard Manufacturing Tolerances (±0.5%)</span>
+          <span>100% Injection Molded &amp; Automatic Machine Fabricated • Export Grade PE100</span>
         </div>
-      </div>
+      </section>
 
-      <!-- Running Page Footer -->
       <footer class="page-footer">
         <div class="footer-left">
-          <span class="footer-badge">© 2026 PlastoGuard</span>
-          <span>Section 4: Flanges, Backing Rings &amp; Fabricated Fittings Directory</span>
+          <span class="footer-badge">© 2026 PLASTOGUARD</span>
+          <span>Section 04 • Flanges, Backing Rings &amp; Fabricated Fittings Directory</span>
         </div>
-        <div class="footer-page-num">PAGE 04 / 04</div>
+        <div class="footer-page-num">04 / 04</div>
       </footer>
     </article>
 
